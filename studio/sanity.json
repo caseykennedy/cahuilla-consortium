@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "i0abzsfe",
-    "dataset": "production"
+    "projectId": "ll8y61un",
+    "dataset": "ccvap-production"
   },
   "project": {
-    "name": "Ortho Implant Co.",
+    "name": "Cahuilla Consortium",
     "basePath": "/studio"
   },
   "plugins": [

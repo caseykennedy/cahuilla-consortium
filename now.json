@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "ortho-implant-co",
+  "name": "cahuilla-consortium-gatsby-sanity-combo",
   "builds": [
     {
       "src": "web/package.json",
@@ -10,15 +10,16 @@
     {
       "src": "studio/package.json",
       "use": "@now/static-build",
-      "config":  { "distDir": "dist" }
+      "config": { "distDir": "dist" }
     }
   ],
   "routes": [
     { "src": "^/studio/static/(.*)", "dest": "/studio/static/$1" },
     { "src": "^/studio/(.*)", "dest": "/studio/index.html" },
     {
-      "src": "/(.*)", "dest": "/web/$1"
+      "src": "/(.*)",
+      "dest": "/web/$1"
     }
   ],
-  "alias": ["ortho-implant-co.now.sh"]
+  "alias": ["cahuilla-consortium-gatsby-sanity-combo.now.sh"]
 }

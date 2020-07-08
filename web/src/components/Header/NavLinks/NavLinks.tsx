@@ -44,7 +44,7 @@ const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
 
 const NavLinks: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
   const navTransitions = useTransition(
-    isNavOpen ? navData : [],
+    isNavOpen ? data : [],
     item => item.name,
     {
       from: {
@@ -78,18 +78,18 @@ export default NavLinks
 
 // ___________________________________________________________________
 
-const navData = [
+const data = [
   {
-    name: 'rethink',
-    link: '/rethink'
+    name: 'what we do',
+    link: '/what-we-do'
   },
   {
-    name: 'about oic',
-    link: '/about'
+    name: 'who we are',
+    link: '/who-we-are'
   },
   {
-    name: 'implants',
-    link: '/implants'
+    name: 'volunteer',
+    link: '/volunteer'
   },
   {
     name: 'blog',

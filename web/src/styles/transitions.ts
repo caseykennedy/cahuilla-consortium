@@ -1,4 +1,4 @@
-// Transitoin keyframes
+// Transition keyframes
 
 // ___________________________________________________________________
 

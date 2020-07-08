@@ -1,7 +1,7 @@
 {
-  "name": "ortho-implant-co-marketing-website",
+  "name": "cahuilla-consortium-gatsby",
   "private": true,
-  "description": "Gatsby TypeScript Starter with Styled System",
+  "description": "Gatsby TypeScript Theme for the Cahuilla Consortium",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {

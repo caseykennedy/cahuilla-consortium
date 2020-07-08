@@ -49,13 +49,11 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           //     ? 'logo--dark'
           //     : null
           // }
-          className="logo--dark"
         >
-          <Parallax y={[5, 10]}>
-            <Link to="/" aria-label="Ortho Implant Co., back to home">
-              <Logo />
-            </Link>
-          </Parallax>
+          <Link to="/" aria-label="Ortho Implant Co., back to home">
+            {/* <Logo /> */}
+            Cahuilla Consortium
+          </Link>
         </S.Logo>
 
         <S.Tools>
@@ -66,12 +64,6 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           <S.Nav>
             <Navigation />
           </S.Nav>
-
-          <S.Cta>
-            <Button to="/contact" invert={false}>
-              Talk to us
-            </Button>
-          </S.Cta>
         </S.Tools>
       </S.Header>
     </>

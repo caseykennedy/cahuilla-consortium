@@ -14,7 +14,6 @@ import Divider from '../elements/Divider'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import ProductPage from '../components/ProductPage'
 
 // Theme
 import theme from '../../config/theme'
@@ -25,14 +24,6 @@ const ProductTemplate: React.FC<ProductContextShape> = ({ pageContext }) => {
   const page = pageContext.page
   // console.log('—————|— implants —|—————')
   // console.log(page)
-
-  // Page animation
-  const pageAnimation = useSpring({
-    config: config.molasses,
-    delay: 0,
-    from: { opacity: 0 },
-    to: { opacity: 1 }
-  })
   return (
     <Layout>
       <SEO
@@ -42,7 +33,7 @@ const ProductTemplate: React.FC<ProductContextShape> = ({ pageContext }) => {
         individual={false}
       />
       <AnimatedBox>
-        <ProductPage pageContext={pageContext} />
+        Template
       </AnimatedBox>
     </Layout>
   )

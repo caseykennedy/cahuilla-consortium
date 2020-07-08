@@ -21,29 +21,16 @@ export const Header = styled(Flex)`
   position: relative;
   z-index: 99;
 
-  background: ${theme.colors.background};
+  background: ${theme.colors.primary};
 
   @media ${theme.mq.tablet} {
   }
 `
 
 export const Logo = styled(Box)`
-  background: ${theme.colors.primary};
-  width: calc(${theme.logoWidth} / 1.75);
-  height: calc(${theme.headerHeight} / 1.5);
-  padding: calc(${theme.space[3]} * 3) ${theme.space[4]} ${theme.space[3]};
-
-  /* border-bottom: 4px solid ${theme.colors.primary}; */
-
-  @media (min-width: 400px) {
-    display: flex;
-  }
+  padding: ${theme.space[5]} ${theme.space[5]};
 
   @media ${theme.mq.tablet} {
-    font-size: 1.4rem;
-    width: ${theme.logoWidth};
-    height: ${theme.headerHeight};
-    padding: calc(${theme.space[3]} * 5) ${theme.space[4]} ${theme.space[3]};
   }
 
   &.logo--dark {
@@ -52,6 +39,10 @@ export const Logo = styled(Box)`
     svg {
       fill: ${theme.colors.white};
     }
+  }
+
+  a {
+    color: ${theme.colors.white};
   }
 
   svg {
@@ -65,7 +56,6 @@ export const Logo = styled(Box)`
 export const Tools = styled(Flex)`
   justify-content: space-between;
   flex: 1;
-  border-left: ${theme.border};
 `
 
 export const Nav = styled(Flex)`

@@ -17,9 +17,7 @@ export const Nav = styled.nav`
   z-index: 999;
 
   width: 100%;
-  height: ${theme.headerHeight};
   padding: ${theme.space[5]} ${theme.space[5]};
-  background: ${theme.colors.background};
 
   @media ${theme.mq.desktop} {
   }
@@ -78,7 +76,7 @@ export const Nav = styled.nav`
     &__title {
       display: flex;
       position: relative;
-      color: ${theme.colors.text};
+      color: ${theme.colors.white};
       transition: ${theme.transition.all};
 
       span {

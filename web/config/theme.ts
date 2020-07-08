@@ -77,16 +77,15 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   colors: {
-    text: '#000000',
-    background: '#ffffff',
+    text: '#000105',
+    background: '#E0D7CF',
     
-    primary: '#FFC900',
-    secondary: '#000000',
-    tertiary: '#9D9FA2',
-    quaternary: '#C4C4c4',
-    quinary: '#ebebeb',
+    primary: '#E87414',
+    secondary: '#52C3B8',
+    tertiary: '#857AEB',
+    quaternary: '#E0D7CF',
 
-    black: '#000000',
+    black: '#000105',
     white: '#ffffff',
   },
 

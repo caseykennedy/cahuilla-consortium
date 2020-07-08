@@ -37,16 +37,16 @@ export default Navigation
 
 const data = [
   {
-    name: 'rethink',
-    link: '/rethink'
+    name: 'what we do',
+    link: '/what-we-do'
   },
   {
-    name: 'about oic',
-    link: '/about'
+    name: 'who we are',
+    link: '/who-we-are'
   },
   {
-    name: 'implants',
-    link: '/implants'
+    name: 'volunteer',
+    link: '/volunteer'
   },
   {
     name: 'blog',
