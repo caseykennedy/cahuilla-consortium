@@ -28,8 +28,6 @@ type ThemeShape = {
   strokeWidth: string
   maxWidth: string
   siteWidth: string
-  logoWidth: string
-  headerHeight: string
   grid: {
     [key: string]: string
   }
@@ -56,7 +54,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['780px', '1024px']
+const breakpoints: string[] = ['768px', '1140px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -153,9 +151,7 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   maxWidth: '1680px',
-  siteWidth: '100vw',
-  logoWidth: '225px',
-  headerHeight: '180px',
+  siteWidth: '50vw',
 
   grid: {
     gap: '0.5rem'

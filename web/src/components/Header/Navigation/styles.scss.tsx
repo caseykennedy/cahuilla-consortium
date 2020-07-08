@@ -12,7 +12,7 @@ import theme from '../../../../config/theme'
 // ___________________________________________________________________
 
 export const Nav = styled.nav`
-  display: flex;
+  display: none;
   align-items: flex-start;
   z-index: 999;
 
@@ -20,16 +20,17 @@ export const Nav = styled.nav`
   padding: ${theme.space[5]} ${theme.space[5]};
 
   @media ${theme.mq.desktop} {
+    display: flex;
   }
 
   .nav-link {
     font-family: ${theme.fonts.heading};
-    font-size: ${theme.fontSizes[2]};
+    font-size: ${theme.fontSizes[1]};
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 
-    margin-left: ${theme.space[5]};
+    margin-left: ${theme.space[4]};
     position: relative;
     cursor: pointer;
 

@@ -115,7 +115,7 @@ const Typography = css`
   }
 
   html {
-    font-size: 18px;
+    font-size: 20px;
     box-sizing: border-box;
     border: 0;
     margin: 0;
@@ -158,20 +158,20 @@ const Typography = css`
   }
 
   .text--xxxl {
-    font-size: calc(${theme.root.font.xxxl} / 1.25);
+    font-size: calc(${theme.root.font.xxxl} / 1);
     line-height: calc(${theme.root.font.headingLineHeight} / 1);
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.xxxl} * 1.25);
+      font-size: calc(${theme.root.font.xxxl} * 1);
     }
   }
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.root.font.lg} * 1.15);
+    font-size: calc(${theme.root.font.xl} / 1);
 
     @media ${theme.mq.tablet} {
-      font-size: ${theme.root.font.xl};
+      font-size: calc(${theme.root.font.xl} * 1.3);
     }
   }
 
@@ -181,7 +181,7 @@ const Typography = css`
     font-weight: 400;
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.lg} * 1.25);
+      font-size: calc(${theme.root.font.lg} * 1);
     }
   }
 
@@ -249,7 +249,7 @@ const Typography = css`
   }
 
   .t--small {
-    font-size: calc(${theme.fontSizes[1]} / 1.1);
+    font-size: calc(${theme.fontSizes[1]} / 1);
   }
 
   .t-underline {

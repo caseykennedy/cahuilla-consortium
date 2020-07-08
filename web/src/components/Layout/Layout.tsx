@@ -47,8 +47,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <S.Wrapper>
           <Header mainRef={mainRef} />
           <S.Main ref={mainRef}>{children}</S.Main>
-          <Footer />
         </S.Wrapper>
+        <Footer />
       </ParallaxProvider>
     </ThemeProvider>
   )

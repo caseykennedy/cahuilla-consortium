@@ -10,12 +10,11 @@ import { Box, Flex } from '../../../../elements'
 
 export const Hero = styled(Flex)`
   flex-wrap: wrap;
-  background: ${theme.colors.quinary};
-  position: relative;
+  /* position: relative; */
   width: 100%;
   /* height: calc(20vh - ${theme.headerHeight}); */
   min-height: 222px;
-  padding: ${theme.space[5]};
+  padding: ${theme.space[12]} ${theme.space[5]};
 
   @media ${theme.mq.tablet} {
   }

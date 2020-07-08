@@ -19,11 +19,17 @@ export const Header = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
   position: relative;
+  width: 100vw;
   z-index: 99;
 
   background: ${theme.colors.primary};
+  color: ${theme.colors.white};
 
   @media ${theme.mq.tablet} {
+    width: 50vw;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
   }
 `
 

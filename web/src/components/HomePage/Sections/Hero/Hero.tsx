@@ -21,13 +21,7 @@ const Hero = () => {
     from: { opacity: 0, transform: theme.transform.matrix.from },
     to: { opacity: 1, transform: theme.transform.matrix.to }
   })
-  return (
-    <>
-      <S.Hero>
-        Herro
-      </S.Hero>
-    </>
-  )
+  return <S.Hero>Herro</S.Hero>
 }
 
 export default Hero

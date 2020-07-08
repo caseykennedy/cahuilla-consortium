@@ -43,16 +43,10 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
       </Overlay>
 
       <S.Header as="header">
-        <S.Logo
-          // className={
-          //   typeof window !== 'undefined' && location.pathname !== '/'
-          //     ? 'logo--dark'
-          //     : null
-          // }
-        >
+        <S.Logo>
           <Link to="/" aria-label="Ortho Implant Co., back to home">
             {/* <Logo /> */}
-            Cahuilla Consortium
+            CCVAP
           </Link>
         </S.Logo>
 
@@ -65,6 +59,11 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
             <Navigation />
           </S.Nav>
         </S.Tools>
+        <Box p={5}>
+          <Heading as="h1" className="t--uppercase">
+            Keeping our people safe
+          </Heading>
+        </Box>
       </S.Header>
     </>
   )

@@ -13,8 +13,9 @@ export const Footer = styled(Flex)`
   flex-wrap: wrap;
   position: relative;
 
-  background: ${theme.colors.background};
+  background: ${theme.colors.tertiary};
   padding: ${theme.space[5]} ${theme.space[5]};
+  width: 100vw;
 
   @media ${theme.mq.tablet} {
   }

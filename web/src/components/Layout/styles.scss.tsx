@@ -12,15 +12,27 @@ import theme from '../../../config/theme'
 
 export const Wrapper = styled(Flex)`
   flex-direction: column;
-  justify-content: flex-start;
   flex-wrap: wrap;
+  justify-content: flex-start;
+
+  width: 100vw;
+  min-height: 100vh;
   background: ${theme.colors.background};
+
+  @media ${theme.mq.tablet} {
+    flex-direction: row;
+  }
 `
 
 export const Main = styled(animated.main)`
   max-height: 100%;
   position: relative;
-  width: ${theme.siteWidth};
+  width: 100vw;
+  scroll-snap-type: y mandatory;
+
+  @media ${theme.mq.tablet} {
+    width: 50vw;
+  }
 `
 
 // ___________________________________________________________________
