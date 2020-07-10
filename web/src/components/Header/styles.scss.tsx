@@ -64,23 +64,23 @@ export const Tools = styled(Flex)`
   flex: 1;
 `
 
-export const Nav = styled(Flex)`
-  flex: 1;
-  display: none;
-  justify-content: flex-end;
+// export const Nav = styled(Flex)`
+//   flex: 1;
+//   display: none;
+//   justify-content: flex-end;
 
-  @media ${theme.mq.desktop} {
-    display: flex;
-  }
+//   @media ${theme.mq.desktop} {
+//     display: flex;
+//   }
 
-  .cta {
-    /* display: none; */
+//   .cta {
+//     /* display: none; */
 
-    @media ${theme.mq.desktop} {
-      display: initial;
-    }
-  }
-`
+//     @media ${theme.mq.desktop} {
+//       display: initial;
+//     }
+//   }
+// `
 
 export const Toggle = styled.div`
   display: flex;

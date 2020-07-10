@@ -6,99 +6,99 @@ import { css } from 'styled-components'
 import theme from '../../config/theme'
 import { darken } from 'polished'
 
-// Helvetica Neue Condensed Regular
-import HelveticaNeueLTStdCnEot from './fonts/HelveticaNeueLTStd-Cn.eot'
-import HelveticaNeueLTStdCnWoff2 from './fonts/HelveticaNeueLTStd-Cn.woff2'
-import HelveticaNeueLTStdCnWoff from './fonts/HelveticaNeueLTStd-Cn.woff'
-import HelveticaNeueLTStdCnOtf from './fonts/HelveticaNeueLTStd-Cn.otf'
+// Staatliches Regular
+import StaatlichesEot from './fonts/Staatliches-Regular.eot'
+import StaatlichesWoff2 from './fonts/Staatliches-Regular.woff2'
+import StaatlichesWoff from './fonts/Staatliches-Regular.woff'
+import StaatlichesOtf from './fonts/Staatliches-Regular.otf'
 
-// Helvetica Neue Condensed Medium
-import HelveticaNeueLTStdMdCnEot from './fonts/HelveticaNeueLTStd-MdCn.eot'
-import HelveticaNeueLTStdMdCnWoff2 from './fonts/HelveticaNeueLTStd-MdCn.woff2'
-import HelveticaNeueLTStdMdCnWoff from './fonts/HelveticaNeueLTStd-MdCn.woff'
-import HelveticaNeueLTStdMdCnOtf from './fonts/HelveticaNeueLTStd-MdCn.otf'
+// San Francisco Regular
+import SanFranciscoTextRegularEot from './fonts/SanFranciscoText-Regular.eot'
+import SanFranciscoTextRegularWoff2 from './fonts/SanFranciscoText-Regular.woff2'
+import SanFranciscoTextRegularWoff from './fonts/SanFranciscoText-Regular.woff'
+import SanFranciscoTextRegularOtf from './fonts/SanFranciscoText-Regular.otf'
 
-// Helvetica Neue Light
-import HelveticaNeueLTStdLtEot from './fonts/HelveticaNeueLTStd-Lt.eot'
-import HelveticaNeueLTStdLtWoff2 from './fonts/HelveticaNeueLTStd-Lt.woff2'
-import HelveticaNeueLTStdLtWoff from './fonts/HelveticaNeueLTStd-Lt.woff'
-import HelveticaNeueLTStdLtOtf from './fonts/HelveticaNeueLTStd-Lt.otf'
+// San Francisco Medium
+import SanFranciscoTextMediumEot from './fonts/SanFranciscoText-Medium.eot'
+import SanFranciscoTextMediumWoff2 from './fonts/SanFranciscoText-Medium.woff2'
+import SanFranciscoTextMediumWoff from './fonts/SanFranciscoText-Medium.woff'
+import SanFranciscoTextMediumOtf from './fonts/SanFranciscoText-Medium.otf'
 
-// Helvetica Neue Roman
-import HelveticaNeueLTStdRomanEot from './fonts/HelveticaNeueLTStd-Roman.eot'
-import HelveticaNeueLTStdRomanWoff2 from './fonts/HelveticaNeueLTStd-Roman.woff2'
-import HelveticaNeueLTStdRomanWoff from './fonts/HelveticaNeueLTStd-Roman.woff'
-import HelveticaNeueLTStdRomanOtf from './fonts/HelveticaNeueLTStd-Roman.otf'
+// San Francisco Bold
+import SanFranciscoTextBoldEot from './fonts/SanFranciscoText-Bold.eot'
+import SanFranciscoTextBoldWoff2 from './fonts/SanFranciscoText-Bold.woff2'
+import SanFranciscoTextBoldWoff from './fonts/SanFranciscoText-Bold.woff'
+import SanFranciscoTextBoldOtf from './fonts/SanFranciscoText-Bold.otf'
 
-// Helvetica Monospace Regular
-import HelveticaMonospacedProRgEot from './fonts/HelveticaMonospacedPro-Rg.eot'
-import HelveticaMonospacedProRgWoff2 from './fonts/HelveticaMonospacedPro-Rg.woff2'
-import HelveticaMonospacedProRgWoff from './fonts/HelveticaMonospacedPro-Rg.woff'
-import HelveticaMonospacedProRgOtf from './fonts/HelveticaMonospacedPro-Rg.otf'
+// BergenMono Regular
+import BergenMonoRegularEot from './fonts/BergenMono-Regular.eot'
+import BergenMonoRegularWoff2 from './fonts/BergenMono-Regular.woff2'
+import BergenMonoRegularWoff from './fonts/BergenMono-Regular.woff'
+import BergenMonoRegularOtf from './fonts/BergenMono-Regular.otf'
 
 // ___________________________________________________________________
 
 const Typography = css`
-  /* Helvetica Neue Condensed Regular */
+  /* Staatliches */
   @font-face {
-    font-family: 'HelveticaCondensed';
-    src: url(${HelveticaNeueLTStdCnEot});
-    src: url(${HelveticaNeueLTStdCnWoff2}) format('woff2'),
-      url(${HelveticaNeueLTStdCnWoff}) format('woff'),
-      url(${HelveticaNeueLTStdCnOtf}) format('opentype'),
-      url(${HelveticaNeueLTStdCnEot}?#iefix) format('embedded-opentype');
+    font-family: 'Staatliches';
+    src: url(${StaatlichesEot});
+    src: url(${StaatlichesWoff2}) format('woff2'),
+      url(${StaatlichesWoff}) format('woff'),
+      url(${StaatlichesOtf}) format('opentype'),
+      url(${StaatlichesEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Helvetica Neue Condensed Medium */
+  /* San Francisco Regular */
   @font-face {
-    font-family: 'HelveticaCondensed';
-    src: url(${HelveticaNeueLTStdMdCnEot});
-    src: url(${HelveticaNeueLTStdMdCnWoff2}) format('woff2'),
-      url(${HelveticaNeueLTStdMdCnWoff}) format('woff'),
-      url(${HelveticaNeueLTStdMdCnOtf}) format('opentype'),
-      url(${HelveticaNeueLTStdMdCnEot}?#iefix) format('embedded-opentype');
+    font-family: 'San Francisco';
+    src: url(${SanFranciscoTextRegularEot});
+    src: url(${SanFranciscoTextRegularWoff2}) format('woff2'),
+      url(${SanFranciscoTextRegularWoff}) format('woff'),
+      url(${SanFranciscoTextRegularOtf}) format('opentype'),
+      url(${SanFranciscoTextRegularEot}?#iefix) format('embedded-opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* San Francisco Medium */
+  @font-face {
+    font-family: 'San Francisco';
+    src: url(${SanFranciscoTextMediumEot});
+    src: url(${SanFranciscoTextMediumWoff2}) format('woff2'),
+      url(${SanFranciscoTextMediumWoff}) format('woff'),
+      url(${SanFranciscoTextMediumOtf}) format('opentype'),
+      url(${SanFranciscoTextMediumEot}?#iefix) format('embedded-opentype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Helvetica Neue Light */
+  /* San Francisco Bold */
   @font-face {
-    font-family: 'Helvetica';
-    src: url(${HelveticaNeueLTStdLtEot});
-    src: url(${HelveticaNeueLTStdLtWoff2}) format('woff2'),
-      url(${HelveticaNeueLTStdLtWoff}) format('woff'),
-      url(${HelveticaNeueLTStdLtOtf}) format('opentype'),
-      url(${HelveticaNeueLTStdLtEot}?#iefix) format('embedded-opentype');
-    font-weight: 300;
+    font-family: 'San Francisco';
+    src: url(${SanFranciscoTextBoldEot});
+    src: url(${SanFranciscoTextBoldWoff2}) format('woff2'),
+      url(${SanFranciscoTextBoldWoff}) format('woff'),
+      url(${SanFranciscoTextBoldOtf}) format('opentype'),
+      url(${SanFranciscoTextBoldEot}?#iefix) format('embedded-opentype');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Helvetica Neue Roman */
+  /* BergenMono Regular */
   @font-face {
-    font-family: 'Helvetica';
-    src: url(${HelveticaNeueLTStdRomanEot});
-    src: url(${HelveticaNeueLTStdRomanWoff2}) format('woff2'),
-      url(${HelveticaNeueLTStdRomanWoff}) format('woff'),
-      url(${HelveticaNeueLTStdRomanOtf}) format('opentype'),
-      url(${HelveticaNeueLTStdRomanEot}?#iefix) format('embedded-opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  /* Helvetica Monospace Regular */
-  @font-face {
-    font-family: 'HelveticaMono';
-    src: url(${HelveticaMonospacedProRgEot});
-    src: url(${HelveticaMonospacedProRgWoff2}) format('woff2'),
-      url(${HelveticaMonospacedProRgWoff}) format('woff'),
-      url(${HelveticaMonospacedProRgOtf}) format('opentype'),
-      url(${HelveticaMonospacedProRgEot}?#iefix) format('embedded-opentype');
+    font-family: 'Bergen Mono';
+    src: url(${BergenMonoRegularEot});
+    src: url(${BergenMonoRegularWoff2}) format('woff2'),
+      url(${BergenMonoRegularWoff}) format('woff'),
+      url(${BergenMonoRegularOtf}) format('opentype'),
+      url(${BergenMonoRegularEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -168,10 +168,10 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.root.font.xl} / 1);
+    font-size: calc(${theme.root.font.xxl} / 1);
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.xl} * 1.3);
+      font-size: calc(${theme.root.font.xxl} / 1.15);
     }
   }
 

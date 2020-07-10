@@ -23,9 +23,9 @@ const RootVariables = css`
     --font-code: ${theme.fonts.code}; */
 
     /* set base values */
-    --text-base-size: 0.75em;
+    --text-base-size: 0.8em;
     --text-scale-ratio: 1.618;
-    --text-base-letter-spacing: 0.5px;
+    --text-base-letter-spacing: 0px;
 
     /* type scale */
     --text-xs: calc(1.5em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
@@ -37,8 +37,8 @@ const RootVariables = css`
     --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
     /* line-height */
-    --heading-line-height: 1;
-    --body-line-height: 1;
+    --heading-line-height: 0.8;
+    --body-line-height: 1.25;
   }
 
   @media ${theme.mq.tablet} {

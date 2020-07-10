@@ -118,9 +118,9 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   fonts: {
-    body: `"Helvetica", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    heading: `"HelveticaCondensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    code: `"HelveticaMono", Consolas, Liberation Mono, Menlo, Courier, monospace`
+    body: `"San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    heading: `"Staatliches", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    code: `"Bergen Mono", Consolas, Liberation Mono, Menlo, Courier, monospace`
   },
 
   fontSizes: [

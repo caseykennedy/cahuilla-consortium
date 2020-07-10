@@ -12,12 +12,13 @@ import theme from '../../../../config/theme'
 // ___________________________________________________________________
 
 export const Nav = styled.nav`
-  display: none;
   align-items: flex-start;
+  justify-content: flex-end;
+  padding: ${theme.space[5]} ${theme.space[5]};
+  width: 100%;
   z-index: 999;
 
-  width: 100%;
-  padding: ${theme.space[5]} ${theme.space[5]};
+  display: none;
 
   @media ${theme.mq.desktop} {
     display: flex;
@@ -30,7 +31,7 @@ export const Nav = styled.nav`
     text-transform: uppercase;
     letter-spacing: 0.5px;
 
-    margin-left: ${theme.space[4]};
+    margin-left: ${theme.space[3]};
     position: relative;
     cursor: pointer;
 
@@ -50,15 +51,13 @@ export const Nav = styled.nav`
 
     a {
       &::before {
+        position: absolute;
         content: '';
-        background: ${theme.colors.tertiary};
+        background: ${theme.colors.white};
         width: 0;
         height: 2px;
-
-        position: absolute;
-
         bottom: 0;
-        left: 0;
+        right: 0;
         z-index: 0;
 
         transition: width 0.222s ease-in-out;
@@ -66,11 +65,12 @@ export const Nav = styled.nav`
 
       &.active,
       &:hover {
-        color: ${theme.colors.tertiary};
+        /* color: ${theme.colors.tertiary}; */
 
-        /* &::before {
+        &::before {
           width: 100%;
-        } */
+          left: 0;
+        }
       }
     }
 

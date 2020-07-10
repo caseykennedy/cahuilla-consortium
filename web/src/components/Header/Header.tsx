@@ -55,14 +55,19 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
             <Icon name="hamburger" color="black" />
           </S.Toggle>
 
-          <S.Nav>
-            <Navigation />
-          </S.Nav>
+          <Navigation />
         </S.Tools>
+        
         <Box p={5}>
           <Heading as="h1" className="t--uppercase">
             Keeping our people safe
           </Heading>
+          <Text as="p">
+            The Cahuilla Consortium’s goal is to recognize that domestic
+            violence and abuse, including physical, mental, verbal, and
+            emotional abuse, as well as stalking and dating violence, are
+            serious offenses against Native women, children and families.
+          </Text>
         </Box>
       </S.Header>
     </>
