@@ -232,6 +232,7 @@ const Typography = css`
 
   p {
     font-size: ${theme.root.font.baseSize};
+    font-weight: 500;
     line-height: ${theme.root.font.bodyLineHeight};
     margin-bottom: 1.5em;
 
@@ -245,7 +246,7 @@ const Typography = css`
   }
 
   strong {
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .t--small {
@@ -318,12 +319,12 @@ const Typography = css`
 
     &:hover {
       span {
-        margin-left: calc(${theme.space[5]} * 1.5);
+        margin-left: calc(${theme.space[4]} * 1.5);
       }
     }
 
     span {
-      margin-left: ${theme.space[5]};
+      margin-left: ${theme.space[4]};
       transition: ${theme.transition.all};
 
       svg {

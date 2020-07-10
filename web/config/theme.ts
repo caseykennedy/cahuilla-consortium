@@ -54,7 +54,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['768px', '1140px']
+const breakpoints: string[] = ['800px', '1024px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -104,14 +104,15 @@ const theme: ThemeShape = {
     '12rem',      // 10
     '14rem',      // 11
     '16rem',      // 12
-    '18rem'       // 13
+    '18rem',      // 13
+    '20rem'       // 14
   ],
 
   // Left/Right gutter
   gutter: {
-    tablet: '2rem',
-    desktop: '4rem',
-    axis: [5, 7],
+    tablet: '1.5rem',
+    desktop: '3rem',
+    axis: [4, 6],
   },
 
   // Typography

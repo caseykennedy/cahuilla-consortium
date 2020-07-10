@@ -5,7 +5,7 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-import { Box, Flex, Text } from '../../../elements'
+import { Box, Flex, Text } from '../../ui'
 
 import theme from '../../../../config/theme'
 
@@ -14,7 +14,7 @@ import theme from '../../../../config/theme'
 export const Nav = styled.nav`
   align-items: flex-start;
   justify-content: flex-end;
-  padding: ${theme.space[5]} ${theme.space[5]};
+  padding: ${theme.space[4]} ${theme.space[4]};
   width: 100%;
   z-index: 999;
 

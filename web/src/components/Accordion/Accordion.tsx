@@ -4,10 +4,12 @@
 
 import React, { useState, useRef } from 'react'
 
-import { Box, Flex, Text, Heading } from '../../elements'
-
+// Theme + Styles
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
+
+// UI
+import { Box, Flex, Text, Heading } from '../ui'
 
 // ___________________________________________________________________
 
@@ -30,19 +32,19 @@ type Props = {
 // ___________________________________________________________________
 
 const Accordion: React.FC<Props> = ({
-  children,
-  title,
-  chevronColor,
-  color,
-  borderColor,
-  colorActive,
   bg,
+  borderColor,
+  chevronColor,
+  children,
+  color,
+  colorActive,
   fontSize,
   subTitle,
   pt,
   pb,
   pr,
-  pl
+  pl,
+  title
 }) => {
   // Accordion hooks
   const [setActive, setActiveState] = useState('')
@@ -50,20 +52,24 @@ const Accordion: React.FC<Props> = ({
   const [setRotate, setRotateState] = useState('accordion-icon')
 
   // Reference the accordion content height
-  const content = useRef(null)
+  const refContent = useRef<HTMLDivElement>(null)
 
   // Toggle classes / height
   function toggleAccordion() {
     setActiveState(setActive === '' ? 'active' : '')
-    setHeightState(
-      setActive === 'active' ? '0px' : `${content.current.scrollHeight}px`
-    )
+    
+    if (null !== refContent.current) {
+      setHeightState(
+        setActive === 'active' ? '0px' : `${refContent.current.scrollHeight}px`
+      )
+    }
+
     setRotateState(
       setActive === 'active' ? 'accordion-icon' : 'accordion-icon rotate'
     )
   }
   return (
-    <S.AccordionContainer bg={bg} borderColor={borderColor}>
+    <S.AccordionContainer borderColor={borderColor}>
       <S.AccordionInner>
         <S.AccordionToggle
           className={setActive}
@@ -91,7 +97,10 @@ const Accordion: React.FC<Props> = ({
             chevronColor={chevronColor}
           />
         </S.AccordionToggle>
-        <S.AccordionContent ref={content} style={{ maxHeight: `${setHeight}` }}>
+        <S.AccordionContent
+          ref={refContent}
+          style={{ maxHeight: `${setHeight}` }}
+        >
           <Box>{children}</Box>
         </S.AccordionContent>
       </S.AccordionInner>

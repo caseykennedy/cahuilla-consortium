@@ -6,8 +6,8 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { lighten } from 'polished'
 
-import { Box, Flex, Heading } from '../'
-import theme from '../../../config/theme'
+import { Box, Flex, Heading } from '..'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
@@ -17,7 +17,7 @@ export const Button = styled(Box)<{ invert?: boolean }>`
   align-items: flex-end;
 
   width: 100%;
-  padding: calc(${theme.space[5]}) ${theme.space[3]} ${theme.space[3]};
+  padding: calc(${theme.space[4]}) ${theme.space[3]} ${theme.space[3]};
 
   color: ${p => p.invert ? theme.colors.white : theme.colors.text};
   font-family: ${theme.fonts.heading};

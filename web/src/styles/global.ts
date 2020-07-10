@@ -24,7 +24,6 @@ const GlobalStyles = createGlobalStyle`
     border: 0;
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden; */
 
     &::-webkit-scrollbar {
       display: none;
@@ -35,17 +34,6 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: 100%;
   }
-
-  /* Cursor */
-  /* html,
-  a,
-  button {
-    cursor: none;
-
-    &:hover {
-      cursor: none;
-    }
-  } */
 
   #drawer-root {
     position: relative;

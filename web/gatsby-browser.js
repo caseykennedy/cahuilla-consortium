@@ -3,13 +3,13 @@
 import React, { useState, useEffect } from 'react'
 import { useSpring, config } from 'react-spring'
 import Loading from './src/components/Loading'
-import { AnimatedBox } from './src/elements'
+import { AnimatedBox } from './src/components/ui'
 
 // ___________________________________________________________________
 
 const LoadAnimation = ({ children }) => {
   const [loading, stillLoading] = useState(true)
-  useEffect(() => stillLoading(false))
+  useEffect(() => stillLoading(false), [])
 
   const pageAnimation = useSpring({
     config: config.molasses,

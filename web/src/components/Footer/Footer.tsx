@@ -7,7 +7,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-import { Text, Heading, Box, Flex } from '../../elements'
+import { Text, Heading, Box, Flex } from '../ui'
 import Icon from '../Icons'
 
 import theme from '../../../config/theme'

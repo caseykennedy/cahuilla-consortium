@@ -4,7 +4,7 @@
 
 import styled from 'styled-components'
 import theme from '../../../../../config/theme'
-import { Box, Flex } from '../../../../elements'
+import { Box, Flex } from '../../../ui'
 
 // ___________________________________________________________________
 
@@ -14,7 +14,7 @@ export const Hero = styled(Flex)`
   width: 100%;
   /* height: calc(20vh - ${theme.headerHeight}); */
   min-height: 222px;
-  padding: ${theme.space[12]} ${theme.space[5]};
+  padding: ${theme.space[12]} ${theme.space[4]};
 
   @media ${theme.mq.tablet} {
   }

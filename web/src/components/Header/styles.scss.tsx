@@ -11,7 +11,7 @@ import { readableColor, darken } from 'polished'
 import theme from '../../../config/theme'
 
 // Elements
-import { Box, Flex, AnimatedFlex } from '../../elements'
+import { Box, Flex, AnimatedFlex } from '../ui'
 
 // ___________________________________________________________________
 
@@ -34,7 +34,7 @@ export const Header = styled(Flex)`
 `
 
 export const Logo = styled(Box)`
-  padding: ${theme.space[5]} ${theme.space[5]};
+  padding: ${theme.space[4]} ${theme.space[4]};
 
   @media ${theme.mq.tablet} {
   }
@@ -86,7 +86,7 @@ export const Toggle = styled.div`
   display: flex;
   align-items: flex-start;
   box-sizing: content-box;
-  padding: ${theme.space[5]};
+  padding: ${theme.space[4]};
 
   color: ${theme.colors.text};
   font-size: calc(${theme.fontSizes[2]});
@@ -99,7 +99,7 @@ export const Toggle = styled.div`
 
   span {
     svg {
-      width: ${theme.space[5]};
+      width: ${theme.space[4]};
     }
   }
 `

@@ -8,13 +8,13 @@ import { Link } from 'gatsby'
 
 import { Parallax } from 'react-scroll-parallax'
 
-import { Box, Flex, Text, Heading } from '../../elements'
+import { Box, Flex, Text, Heading } from '../ui'
 
 import Logo from '../Logo'
 import Navigation from './Navigation'
 import NavLinks from './NavLinks'
 import Overlay from '../Overlay'
-import Button from '../../elements/Button'
+import Button from '../ui/Button'
 import Icon from '../Icons'
 
 import theme from '../../../config/theme'
@@ -58,7 +58,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           <Navigation />
         </S.Tools>
         
-        <Box p={5}>
+        <Box p={4}>
           <Heading as="h1" className="t--uppercase">
             Keeping our people safe
           </Heading>

@@ -5,9 +5,9 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-import { Box, Flex, Heading, AnimatedBox } from '../../elements'
+import { Box, Flex, Heading, AnimatedBox } from '..'
 
-import theme from '../../../config/theme'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
@@ -99,7 +99,7 @@ export const CardHolder = styled(Box)`
 
 export const CardColumn = styled(Flex)`
   justify-content: space-between;
-  margin-bottom: ${theme.space[5]};
+  margin-bottom: ${theme.space[4]};
 
   @media ${theme.mq.desktop} {
     margin-bottom: 0;

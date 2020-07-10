@@ -9,8 +9,8 @@ import { useSpring, config } from 'react-spring'
 import Logo from '../Logo'
 
 // Elements
-import { Flex, Box, Heading, Text } from '../../elements'
-import Divider from '../../elements/Divider'
+import { Flex, Box, Heading, Text } from '../ui'
+import Divider from '../ui/Divider'
 
 // Theme
 import GlobalStyles from '../../styles/global'
@@ -31,7 +31,7 @@ const Loading = () => {
       <GlobalStyles />
       <S.Loading style={pageAnimation}>
         <Flex className="animation">
-          <Logo />
+          Loading
         </Flex>
       </S.Loading>
     </>

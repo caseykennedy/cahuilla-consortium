@@ -8,8 +8,8 @@ import { Link } from 'gatsby'
 import { useSpring, config } from 'react-spring'
 
 // Elements
-import { AnimatedBox, Box, Heading } from '../elements'
-import Divider from '../elements/Divider'
+import { AnimatedBox, Box, Heading } from '../components/ui'
+import Divider from '../components/ui/Divider'
 
 // Components
 import Layout from '../components/Layout'

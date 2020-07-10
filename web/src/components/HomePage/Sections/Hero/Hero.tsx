@@ -9,7 +9,7 @@ import Img from 'gatsby-image/withIEPolyfill'
 import { Parallax } from 'react-scroll-parallax'
 
 import * as S from './styles.scss'
-import { Box, Flex, AnimatedBox, Heading } from '../../../../elements'
+import { Box, Flex, AnimatedBox, Heading } from '../../../ui'
 import theme from '../../../../../config/theme'
 
 // ___________________________________________________________________
