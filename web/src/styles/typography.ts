@@ -232,7 +232,7 @@ const Typography = css`
 
   p {
     font-size: ${theme.root.font.baseSize};
-    font-weight: 500;
+    font-weight: 400;
     line-height: ${theme.root.font.bodyLineHeight};
     margin-bottom: 1.5em;
 

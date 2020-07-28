@@ -17,6 +17,7 @@ export const Wrapper = styled(Flex)`
 
   width: 100vw;
   min-height: 100vh;
+  position: relative;
   background: ${theme.colors.background};
 
   @media ${theme.mq.tablet} {
@@ -32,6 +33,20 @@ export const Main = styled(animated.main)`
 
   @media ${theme.mq.tablet} {
     width: 50vw;
+  }
+`
+
+export const Aside = styled(Flex)`
+  background: ${theme.colors.primary};
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100%;
+
+  @media ${theme.mq.tablet} {
+    width: 50vw;
+    position: sticky;
+    top: 0;
   }
 `
 

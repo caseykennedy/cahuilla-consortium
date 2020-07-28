@@ -10,7 +10,8 @@ import { Parallax } from 'react-scroll-parallax'
 
 import { Box, Flex, Text, Heading } from '../ui'
 
-import Logo from '../Logo'
+import Symbol from '../Symbol'
+import Wordmark from '../Wordmark'
 import Navigation from './Navigation'
 import NavLinks from './NavLinks'
 import Overlay from '../Overlay'
@@ -31,7 +32,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
   return (
     <>
-      <Overlay
+      {/* <Overlay
         id="nav-root"
         root="root"
         isOpen={isNavOpen}
@@ -40,13 +41,17 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
       >
         <NavLinks handleExit={() => setNavOpen(false)} isNavOpen={isNavOpen} />
-      </Overlay>
+      </Overlay> */}
 
       <S.Header as="header">
         <S.Logo>
           <Link to="/" aria-label="Ortho Implant Co., back to home">
-            {/* <Logo /> */}
-            CCVAP
+            <div className="symbol">
+              <Symbol />
+            </div>
+            <div className="wordmark">
+              <Wordmark />
+            </div>
           </Link>
         </S.Logo>
 
@@ -57,18 +62,6 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
           <Navigation />
         </S.Tools>
-        
-        <Box p={4}>
-          <Heading as="h1" className="t--uppercase">
-            Keeping our people safe
-          </Heading>
-          <Text as="p">
-            The Cahuilla Consortium’s goal is to recognize that domestic
-            violence and abuse, including physical, mental, verbal, and
-            emotional abuse, as well as stalking and dating violence, are
-            serious offenses against Native women, children and families.
-          </Text>
-        </Box>
       </S.Header>
     </>
   )

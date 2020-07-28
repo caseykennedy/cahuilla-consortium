@@ -12,9 +12,9 @@ import theme from '../../../../config/theme'
 // ___________________________________________________________________
 
 export const Nav = styled.nav`
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: ${theme.space[4]} ${theme.space[4]};
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: ${theme.space[4]} ${theme.space[4]} calc(${theme.space[3]} * 1.75) ${theme.space[4]}; 
   width: 100%;
   z-index: 999;
 

@@ -18,44 +18,47 @@ import { Box, Flex, AnimatedFlex } from '../ui'
 export const Header = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
-  position: relative;
+  position: absolute;
   width: 100vw;
-  z-index: 99;
+  height: ${theme.headerHeight};
+  z-index: 999;
 
-  background: ${theme.colors.primary};
   color: ${theme.colors.white};
 
   @media ${theme.mq.tablet} {
     width: 50vw;
-    max-height: 100vh;
-    position: sticky;
-    top: 0;
   }
 `
 
-export const Logo = styled(Box)`
-  padding: ${theme.space[4]} ${theme.space[4]};
+export const Logo = styled(Flex)`
+  padding: ${theme.space[4]};
 
   @media ${theme.mq.tablet} {
   }
 
-  &.logo--dark {
-    background: ${theme.colors.secondary};
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ${theme.colors.white};
 
     svg {
       fill: ${theme.colors.white};
     }
-  }
 
-  a {
-    color: ${theme.colors.white};
-  }
+    .symbol {
+      svg {
+        width: 45px;
+      }
+    }
 
-  svg {
-    fill: ${theme.colors.secondary};
-    width: 100%;
-    max-width: calc(${theme.space[3]} * 6);
-    min-width: calc(${theme.space[3]} * 4);
+    .wordmark {
+      margin-left: ${theme.space[2]};
+
+      svg {
+        width: 90px;
+      }
+    }
   }
 `
 
@@ -101,13 +104,5 @@ export const Toggle = styled.div`
     svg {
       width: ${theme.space[4]};
     }
-  }
-`
-
-export const Cta = styled(Box)`
-  display: none;
-
-  @media ${theme.mq.tablet} {
-    display: flex;
   }
 `

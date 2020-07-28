@@ -8,6 +8,7 @@ import { ThemeProvider } from 'styled-components'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 import Header from '../Header'
+import Billboard from '../Billboard'
 import Footer from '../Footer'
 import Cursor from '../Cursor'
 
@@ -45,7 +46,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <GlobalStyles />
       <ParallaxProvider>
         <S.Wrapper>
-          <Header mainRef={mainRef} />
+          <S.Aside as="aside">
+            <Header mainRef={mainRef} />
+            <Billboard />
+          </S.Aside>
           <S.Main ref={mainRef}>{children}</S.Main>
         </S.Wrapper>
         <Footer />

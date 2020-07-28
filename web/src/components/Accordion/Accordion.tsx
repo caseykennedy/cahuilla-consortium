@@ -113,10 +113,10 @@ export default Accordion
 // ___________________________________________________________________
 
 const defaultProps = {
-  pt: [7, 8],
-  pb: [7, 8],
-  pr: [5, 7],
-  pl: [5, 7]
+  pt: [4, 6],
+  pb: [4, 6],
+  pr: [4, 6],
+  pl: [4, 6]
 }
 
 Accordion.defaultProps = defaultProps

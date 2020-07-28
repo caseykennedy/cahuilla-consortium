@@ -3,18 +3,19 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import theme from '../../../../../config/theme'
-import { Box, Flex } from '../../../ui'
+import theme from '../../../../config/theme'
+import { Box, Flex } from '../../ui'
 
 // ___________________________________________________________________
 
 export const Hero = styled(Flex)`
   flex-wrap: wrap;
-  /* position: relative; */
+  height: 100vh;
   width: 100%;
-  /* height: calc(20vh - ${theme.headerHeight}); */
-  min-height: 222px;
-  padding: ${theme.space[12]} ${theme.space[4]};
+
+  img {
+    mix-blend-mode: luminosity;
+  }
 
   @media ${theme.mq.tablet} {
   }

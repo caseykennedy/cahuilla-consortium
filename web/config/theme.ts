@@ -28,6 +28,7 @@ type ThemeShape = {
   strokeWidth: string
   maxWidth: string
   siteWidth: string
+  headerHeight: string
   grid: {
     [key: string]: string
   }
@@ -153,6 +154,7 @@ const theme: ThemeShape = {
 
   maxWidth: '1680px',
   siteWidth: '50vw',
+  headerHeight: '111px',
 
   grid: {
     gap: '0.5rem'
