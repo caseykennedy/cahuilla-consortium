@@ -23,7 +23,7 @@ const RootVariables = css`
     --font-code: ${theme.fonts.code}; */
 
     /* set base values */
-    --text-base-size: 0.8em;
+    --text-base-size: 0.9em;
     --text-scale-ratio: 1.618;
     --text-base-letter-spacing: 0px;
 
@@ -37,7 +37,7 @@ const RootVariables = css`
     --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
     /* line-height */
-    --heading-line-height: 0.8;
+    --heading-line-height: 0.9;
     --body-line-height: 1.25;
   }
 

@@ -45,12 +45,12 @@ const data = [
     link: '/who-we-are'
   },
   {
-    name: 'volunteer',
+    name: 'Resources',
     link: '/volunteer'
   },
   {
-    name: 'blog',
-    link: '/blog'
+    name: 'FAQ',
+    link: '/FAQ'
   },
   {
     name: 'contact',

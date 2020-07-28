@@ -10,7 +10,7 @@ import { Box, Flex } from '../../ui'
 
 export const Hero = styled(Flex)`
   flex-wrap: wrap;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
 
   img {

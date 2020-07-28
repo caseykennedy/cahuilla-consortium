@@ -15,6 +15,7 @@ export const Footer = styled(Flex)`
 
   background: ${theme.colors.tertiary};
   padding: ${theme.space[4]} ${theme.space[4]};
+  height: 100vh;
   width: 100vw;
 
   @media ${theme.mq.tablet} {

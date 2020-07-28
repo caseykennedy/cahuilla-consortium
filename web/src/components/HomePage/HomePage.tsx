@@ -14,6 +14,7 @@ import Divider from '../ui/Divider'
 
 // Components
 import Accordion from '../Accordion'
+import ImgMatch from '../ImgMatch'
 
 // Sections
 import Hero from './Hero'
@@ -37,6 +38,15 @@ const HomePage: React.FC = () => {
           Our objective is to promote the safety and well­ being of our Native
           women.
         </Text>
+        <Heading as="h3" fontSize={5} mt={8}>
+          Live a life
+          <br />
+          without violence.
+        </Heading>
+        <ImgMatch
+          src="hands-on-shoulder.jpg"
+          altText="Friends comforting each others."
+        />
       </Box>
 
       <Divider py={12} />
