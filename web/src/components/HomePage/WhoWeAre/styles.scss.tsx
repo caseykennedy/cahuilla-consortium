@@ -1,4 +1,4 @@
-// Rethink Styles:
+// Who We Are Styles:
 
 // ___________________________________________________________________
 
@@ -8,15 +8,9 @@ import { Box, Flex } from '../../ui'
 
 // ___________________________________________________________________
 
-export const Hero = styled(Flex)`
+export const WhoWeAre = styled.div`
   scroll-snap-align: start;
-  flex-wrap: wrap;
-  height: 80vh;
-  width: 100%;
-
-  img {
-    mix-blend-mode: luminosity;
-  }
+  padding: ${theme.space[4]};
 
   @media ${theme.mq.tablet} {
   }

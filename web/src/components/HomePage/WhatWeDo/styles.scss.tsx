@@ -1,4 +1,4 @@
-// Rethink Styles:
+// What We Do Styles:
 
 // ___________________________________________________________________
 
@@ -8,15 +8,8 @@ import { Box, Flex } from '../../ui'
 
 // ___________________________________________________________________
 
-export const Hero = styled(Flex)`
+export const WhatWeDo = styled.div`
   scroll-snap-align: start;
-  flex-wrap: wrap;
-  height: 80vh;
-  width: 100%;
-
-  img {
-    mix-blend-mode: luminosity;
-  }
 
   @media ${theme.mq.tablet} {
   }

@@ -177,7 +177,7 @@ const Typography = css`
 
   h2,
   .text--xl {
-    font-size: ${theme.root.font.lg};
+    font-size: ${theme.root.font.md};
     font-weight: 400;
 
     @media ${theme.mq.tablet} {
@@ -191,7 +191,7 @@ const Typography = css`
     /* line-height: ${theme.root.font.bodyLineHeight}; */
 
     @media ${theme.mq.tablet} {
-      font-size: ${theme.root.font.lg};
+      font-size: ${theme.root.font.md};
     }
   }
 

@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <S.Hero>
       <ImgMatch
-        src="hands-on-shoulder.jpg"
+        src="counseling.jpg"
         altText="Friends comforting each others."
       />
     </S.Hero>

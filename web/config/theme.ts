@@ -94,9 +94,9 @@ const theme: ThemeShape = {
   space: [
     '0',          // 0
     '0.25rem',    // 1
-    '0.5rem',     // 2
-    '1rem',       // 3
-    '1.5rem',     // 4
+    '0.75rem',     // 2
+    '1.25rem',       // 3
+    '1.75rem',     // 4
     '2rem',       // 5
     '3rem',       // 6
     '4rem',       // 7

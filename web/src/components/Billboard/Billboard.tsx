@@ -65,15 +65,15 @@ const Billboard = () => {
             Keeping our people safe
           </Heading>
           <Text as="p">
-            The Cahuilla Consortium’s goal is to recognize that domestic
-            violence and abuse, including physical, mental, verbal, and
-            emotional abuse, as well as stalking and dating violence, are
-            serious offenses against Native women, children and families.
+            The Vision of the Cahuilla Consortium Victim Advocacy Program
+            (CCVAP)is to END violence and victimization in our Tribal
+            communities. The CCVAP will support and promote the safety and
+            well-being of our community.
           </Text>
         </Box>
         <S.Telephone>
           <div className="title">Talk to an advocate</div>
-          <div className="tel">1 (800) 799-SAFE</div>
+          <div className="tel">1 (951) 330-0479</div>
         </S.Telephone>
         <S.Footnote>Crime victim advocacy &amp; crises center</S.Footnote>
       </S.Billboard>

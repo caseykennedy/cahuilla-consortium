@@ -29,7 +29,6 @@ export const Main = styled(animated.main)`
   max-height: 100%;
   position: relative;
   width: 100vw;
-  scroll-snap-type: y mandatory;
 
   @media ${theme.mq.tablet} {
     width: 50vw;
