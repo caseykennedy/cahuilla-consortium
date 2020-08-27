@@ -25,7 +25,7 @@ export const Nav = styled.nav`
   }
 
   .nav-link {
-    font-family: ${theme.fonts.heading};
+    font-family: ${theme.fonts.display};
     font-size: ${theme.fontSizes[1]};
     font-weight: 500;
     text-transform: uppercase;
@@ -54,7 +54,7 @@ export const Nav = styled.nav`
         position: absolute;
         content: '';
         background: ${theme.colors.white};
-        width: 0;
+        width: 100%;
         height: 2px;
         bottom: 0;
         right: 0;
@@ -68,7 +68,7 @@ export const Nav = styled.nav`
         /* color: ${theme.colors.tertiary}; */
 
         &::before {
-          width: 100%;
+          width: 0;
           left: 0;
         }
       }

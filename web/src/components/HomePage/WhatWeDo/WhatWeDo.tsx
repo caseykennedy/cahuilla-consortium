@@ -13,10 +13,12 @@ import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
 // UI
-import { Box, Text, Heading } from '../../ui'
+import { Box, Flex, Text, Heading } from '../../ui'
 
 // Components
 import ImgMatch from '../../ImgMatch'
+import Accordion from '../../Accordion'
+import AccordionChild from '../../Accordion/Accordion'
 
 // ___________________________________________________________________
 
@@ -24,7 +26,7 @@ const WhatWeDo = () => {
   return (
     <S.WhatWeDo>
       <Box p={4} mt={4}>
-        <Heading as="h2" fontSize={3} mb={4}>
+        <Heading as="h2" fontSize={2} mb={4}>
           What we do
         </Heading>
 
@@ -34,37 +36,63 @@ const WhatWeDo = () => {
           intervention, and the fostering of resiliency.
         </Text>
 
-        <Box py={[6, 8]} pl={[0, 10]}>
-          <Text as="p">
-            <strong>Our objective</strong>
-          </Text>
-          <Text as="p">
-            To promote the safety and well-being of our Native communities.
-          </Text>
-          <Text as="p">
-            <strong>Our belief</strong>
-          </Text>
-          <Text as="p">
-            People are at their best when contributing to society, and making
-            the choice to strengthen our community is a true expression of our
-            values.
-          </Text>
-          <Text as="p">
-            <strong>End goal</strong>
-          </Text>
-          <Text as="p">
-            To promote the safety and well-being of our Native communities. To
-            promote the safety and well-being of our Native communities. To
-            promote the safety and well-being of our Native communities.
-          </Text>
-        </Box>
+        {/* <hr /> */}
+
+        <Accordion title="What is our objective?" active={true} {...AccordionProps}>
+          <Flex className="content">
+            <Box width={[1 / 4]}>
+              <Text as="p">
+                <strong>Objective</strong>
+              </Text>
+            </Box>
+            <Box width={[3 / 4]} pl={[0, 4]}>
+              <Text as="p" fontSize={2}>
+                To promote the safety and well-being of our Native communities.
+              </Text>
+            </Box>
+          </Flex>
+        </Accordion>
+
+        <Accordion title="What do we believe?" {...AccordionProps}>
+          <Flex className="content">
+            <Box width={[1 / 4]}>
+              <Text as="p">
+                <strong>Our belief</strong>
+              </Text>
+            </Box>
+            <Box width={[3 / 4]} pl={[0, 4]}>
+              <Text as="p" pb={4}>
+                People are at their best when contributing to society, and
+                making the choice to strengthen our community is a true
+                expression of our values.
+              </Text>
+            </Box>
+          </Flex>
+        </Accordion>
+
+        <Accordion title="What is our end goal?" {...AccordionProps}>
+          <Flex className="content">
+            <Box width={[1 / 4]}>
+              <Text as="p">
+                <strong>End Goal</strong>
+              </Text>
+            </Box>
+            <Box width={[3 / 4]} pl={[0, 4]}>
+              <Text as="p" pb={4}>
+                To promote the safety and well-being of our Native communities.
+                To promote the safety and well-being of our Native communities.
+                To promote the safety and well-being of our Native communities.
+              </Text>
+            </Box>
+          </Flex>
+        </Accordion>
 
         <ImgMatch
           src="supporting-hands.jpg"
           altText="Friends comforting each others."
         />
 
-        <Heading as="h3" fontSize={5} mt={8} mb={4}>
+        <Heading as="h3" fontSize={5} fontFamily="display" mt={8} mb={4}>
           Live a life
           <br />
           without violence.
@@ -87,3 +115,7 @@ const WhatWeDo = () => {
 }
 
 export default WhatWeDo
+
+// ___________________________________________________________________
+
+const AccordionProps = {}

@@ -13,6 +13,7 @@ export const Hero = styled(Flex)`
   flex-wrap: wrap;
   height: 80vh;
   width: 100%;
+  
 
   img {
     mix-blend-mode: luminosity;

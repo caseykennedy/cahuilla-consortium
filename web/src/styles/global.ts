@@ -35,10 +35,12 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
-  #drawer-root {
-    position: relative;
-    z-index: 100;
+  hr {
+    border-top: 1px solid ${theme.colors.gray};
+    border-bottom: none;
   }
+
+
 `
 
 export default GlobalStyles

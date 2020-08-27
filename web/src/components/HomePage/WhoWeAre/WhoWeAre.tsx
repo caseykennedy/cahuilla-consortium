@@ -23,11 +23,11 @@ import ImgMatch from '../../ImgMatch'
 const WhoWeAre = () => {
   return (
     <S.WhoWeAre>
-      <Heading as="h2" fontSize={3} mb={4}>
+      <Heading as="h2" fontSize={2} mb={4}>
         Who we are
       </Heading>
 
-      <Text as="p" fontSize={3}>
+      <Text as="p">
         Each Tribe is represented on our Advisory Committee:
       </Text>
 

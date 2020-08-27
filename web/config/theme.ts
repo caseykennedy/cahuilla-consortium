@@ -77,15 +77,16 @@ const theme: ThemeShape = {
 
   colors: {
     text: '#000105',
-    background: '#E0D7CF',
+    background: '#EFEDEB',
     
     primary: '#E87414',
     secondary: '#52C3B8',
     tertiary: '#857AEB',
-    quaternary: '#E0D7CF',
+    quaternary: '#EFEDEB',
 
     black: '#000105',
     white: '#ffffff',
+    gray: '#B6B2AF',
   },
 
   // Space
@@ -121,7 +122,8 @@ const theme: ThemeShape = {
 
   fonts: {
     body: `"San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    heading: `"Staatliches", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    heading: `"San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    display: `"Staatliches", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     code: `"Bergen Mono", Consolas, Liberation Mono, Menlo, Courier, monospace`
   },
 

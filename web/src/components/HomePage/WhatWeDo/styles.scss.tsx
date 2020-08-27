@@ -9,7 +9,7 @@ import { Box, Flex } from '../../ui'
 // ___________________________________________________________________
 
 export const WhatWeDo = styled.div`
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 
   @media ${theme.mq.tablet} {
   }

@@ -4,23 +4,24 @@
 
 import React, { useState, useRef } from 'react'
 
-// Theme + Styles
+import { Box, Flex, Text, Heading } from '../ui'
+import Icon from '../Icons'
+
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
-
-// UI
-import { Box, Flex, Text, Heading } from '../ui'
 
 // ___________________________________________________________________
 
 type Props = {
+  active?: boolean
   children: React.ReactNode
   title: string
-  color: string
-  chevronColor: string
-  borderColor: string
-  colorActive: string
-  bg: string
+  color?: string
+  chevronColor?: string
+  chevronWidth?: string
+  borderColor?: string
+  colorActive?: string
+  bg?: string
   fontSize?: number | number[] | string
   subTitle?: string
   pt?: number | number[] | string
@@ -32,9 +33,11 @@ type Props = {
 // ___________________________________________________________________
 
 const Accordion: React.FC<Props> = ({
+  active,
   bg,
   borderColor,
   chevronColor,
+  chevronWidth,
   children,
   color,
   colorActive,
@@ -46,24 +49,22 @@ const Accordion: React.FC<Props> = ({
   pl,
   title
 }) => {
+  // Reference the accordion content height
+  const refContent = useRef<HTMLDivElement>(null)
+
   // Accordion hooks
   const [setActive, setActiveState] = useState('')
   const [setHeight, setHeightState] = useState('0px')
   const [setRotate, setRotateState] = useState('accordion-icon')
 
-  // Reference the accordion content height
-  const refContent = useRef<HTMLDivElement>(null)
-
   // Toggle classes / height
   function toggleAccordion() {
     setActiveState(setActive === '' ? 'active' : '')
-    
-    if (null !== refContent.current) {
+    if (null !== refContent) {
       setHeightState(
         setActive === 'active' ? '0px' : `${refContent.current.scrollHeight}px`
       )
     }
-
     setRotateState(
       setActive === 'active' ? 'accordion-icon' : 'accordion-icon rotate'
     )
@@ -83,25 +84,28 @@ const Accordion: React.FC<Props> = ({
           pl={pl}
         >
           <S.AccordionToggleInner width={2 / 3}>
-            <Heading as="h3" fontSize={fontSize} mb={0} width={1 / 2}>
+            <Heading as="h4" fontSize={fontSize} width={1}>
               {title}
             </Heading>
-            <Text as="span" mb={0}>
-              {subTitle}
-            </Text>
+            {subTitle && (
+              <Text as="span" mb={0}>
+                {subTitle}
+              </Text>
+            )}
           </S.AccordionToggleInner>
           <S.Carat
-            name="nextArrow"
-            color="white"
             className={setRotate}
             chevronColor={chevronColor}
-          />
+            chevronWidth={chevronWidth}
+          >
+            <Icon name="plus" color="black" />
+          </S.Carat>
         </S.AccordionToggle>
         <S.AccordionContent
           ref={refContent}
           style={{ maxHeight: `${setHeight}` }}
         >
-          <Box>{children}</Box>
+          {children}
         </S.AccordionContent>
       </S.AccordionInner>
     </S.AccordionContainer>
@@ -113,10 +117,10 @@ export default Accordion
 // ___________________________________________________________________
 
 const defaultProps = {
-  pt: [4, 6],
-  pb: [4, 6],
-  pr: [4, 6],
-  pl: [4, 6]
+  pt: [4],
+  pb: [4],
+  pr: [0],
+  pl: [0]
 }
 
 Accordion.defaultProps = defaultProps

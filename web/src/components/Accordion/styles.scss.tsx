@@ -6,12 +6,10 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-import Icon from '../Icons'
-
 // Theme
 import theme from '../../../config/theme'
 
-// Elements
+// UI
 import { Box, Flex } from '../ui'
 
 // Begin Styles
@@ -19,10 +17,10 @@ import { Box, Flex } from '../ui'
 
 // export const AccordionContainer = styled.div<{ chevronColor: string }>`
 
-export const AccordionContainer = styled.div<{ borderColor: string }>`
+export const AccordionContainer = styled.div<{ borderColor?: string }>`
   width: 100%;
   position: relative;
-  border-top: 2px solid ${p => p.borderColor};
+  border-top: 1px solid ${p => p.borderColor};
 
   /* &:first-child {
     border-top: none;
@@ -34,12 +32,12 @@ export const AccordionInner = styled.div`
   flex-direction: column;
 
   .rotate {
-    transform: rotate(90deg);
+    transform: rotate(45deg);
   }
 `
 
-export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, color: string }>`
-  align-items: flex-end;
+export const AccordionToggle = styled(Flex)<{ bg?: string, colorActive?: string, color?: string }>`
+  align-items: center;
   justify-content: space-between;
   background: ${p => p.bg};
   color: ${p => p.color};
@@ -47,7 +45,7 @@ export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, c
 
   border: none;
   outline: none;
-  transition: background-color 0.6s ease;
+  transition: color 0.6s ease;
 
   &:last-child {
     margin-bottom: 0;
@@ -56,7 +54,6 @@ export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, c
   &:hover,
   &.active  {
     color: ${p => p.colorActive};
-    background: ${theme.colors.white};
   }
 `
 
@@ -67,13 +64,11 @@ export const AccordionToggleInner = styled(Flex)`
     flex-direction: row;
   }
 
-  h3 {
-    line-height: 0.6;
-    text-transform: uppercase;
-    margin-bottom: ${theme.space[3]};
+  h4 {
+    font-weight: 400;
+    margin-bottom: 0;
 
     @media ${theme.mq.desktop} {
-      margin-bottom: 0;
     }
   }
 `
@@ -81,14 +76,20 @@ export const AccordionToggleInner = styled(Flex)`
 export const AccordionContent = styled(Box)`
   overflow: hidden;
   transition: max-height 0.3s ease;
+
+  .content {
+    border-top: 1px solid ${theme.colors.gray};
+    padding-top: ${theme.space[4]};
+    padding-bottom: ${theme.space[4]};
+  }
 `
 
-export const Carat = styled(Icon)<{ chevronColor: string }>`
-  margin-right: ${theme.space[2]};
+export const Carat = styled(Box)<{ chevronColor?: string, chevronWidth?: string }>`
+  /* margin-right: ${theme.space[2]}; */
   transition: transform 0.3s ease;
 
   @media ${theme.mq.tablet} {
-    margin-right: ${theme.space[4]};
+    margin-right: ${theme.space[3]};
   }
 
   svg {
@@ -96,7 +97,7 @@ export const Carat = styled(Icon)<{ chevronColor: string }>`
     width: ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
-      width: ${theme.space[6]};
+      width: ${p => !p.chevronWidth ? theme.space[6] : p.chevronWidth};
     }
   }
 `

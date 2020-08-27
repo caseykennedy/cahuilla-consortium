@@ -168,20 +168,20 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.root.font.xxl} / 1.25);
+    font-family: ${theme.fonts.display};
+    font-size: calc(${theme.root.font.xl} / 1);
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.xxl} / 1.15);
+      font-size: calc(${theme.root.font.xxl} / 1);
     }
   }
 
   h2,
   .text--xl {
-    font-size: ${theme.root.font.md};
-    font-weight: 400;
+    font-size: ${theme.root.font.lg};
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.lg} * 1);
+      font-size: calc(${theme.root.font.xl} * 1);
     }
   }
 
@@ -191,26 +191,22 @@ const Typography = css`
     /* line-height: ${theme.root.font.bodyLineHeight}; */
 
     @media ${theme.mq.tablet} {
-      font-size: ${theme.root.font.md};
+      font-size: ${theme.root.font.lg};
     }
   }
 
   h4,
   .text--md {
     font-size: ${theme.fontSizes[2]};
-    font-weight: 500;
     /* line-height: ${theme.root.font.bodyLineHeight}; */
-    text-transform: uppercase;
-      margin: 0 0 2em;
 
     @media ${theme.mq.tablet} {
-      margin: 0 0 1.5em;
     }
   }
 
   h5,
   .text--sm {
-    font-size: ${theme.fontSizes[1]};
+    font-size: ${theme.root.font.xs};
     /* font-weight: 400; */
     line-height: ${theme.root.font.bodyLineHeight};
     text-transform: uppercase;
@@ -218,6 +214,7 @@ const Typography = css`
 
     @media ${theme.mq.tablet} {
       margin: 0 0 1.5em;
+      font-size: ${theme.root.font.sm};
     }
   }
 
@@ -245,7 +242,7 @@ const Typography = css`
   }
 
   strong {
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .t--small {
