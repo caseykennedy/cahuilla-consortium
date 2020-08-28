@@ -22,6 +22,7 @@ const Navigation = () => {
             to={item.link}
             className="nav-link__title"
             activeClassName="active"
+            aria-label="Jump to section"
           >
             {item.name}
           </Link>

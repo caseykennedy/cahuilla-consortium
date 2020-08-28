@@ -27,11 +27,16 @@ import Hero from '../Hero'
 const WhoWeAre = () => {
   return (
     <S.WhoWeAre id="who-we-are">
-      <Hero />
+      <Hero src="counseling.jpg" altText="Therapist and patient talking." />
       <Box p={4}>
-        <Heading as="h2" fontSize={2} mb={6}>
-          Who we are
-        </Heading>
+        <Flex justifyContent="flex-end">
+          <Box width={1 / 3}>2.</Box>
+          <Box width={2 / 3}>
+            <Heading as="h2" fontSize={2} mb={6}>
+              Who we are
+            </Heading>
+          </Box>
+        </Flex>
 
         <Text as="p" className="t--lead">
           The Cahuilla Consortium was formed by the Lost Coyotes Band of
@@ -39,12 +44,14 @@ const WhoWeAre = () => {
           Santa Rosa Band of Cahuilla Indians.
         </Text>
 
-        <Text as="p" className="t--lead">
+        <Text as="p">
           We have been advocating for Victims of Domestic Vioilence, Sexual
           Assault, Stalking, and Sex/Human Trafficking since 2010.
         </Text>
 
-        <Text as="p" fontWeight={500}>
+        <hr />
+
+        <Text as="p" fontWeight={500} mt={4}>
           Each Tribe is represented on our Advisory Committee:
         </Text>
 
@@ -54,10 +61,16 @@ const WhoWeAre = () => {
           <li>A representative from our local Indian Health Clinic</li>
         </ListBox>
 
-        <Text as="p" mt={4}>
-          The Advisory Committee meets monthly to provide policy guidance and to
-          serve as a conduit to the tribal communities.
-        </Text>
+        <Flex justifyContent="flex-end">
+          <Box width={2 / 3}>
+            <Text as="p" mt={4} pb={4}>
+              The Advisory Committee meets monthly to provide policy guidance
+              and to serve as a conduit to the tribal communities.
+            </Text>
+          </Box>
+        </Flex>
+
+        <hr />
 
         <Box my={8}>
           <ImgMatch
@@ -101,7 +114,9 @@ const WhoWeAre = () => {
             </Box>
             <Box width={[3 / 4]} pl={[0, 4]}>
               <Text as="p">
-              We work diligently to end all victimization against our tribal people through advocacy and education efforts that include prevention, intervention, and the fostering of resiliency.
+                We work diligently to end all victimization against our tribal
+                people through advocacy and education efforts that include
+                prevention, intervention, and the fostering of resiliency.
               </Text>
             </Box>
           </Flex>

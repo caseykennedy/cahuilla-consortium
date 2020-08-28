@@ -45,7 +45,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
       <S.Header as="header">
         <S.Logo>
-          <Link to="/" aria-label="Ortho Implant Co., back to home">
+          <Link to="/" aria-label="Back to home">
             <div className="symbol">
               <Symbol />
             </div>
@@ -56,7 +56,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         </S.Logo>
 
         <S.Tools>
-          <S.Toggle onClick={toggleModal} aria-label="toggle menu">
+          <S.Toggle onClick={toggleModal} aria-label="Toggle menu">
             <Icon name="hamburger" color="black" />
           </S.Toggle>
 

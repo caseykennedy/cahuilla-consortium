@@ -234,9 +234,9 @@ const Typography = css`
       font-size: ${theme.fontSizes[1]};
     }
 
-    /* &:last-child {
+    &:last-child {
       margin-bottom: 0;
-    } */
+    }
   }
 
   strong {
@@ -244,7 +244,8 @@ const Typography = css`
   }
 
   .t--lead {
-    font-size: calc(${theme.fontSizes[1]} * 1.25);
+    font-size: calc(${theme.fontSizes[1]} * 1.5);
+    margin-bottom: 1em;
   }
 
   .t--small {
@@ -275,12 +276,12 @@ const Typography = css`
 
     transition: ${theme.transition.all};
 
-    /* color: ${theme.colors.primary}; */
+    color: ${theme.colors.primary};
 
     &:hover,
     &:focus {
       text-decoration: none;
-      color: ${darken(0.05, `${theme.colors.secondary}`)};
+      color: ${darken(0.1, `${theme.colors.primary}`)};
     }
   }
 
@@ -336,7 +337,6 @@ const Typography = css`
   }
 
   ul {
-    margin: 0 0 1.5em 0;
     list-style-type: none;
 
     li {
