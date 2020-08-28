@@ -20,6 +20,7 @@ type Props = {
   chevronColor?: string
   chevronWidth?: string
   borderColor?: string
+  borderTop?: boolean
   colorActive?: string
   bg?: string
   fontSize?: number | number[] | string
@@ -36,6 +37,7 @@ const Accordion: React.FC<Props> = ({
   active,
   bg,
   borderColor,
+  borderTop,
   chevronColor,
   chevronWidth,
   children,
@@ -57,6 +59,8 @@ const Accordion: React.FC<Props> = ({
   const [setHeight, setHeightState] = useState('0px')
   const [setRotate, setRotateState] = useState('accordion-icon')
 
+  
+
   // Toggle classes / height
   function toggleAccordion() {
     setActiveState(setActive === '' ? 'active' : '')
@@ -70,7 +74,7 @@ const Accordion: React.FC<Props> = ({
     )
   }
   return (
-    <S.AccordionContainer borderColor={borderColor}>
+    <S.AccordionContainer borderColor={borderColor} borderTop={borderTop}>
       <S.AccordionInner>
         <S.AccordionToggle
           className={setActive}
@@ -98,7 +102,7 @@ const Accordion: React.FC<Props> = ({
             chevronColor={chevronColor}
             chevronWidth={chevronWidth}
           >
-            <Icon name="plus" color="black" />
+            <Icon name="carat" color="black" />
           </S.Carat>
         </S.AccordionToggle>
         <S.AccordionContent
@@ -120,7 +124,14 @@ const defaultProps = {
   pt: [4],
   pb: [4],
   pr: [0],
-  pl: [0]
+  pl: [0],
+  title: 'title',
+  color: theme.colors.text,
+  chevronColor: theme.colors.text,
+  chevronWidth: theme.space[2],
+  borderColor: theme.colors.text,
+  borderTop: false,
+  colorActive: theme.colors.text
 }
 
 Accordion.defaultProps = defaultProps

@@ -38,22 +38,22 @@ export default Navigation
 const data = [
   {
     name: 'what we do',
-    link: '/what-we-do'
+    link: '/#what-we-do'
   },
   {
     name: 'who we are',
-    link: '/who-we-are'
+    link: '/#who-we-are'
   },
   {
     name: 'Resources',
-    link: '/volunteer'
+    link: '/#resources'
   },
   {
     name: 'FAQ',
-    link: '/FAQ'
+    link: '/#FAQ'
   },
   {
     name: 'contact',
-    link: '/contact'
+    link: '/#contact'
   }
 ]

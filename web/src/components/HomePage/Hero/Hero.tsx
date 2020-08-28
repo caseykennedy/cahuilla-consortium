@@ -15,21 +15,26 @@ import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
-const Hero = () => {
-  const fadeAnimation = useSpring({
-    config: config.molasses,
-    delay: 260,
-    from: { opacity: 0, transform: theme.transform.matrix.from },
-    to: { opacity: 1, transform: theme.transform.matrix.to }
-  })
+type Props = {
+  altText: string
+  src: string
+}
+
+const Hero: React.FC<Props> = ({ altText, src }) => {
   return (
     <S.Hero>
-      <ImgMatch
-        src="counseling.jpg"
-        altText="Friends comforting each others."
-      />
+      <ImgMatch src={src} altText={altText} />
     </S.Hero>
   )
 }
 
 export default Hero
+
+// ___________________________________________________________________
+
+const defaultProps = {
+  altText: 'Friends comforting each others.',
+  src: 'counseling.jpg'
+}
+
+Hero.defaultProps = defaultProps

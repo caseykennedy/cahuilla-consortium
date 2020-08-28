@@ -26,11 +26,8 @@ import WhoWeAre from './WhoWeAre'
 const HomePage: React.FC = () => {
   return (
     <S.HomePage>
-      <Hero />
       <WhatWeDo />
-      <Hero />
       <WhoWeAre />
-      <Hero />
       <Divider py={12} />
     </S.HomePage>
   )

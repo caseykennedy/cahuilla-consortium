@@ -122,7 +122,7 @@ const theme: ThemeShape = {
 
   fonts: {
     body: `"San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    heading: `"San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    heading: `"Staatliches", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     display: `"Staatliches", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     code: `"Bergen Mono", Consolas, Liberation Mono, Menlo, Courier, monospace`
   },
@@ -173,7 +173,7 @@ const theme: ThemeShape = {
     }
   },
 
-  border: '2px solid #000000',
+  border: '1px solid #000000',
   shadow: '2rem 1.5rem 1rem #8a8a7c',
 
   root: {

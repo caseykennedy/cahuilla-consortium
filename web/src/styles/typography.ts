@@ -210,10 +210,8 @@ const Typography = css`
     /* font-weight: 400; */
     line-height: ${theme.root.font.bodyLineHeight};
     text-transform: uppercase;
-    margin: 0 0 1em;
 
     @media ${theme.mq.tablet} {
-      margin: 0 0 1.5em;
       font-size: ${theme.root.font.sm};
     }
   }
@@ -227,26 +225,30 @@ const Typography = css`
   }
 
   p {
-    font-size: calc(${theme.root.font.baseSize} * 1.25);
+    font-size: ${theme.fontSizes[2]};
     font-weight: 400;
     line-height: ${theme.root.font.bodyLineHeight};
-    margin-bottom: 1.5em;
+    margin-bottom: 1.75em;
 
     @media ${theme.mq.tablet} {
-      font-size: ${theme.fontSizes[2]};
+      font-size: ${theme.fontSizes[1]};
     }
 
-    &:last-child {
+    /* &:last-child {
       margin-bottom: 0;
-    }
+    } */
   }
 
   strong {
     font-weight: 500;
   }
 
+  .t--lead {
+    font-size: calc(${theme.fontSizes[1]} * 1.25);
+  }
+
   .t--small {
-    font-size: calc(${theme.fontSizes[1]} / 1);
+    font-size: calc(${theme.fontSizes[1]} / 1.25);
   }
 
   .t-underline {
@@ -334,13 +336,18 @@ const Typography = css`
   }
 
   ul {
-    margin: 0 0 1.5em 1.15rem;
-    list-style-type: disc;
+    margin: 0 0 1.5em 0;
+    list-style-type: none;
 
     li {
       list-style-position: outside;
       /* font-size: calc(${theme.root.font.baseSize} / 1); */
       line-height: ${theme.root.font.bodyLineHeight};
+      font-size: ${theme.fontSizes[2]};
+
+      @media ${theme.mq.tablet} {
+        font-size: ${theme.fontSizes[1]};
+      }
 
       @media ${theme.mq.tablet} {
         /* font-size: calc(${theme.root.font.baseSize} / 1.25); */

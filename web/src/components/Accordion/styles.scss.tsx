@@ -17,10 +17,11 @@ import { Box, Flex } from '../ui'
 
 // export const AccordionContainer = styled.div<{ chevronColor: string }>`
 
-export const AccordionContainer = styled.div<{ borderColor?: string }>`
+export const AccordionContainer = styled.div<{ borderColor?: string, borderTop?: boolean }>`
   width: 100%;
   position: relative;
-  border-top: 1px solid ${p => p.borderColor};
+  border-bottom: 1px solid ${p => p.borderColor};
+  border-top: ${p => !p.borderTop ? 'none' : theme.border};
 
   /* &:first-child {
     border-top: none;
@@ -65,7 +66,7 @@ export const AccordionToggleInner = styled(Flex)`
   }
 
   h4 {
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 0;
 
     @media ${theme.mq.desktop} {
@@ -78,7 +79,7 @@ export const AccordionContent = styled(Box)`
   transition: max-height 0.3s ease;
 
   .content {
-    border-top: 1px solid ${theme.colors.gray};
+    /* border-top: 1px solid ${theme.colors.gray}; */
     padding-top: ${theme.space[4]};
     padding-bottom: ${theme.space[4]};
   }
