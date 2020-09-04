@@ -35,7 +35,7 @@ type CallbackTypes = {
 
 const billboardProps = {
   bg: theme.colors.secondary,
-  title: `Love shouldn't hurt.`
+  title: `Love<br />shouldn't<br />hurt.`
 }
 
 const WhoWeAre = () => {
@@ -49,8 +49,6 @@ const WhoWeAre = () => {
     const scrollPos = scrollRef.current.getBoundingClientRect().top
 
     setBillboardActive(scrollPos < 1)
-
-    console.log(billboardActive)
   })
 
   return (

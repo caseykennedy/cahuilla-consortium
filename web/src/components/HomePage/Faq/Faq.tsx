@@ -35,7 +35,7 @@ type CallbackTypes = {
 
 const billboardProps = {
   bg: theme.colors.tertiary,
-  title: `Women are sacred.`
+  title: `Women<br />are<br />sacred.`
 }
 
 const Faq = () => {
@@ -49,8 +49,6 @@ const Faq = () => {
     const scrollPos = scrollRef.current.getBoundingClientRect().top
 
     setBillboardActive(scrollPos < 1)
-
-    console.log(billboardActive)
   })
 
   return (

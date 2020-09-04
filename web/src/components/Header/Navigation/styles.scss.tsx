@@ -20,7 +20,7 @@ export const Nav = styled.nav`
 
   display: none;
 
-  @media ${theme.mq.desktop} {
+  @media (min-width: 1100px) {
     display: flex;
   }
 

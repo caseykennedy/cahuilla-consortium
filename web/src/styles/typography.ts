@@ -115,7 +115,7 @@ const Typography = css`
   }
 
   html {
-    font-size: 20px;
+    font-size: 18px;
     box-sizing: border-box;
     border: 0;
     margin: 0;
@@ -173,6 +173,7 @@ const Typography = css`
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.root.font.xxl} / 1);
+      line-height: 0.85;
     }
   }
 
