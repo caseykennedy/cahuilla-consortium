@@ -9,6 +9,11 @@ import { throttle } from 'lodash'
 
 // ___________________________________________________________________
 
+type CallbackTypes = {
+  previousScrollTop: number
+  currentScrollTop: number
+}
+
 function useScrollWatch(callback: any) {
   const [, setScrollPosition] = useState(0)
   let previousScrollTop = 0
@@ -36,5 +41,3 @@ function useScrollWatch(callback: any) {
 }
 
 export default useScrollWatch
-
-// ___________________________________________________________________

@@ -13,7 +13,7 @@ import theme from '../../../../config/theme'
 
 export const Nav = styled.nav`
   align-items: flex-end;
-  justify-content: flex-start;
+  justify-content: flex-end;
   padding: ${theme.space[4]} ${theme.space[4]} calc(${theme.space[3]} * 1.75) ${theme.space[4]}; 
   width: 100%;
   z-index: 999;
@@ -27,7 +27,6 @@ export const Nav = styled.nav`
   .nav-link {
     font-family: ${theme.fonts.display};
     font-size: ${theme.fontSizes[1]};
-    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 

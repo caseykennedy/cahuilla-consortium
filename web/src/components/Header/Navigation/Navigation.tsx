@@ -5,11 +5,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Icon from '../../Icons'
-import { Box } from '../../ui'
+// Libraries
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-import theme from '../../../../config/theme'
+// Theme + Styles
 import * as S from './styles.scss'
+import theme from '../../../../config/theme'
+
+// UI
+import { Box } from '../../ui'
 
 // ___________________________________________________________________
 
@@ -39,19 +43,19 @@ export default Navigation
 const data = [
   {
     name: 'what we do',
-    link: '/#what-we-do'
+    link: '/#what'
   },
   {
     name: 'who we are',
-    link: '/#who-we-are'
-  },
-  {
-    name: 'Resources',
-    link: '/#resources'
+    link: '/#who'
   },
   {
     name: 'FAQ',
-    link: '/#FAQ'
+    link: '/#faq'
+  },
+  {
+    name: 'blog',
+    link: '/#blog'
   },
   {
     name: 'contact',

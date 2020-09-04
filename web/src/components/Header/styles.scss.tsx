@@ -18,12 +18,17 @@ import { Box, Flex, AnimatedFlex } from '../ui'
 export const Header = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
-  position: absolute;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin-top: -${theme.headerHeight};
+
   width: 100vw;
   height: ${theme.headerHeight};
-  z-index: 999;
 
   color: ${theme.colors.white};
+  z-index: 9999;
 
   @media ${theme.mq.tablet} {
     width: 50vw;

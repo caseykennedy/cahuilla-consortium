@@ -54,12 +54,31 @@ const Accordion: React.FC<Props> = ({
   // Reference the accordion content height
   const refContent = useRef<HTMLDivElement>(null)
 
-  // Accordion hooks
-  const [setActive, setActiveState] = useState('')
-  const [setHeight, setHeightState] = useState('0px')
-  const [setRotate, setRotateState] = useState('accordion-icon')
+  let activeState
+  let heightState
+  let rotateState
 
-  
+  if (!active) {
+    activeState = ''
+    heightState = '0px'
+    rotateState = 'accordion-icon'
+  } else {
+    activeState = 'active'
+    heightState = '100%'
+    rotateState = 'accordion-icon rotate'
+  }
+
+  // Accordion hooks
+  const [setActive, setActiveState] = useState(activeState)
+  const [setHeight, setHeightState] = useState(heightState)
+  const [setRotate, setRotateState] = useState(rotateState)
+
+  // setHeightState(
+  //   setActive === 'active' ? '0px' : `${refContent.current.scrollHeight}px`
+  // )
+  // setRotateState(
+  //   setActive === 'active' ? 'accordion-icon' : 'accordion-icon rotate'
+  // )
 
   // Toggle classes / height
   function toggleAccordion() {

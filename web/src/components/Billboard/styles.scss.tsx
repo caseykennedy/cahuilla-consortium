@@ -16,22 +16,24 @@ import { Box, Flex, AnimatedFlex } from '../ui'
 // ___________________________________________________________________
 
 export const Billboard = styled(Flex)`
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
   padding-top: calc(${theme.headerHeight} + ${theme.space[7]});
   position: relative;
+  height: 100vh;
   width: 100vw;
+  z-index: 99;
 
-  /* background: ${theme.colors.primary}; */
   color: ${theme.colors.white};
-  transition: ${theme.transition.all};
 
   @media ${theme.mq.tablet} {
     position: sticky;
     top: 0;
     width: 50vw;
+  }
+
+  .inner {
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 `
 

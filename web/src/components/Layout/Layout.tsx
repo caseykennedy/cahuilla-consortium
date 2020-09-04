@@ -3,23 +3,29 @@
 
 // ___________________________________________________________________
 
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 import Header from '../Header'
-import Billboard from '../Billboard'
 import Footer from '../Footer'
-import Cursor from '../Cursor'
 
 import theme from '../../../config/theme'
 import GlobalStyles from '../../styles/global'
 import * as S from './styles.scss'
 import 'swiper/css/swiper.css'
 
+// Hooks
+import useScrollWatch from '../../hooks/useScrollWatch'
+
 // ___________________________________________________________________
 
-export type LayoutProps = {
+type CallbackTypes = {
+  previousScrollTop: number
+  currentScrollTop: number
+}
+
+type LayoutProps = {
   children: React.ReactNode
   isShowing?: boolean
   toggleOverlay?: () => void
@@ -46,10 +52,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <GlobalStyles />
       <ParallaxProvider>
         <S.Wrapper>
-          <S.Aside as="aside">
-            <Header mainRef={mainRef} />
-            <Billboard />
-          </S.Aside>
+          <Header mainRef={mainRef} />
           <S.Main ref={mainRef}>{children}</S.Main>
         </S.Wrapper>
         <Footer />

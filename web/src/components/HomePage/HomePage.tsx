@@ -20,6 +20,7 @@ import ImgMatch from '../ImgMatch'
 import Hero from './Hero'
 import WhatWeDo from './WhatWeDo'
 import WhoWeAre from './WhoWeAre'
+import Faq from './Faq'
 
 // ___________________________________________________________________
 
@@ -28,7 +29,7 @@ const HomePage: React.FC = () => {
     <S.HomePage>
       <WhatWeDo />
       <WhoWeAre />
-      <Divider py={12} />
+      <Faq />
     </S.HomePage>
   )
 }

@@ -8,8 +8,8 @@ import { Box, Flex } from '../../ui'
 
 // ___________________________________________________________________
 
-export const WhatWeDo = styled.div`
-  /* scroll-snap-align: start; */
+export const WhatWeDo = styled(Flex)`
+  flex-wrap: wrap;
 
   @media ${theme.mq.tablet} {
   }

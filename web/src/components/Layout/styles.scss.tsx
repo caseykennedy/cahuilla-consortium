@@ -16,7 +16,7 @@ export const Wrapper = styled(Flex)`
   justify-content: flex-start;
 
   width: 100vw;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   position: relative;
   background: ${theme.colors.background};
 
@@ -25,22 +25,23 @@ export const Wrapper = styled(Flex)`
   }
 `
 
-export const Main = styled(animated.main)`
-  max-height: 100%;
+export const Main = styled.main`
+  /* max-height: 100%; */
   position: relative;
   width: 100vw;
 
   @media ${theme.mq.tablet} {
-    width: 50vw;
   }
 `
 
 export const Aside = styled(Flex)`
-  background: ${theme.colors.primary};
-  position: relative;
+  /* background: ${theme.colors.primary}; */
+  position: fixed;
   width: 100vw;
   height: 100vh;
   max-height: 100%;
+
+  z-index: 9999;
 
   @media ${theme.mq.tablet} {
     width: 50vw;
