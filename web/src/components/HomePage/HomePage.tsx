@@ -21,6 +21,7 @@ import Hero from './Hero'
 import WhatWeDo from './WhatWeDo'
 import WhoWeAre from './WhoWeAre'
 import Faq from './Faq'
+import Resources from './Resources'
 
 // ___________________________________________________________________
 
@@ -30,6 +31,7 @@ const HomePage: React.FC = () => {
       <WhatWeDo />
       <WhoWeAre />
       <Faq />
+      <Resources />
     </S.HomePage>
   )
 }
