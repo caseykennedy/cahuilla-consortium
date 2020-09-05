@@ -57,13 +57,13 @@ const WhatWeDo = () => {
   })
 
   return (
-    <S.WhatWeDo id="what" ref={scrollRef}>
+    <S.WhatWeDo ref={scrollRef}>
       <Box width={[1, 1 / 2]}>
         <Billboard {...billboardProps} />
       </Box>
       <Box width={[1, 1 / 2]}>
         <Hero src="group-hands.jpg" altText="Group raising hands in the air." />
-        <Box p={4}>
+        <Box p={4} id="what">
           <Flex justifyContent="flex-end">
             <Box width={1 / 3}>1.</Box>
             <Box width={2 / 3}>

@@ -20,6 +20,7 @@ import ListBox from '../../ui/ListBox'
 import ImgMatch from '../../ImgMatch'
 import Accordion from '../../Accordion'
 import Billboard from '../../Billboard'
+import Icon from '../../Icons'
 
 import Hero from '../Hero'
 
@@ -58,8 +59,20 @@ const Resources = () => {
       </Box>
       <Box width={[1, 1 / 2]}>
         <S.ButtonGroup flexWrap="wrap">
-          <button>Get in touch</button>
-          <button>Volunteer</button>
+          <button>
+            <Heading as="h3">Get in touch</Heading>
+            <Flex as="p">
+              <div>We're always here for you.</div>
+              <Icon name="nextArrow" />
+            </Flex>
+          </button>
+          <button>
+            <Heading as="h3">Volunteer</Heading>
+            <Flex as="p">
+              <div>Helping others is the best medicine.</div>
+              <Icon name="nextArrow" />
+            </Flex>
+          </button>
         </S.ButtonGroup>
       </Box>
     </S.Resources>

@@ -32,6 +32,7 @@ const HomePage: React.FC = () => {
       <WhoWeAre />
       <Faq />
       <Resources />
+      <Divider py={11} />
     </S.HomePage>
   )
 }

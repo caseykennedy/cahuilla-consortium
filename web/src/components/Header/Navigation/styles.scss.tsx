@@ -25,11 +25,6 @@ export const Nav = styled.nav`
   }
 
   .nav-link {
-    font-family: ${theme.fonts.display};
-    font-size: ${theme.fontSizes[1]};
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-
     margin-left: ${theme.space[3]};
     position: relative;
     cursor: pointer;
@@ -49,6 +44,11 @@ export const Nav = styled.nav`
     }
 
     a {
+      font-family: ${theme.fonts.display};
+      font-size: ${theme.fontSizes[1]};
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+
       &::before {
         position: absolute;
         content: '';

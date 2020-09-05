@@ -9,6 +9,8 @@ import { darken } from 'polished'
 
 // ___________________________________________________________________
 
+const buttonBorder = `4px solid ${theme.colors.background}`
+
 export const Resources = styled(Flex)`
   flex-wrap: wrap;
 
@@ -24,16 +26,23 @@ export const ButtonGroup = styled(Flex)`
 
   button {
     background: ${theme.colors.tertiary};
-
     border-top: none;
-    border-right: 2px solid ${theme.colors.background};
-    border-bottom: 2px solid ${theme.colors.background};
-    border-left: 2px solid ${theme.colors.background};
-
+    border-right: none;
+    border-bottom: ${buttonBorder};
+    border-left: ${buttonBorder};
     border-radius: 0;
+    color: ${theme.colors.white};
     cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: left;
+
     height: calc(50vh);
     width: 100%;
+    padding: ${theme.space[6]};
     transition: ${theme.transition.all};
 
     &:last-child {
@@ -41,7 +50,26 @@ export const ButtonGroup = styled(Flex)`
     }
 
     &:hover {
-      background: ${darken(0.05, theme.colors.tertiary)};
+      background: ${darken(0.025, theme.colors.tertiary)};
+    }
+
+    p {
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      div {
+
+      }
+
+      span {
+        align-self: flex-end;
+
+        svg {
+          fill: ${theme.colors.white};
+          width: 56px;
+        }
+      }
     }
   }
 `

@@ -43,7 +43,7 @@ const Billboard: React.FC<Props> = ({ active, bg, message, title }) => {
   return (
     <S.Billboard bg={bg}>
       <AnimatedFlex className="inner" style={fadeIn}>
-        <Box p={4}>
+        <Box p={4} className={`contact ${!active ? 'hide' : 'show'}`}>
           <Heading
             as="h1"
             className="t--uppercase"
