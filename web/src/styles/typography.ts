@@ -217,10 +217,6 @@ const Typography = css`
     }
   }
 
-  small {
-    font-size: calc(${theme.fontSizes[1]} / 1.25);
-  }
-
   .text--xs {
     font-size: ${theme.root.font.xs};
   }
@@ -249,8 +245,9 @@ const Typography = css`
     margin-bottom: 1em;
   }
 
+  small,
   .t--small {
-    font-size: calc(${theme.fontSizes[1]} / 1.25);
+    font-size: calc(${theme.fontSizes[1]} / 1.45);
   }
 
   .t-underline {

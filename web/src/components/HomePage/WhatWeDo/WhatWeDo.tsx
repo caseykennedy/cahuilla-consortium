@@ -66,17 +66,12 @@ const WhatWeDo = () => {
       <Box width={[1, 1 / 2]}>
         <Hero src="group-hands.jpg" altText="Group raising hands in the air." />
         <Box p={4} id="what">
-          <Flex justifyContent="flex-end">
-            <Box width={1 / 3}>1.</Box>
-            <Box width={2 / 3}>
-              <Heading as="h2" fontSize={2} mb={6}>
-                What we do
-              </Heading>
-            </Box>
-          </Flex>
+          <Heading as="h3" mb={6}>
+            What we do
+          </Heading>
 
           <Text as="p" className="t--lead">
-            We work diligently to end all victimization against our tribal
+            Our mission is to work to end all victimization against our tribal
             people through advocacy and education efforts that include
             prevention, intervention, and the fostering of resiliency.
           </Text>
@@ -86,7 +81,7 @@ const WhatWeDo = () => {
             Native communities.
           </Text>
 
-          <Heading as="h3" fontSize={5} fontFamily="display" mt={8}>
+          <Heading as="h4" fontSize={5} fontFamily="display" mt={8}>
             Live a life
             <br />
             without violence.
@@ -99,12 +94,13 @@ const WhatWeDo = () => {
             />
           </Box>
 
-          <Heading as="h2" fontSize={2} mb={6}>
-            What we can help with
+          <Heading as="h3" mb={6}>
+            How we can help
           </Heading>
 
           <ListBox>
             <li>Emergency short term &amp; basic needs</li>
+            <li>In-person support through Advocacy</li>
             <li>Moving &amp; relocation</li>
             <li>Small home repair &amp; locksmith</li>
             <li>Transport / Public transportation assistance</li>

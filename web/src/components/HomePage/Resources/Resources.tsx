@@ -61,7 +61,7 @@ const Resources = () => {
         <Billboard active={billboardActive} {...billboardProps} />
       </Box>
       <Box width={[1, 1 / 2]}>
-        <S.ButtonGroup flexWrap="wrap">
+        <S.ButtonGroup>
           <button>
             <Heading as="h3">Get in touch</Heading>
             <Flex>

@@ -32,11 +32,14 @@ export const Footer = styled.footer`
     position: relative;
     height: 90vh;
     width: 100vw;
+    z-index: 2;
 
     color: ${theme.colors.white};
   }
 
   .panel {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
     width: 100%;
     z-index: 1;
@@ -60,12 +63,16 @@ export const Footer = styled.footer`
 `
 
 export const HideAway = styled(Box)`
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+
   .wallpaper {
     background: url(${pattern}) repeat-x center center;
-    background-size: calc(${theme.space[7]} * 11);
+    background-size: calc(${theme.space[7]} * 8);
 
     opacity: 0.5;
-    height: calc(${theme.space[7]} * 7);
+    height: calc(${theme.space[7]} * 3);
     width: 100%;
   }
 
@@ -80,6 +87,45 @@ export const HideAway = styled(Box)`
       border-left: ${theme.border};
       margin-left: ${theme.space[4]};
       padding-left: ${theme.space[4]};
+
+      font-size: calc(${theme.fontSizes[1]} / 1.25);
+    }
+  }
+`
+
+export const Logo = styled(Flex)`
+  align-items: center;
+
+  @media ${theme.mq.tablet} {
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ${theme.colors.white};
+
+    svg {
+      fill: ${theme.colors.white};
+    }
+
+    .symbol {
+      svg {
+        width: 45px;
+      }
+    }
+
+    .wordmark {
+      margin-left: ${theme.space[2]};
+      display: none;
+
+      @media ${theme.mq.tablet} {
+        display: initial;
+      }
+
+      svg {
+        width: 90px;
+      }
     }
   }
 `

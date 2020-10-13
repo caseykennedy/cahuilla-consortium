@@ -61,14 +61,9 @@ const WhoWeAre = () => {
       <Box width={[1, 1 / 2]}>
         <Hero src="counseling.jpg" altText="Therapist and patient talking." />
         <Box p={4}>
-          <Flex justifyContent="flex-end">
-            <Box width={1 / 3}>2.</Box>
-            <Box width={2 / 3}>
-              <Heading as="h2" fontSize={2} mb={6}>
-                Who we are
-              </Heading>
-            </Box>
-          </Flex>
+          <Heading as="h3" mb={6}>
+            Who we are
+          </Heading>
 
           <Text as="p" className="t--lead">
             The Cahuilla Consortium was formed by the Lost Coyotes Band of

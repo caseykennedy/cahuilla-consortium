@@ -21,15 +21,12 @@ export const Resources = styled(Flex)`
 export const ButtonGroup = styled(Flex)`
   flex-wrap: wrap;
 
-  @media ${theme.mq.tablet} {
-  }
-
   button {
     background: ${theme.colors.tertiary};
     border-top: none;
     border-right: none;
     border-bottom: ${buttonBorder};
-    border-left: ${buttonBorder};
+    border-left: none;
     border-radius: 0;
     color: ${theme.colors.white};
     cursor: pointer;
@@ -51,6 +48,10 @@ export const ButtonGroup = styled(Flex)`
 
     &:hover {
       background: ${darken(0.025, theme.colors.tertiary)};
+    }
+
+    @media ${theme.mq.tablet} {
+      border-left: ${buttonBorder};
     }
 
     div {

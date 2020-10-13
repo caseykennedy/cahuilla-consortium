@@ -13,7 +13,8 @@ import * as S from './styles.scss'
 
 // Components
 import ImgMatch from '../ImgMatch'
-import Logo from '../Symbol'
+import Symbol from '../Symbol'
+import Wordmark from '../Wordmark'
 
 // ___________________________________________________________________
 
@@ -24,21 +25,28 @@ const Year = () => {
 const HideAway = () => {
   return (
     <S.HideAway>
-      <Box className="wallpaper">wallpaper</Box>
+      <Box className="wallpaper" />
       <Flex className="footnote">
-        <Box width={'120px'}>
-          <Logo />
-        </Box>
-        <p>
-          <small>
+        <S.Logo>
+          <Link to="/" aria-label="Back to home">
+            <div className="symbol">
+              <Symbol />
+            </div>
+            <div className="wordmark">
+              <Wordmark />
+            </div>
+          </Link>
+        </S.Logo>
+        <Flex alignItems="center">
+          <p>
             This project was supported by Grant No. 2018-TW-AX-0015 awarded by
             the Office on Violence Against Women, U.S. Department of Justice.
             The opinions, findings, conclusions, and recommendations expressed
             in this publication/program/exhibition are those of the author and
             do not necessarily reflect the views of the U.S. Department of
             Justice.
-          </small>
-        </p>
+          </p>
+        </Flex>
       </Flex>
     </S.HideAway>
   )
