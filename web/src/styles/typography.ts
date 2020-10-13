@@ -218,7 +218,7 @@ const Typography = css`
   }
 
   small {
-    font-size: ${theme.root.font.sm};
+    font-size: calc(${theme.fontSizes[1]} / 1.25);
   }
 
   .text--xs {
@@ -232,7 +232,7 @@ const Typography = css`
     margin-bottom: 1.75em;
 
     @media ${theme.mq.tablet} {
-      font-size: ${theme.fontSizes[1]};
+      font-size: calc(${theme.fontSizes[1]} * 1.25);
     }
 
     &:last-child {
@@ -271,18 +271,18 @@ const Typography = css`
   }
 
   a {
-    text-decoration: none;
+    text-decoration: underline;
     position: relative;
     z-index: 1;
 
     transition: ${theme.transition.all};
 
-    color: ${theme.colors.primary};
+    color: inherit;
 
     &:hover,
     &:focus {
       text-decoration: none;
-      color: ${darken(0.1, `${theme.colors.primary}`)};
+      color: ${darken(0.1, theme.colors.primary)};
     }
   }
 

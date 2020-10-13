@@ -51,9 +51,11 @@ const WhatWeDo = () => {
   // Watch for scroll position
   useScrollWatch((callbackData: CallbackTypes) => {
     const { previousScrollTop, currentScrollTop } = callbackData
-    const scrollPos = scrollRef.current.getBoundingClientRect().top
+    const scrollPos =
+      null !== scrollRef.current &&
+      scrollRef.current.getBoundingClientRect().top
 
-    setBillboardActive(scrollPos > 1)
+    setBillboardActive(scrollPos > 128)
   })
 
   return (

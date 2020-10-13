@@ -2,7 +2,7 @@
 
 // ___________________________________________________________________
 
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useLayoutEffect } from 'react'
 
 // Libraries
 import Img from 'gatsby-image/withIEPolyfill'
@@ -44,12 +44,15 @@ const Resources = () => {
 
   // Show/Hide Billboard content
   const [billboardActive, setBillboardActive] = useState(false)
+
   // Watch for scroll position
   useScrollWatch((callbackData: CallbackTypes) => {
     const { previousScrollTop, currentScrollTop } = callbackData
-    const scrollPos = scrollRef.current.getBoundingClientRect().top
+    const scrollPos =
+      null !== scrollRef.current &&
+      scrollRef.current.getBoundingClientRect().top
 
-    setBillboardActive(scrollPos < 1)
+    setBillboardActive(scrollPos < 128)
   })
 
   return (
@@ -61,15 +64,15 @@ const Resources = () => {
         <S.ButtonGroup flexWrap="wrap">
           <button>
             <Heading as="h3">Get in touch</Heading>
-            <Flex as="p">
-              <div>We're always here for you.</div>
+            <Flex>
+              <p>We're always here for you.</p>
               <Icon name="nextArrow" />
             </Flex>
           </button>
           <button>
             <Heading as="h3">Volunteer</Heading>
-            <Flex as="p">
-              <div>Helping others is the best medicine.</div>
+            <Flex>
+              <p>Helping others is the best medicine.</p>
               <Icon name="nextArrow" />
             </Flex>
           </button>

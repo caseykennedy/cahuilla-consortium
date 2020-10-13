@@ -46,6 +46,7 @@ export const Nav = styled.nav`
     a {
       font-family: ${theme.fonts.display};
       font-size: ${theme.fontSizes[1]};
+      text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.5px;
 

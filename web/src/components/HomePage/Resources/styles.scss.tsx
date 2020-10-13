@@ -53,13 +53,13 @@ export const ButtonGroup = styled(Flex)`
       background: ${darken(0.025, theme.colors.tertiary)};
     }
 
-    p {
+    div {
       align-items: center;
       justify-content: space-between;
       width: 100%;
 
-      div {
-
+      p {
+        margin-bottom: 0;
       }
 
       span {
