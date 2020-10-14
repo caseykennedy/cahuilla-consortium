@@ -55,7 +55,7 @@ const HideAway = () => {
 
 const Footer: React.FC = () => {
   return (
-    <S.Footer>
+    <S.Footer id="contact">
       <Flex className="inner">
         <Flex className="panel">
           <Box width={[1, 1 / 2]}>

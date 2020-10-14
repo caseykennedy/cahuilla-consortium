@@ -3,6 +3,8 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
+import { darken } from 'polished'
+
 import theme from '../../../../config/theme'
 import { Box, Flex } from '../../ui'
 
@@ -15,11 +17,24 @@ export const Blog = styled(Flex)`
   background: ${theme.colors.background};
 
   .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     border: 1px solid ${theme.colors.gray};
     padding: ${theme.space[4]};
 
+    transition: background-color 0.777s ease-in-out 0s;
+
     &:first-child {
       margin-left: 0;
+    }
+
+    &:hover {
+      background: ${darken(0.05, theme.colors.background)};
+    }
+
+    .title {
     }
   }
 `

@@ -69,7 +69,7 @@ export const HideAway = styled(Box)`
 
   .wallpaper {
     background: url(${pattern}) repeat-x center center;
-    background-size: calc(${theme.space[7]} * 8);
+    background-size: calc(${theme.space[7]} * 5);
 
     opacity: 0.5;
     height: calc(${theme.space[5]} * 5);
