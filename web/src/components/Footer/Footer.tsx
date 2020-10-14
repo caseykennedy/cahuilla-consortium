@@ -39,12 +39,13 @@ const HideAway = () => {
         </S.Logo>
         <Flex alignItems="center">
           <p>
-            This project was supported by Grant No. 2018-TW-AX-0015 awarded by
-            the Office on Violence Against Women, U.S. Department of Justice.
-            The opinions, findings, conclusions, and recommendations expressed
-            in this publication/program/exhibition are those of the author and
-            do not necessarily reflect the views of the U.S. Department of
-            Justice.
+            This website was produced by the Cahuilla Consortium under grant
+            award #2019-VO-GX-0010, awarded by the Office for Victims of Crime,
+            Office of Justice Programs, U.S. Department of Justice. The
+            opinions, findings, and conclusions or recommendations expressed on
+            this website are those of the contributors and do not necessarily
+            represent the official position or policies of the U.S. Department
+            of Justice.
           </p>
         </Flex>
       </Flex>

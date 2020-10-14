@@ -30,7 +30,7 @@ export const Footer = styled.footer`
 
     padding: ${theme.space[4]} ${theme.space[4]};
     position: relative;
-    height: 90vh;
+    height: 75vh;
     width: 100vw;
     z-index: 2;
 
@@ -72,7 +72,7 @@ export const HideAway = styled(Box)`
     background-size: calc(${theme.space[7]} * 8);
 
     opacity: 0.5;
-    height: calc(${theme.space[7]} * 3);
+    height: calc(${theme.space[5]} * 5);
     width: 100%;
   }
 

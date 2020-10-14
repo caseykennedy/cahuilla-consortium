@@ -93,21 +93,20 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   space: [
-    '0',          // 0
-    '0.25rem',    // 1
-    '0.75rem',     // 2
-    '1.25rem',       // 3
-    '1.5rem',     // 4
-    '2rem',       // 5
-    '3rem',       // 6
-    '4rem',       // 7
-    '6rem',       // 8
-    '10rem',      // 9
-    '12rem',      // 10
-    '14rem',      // 11
-    '16rem',      // 12
-    '18rem',      // 13
-    '20rem'       // 14
+    '0',                     // 0
+    'var(--space-xxs)',      // 1
+    'var(--space-xs)',       // 2
+    'var(--space-sm)',       // 3
+    'var(--space-md)',       // 4
+    'var(--space-lg)',       // 5
+    'var(--space-xl)',       // 6
+    'var(--space-xxl)',      // 7
+    '6rem',                  // 8
+    '10rem',                 // 9
+    '12rem',                 // 10
+    '14rem',                 // 11
+    '16rem',                 // 12
+    '18rem'                  // 13
   ],
 
   // Left/Right gutter

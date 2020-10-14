@@ -35,7 +35,7 @@ type CallbackTypes = {
 
 const billboardProps = {
   bg: theme.colors.secondary,
-  title: `Love<br />shouldn't<br />hurt.`
+  title: `Women<br />are<br />sacred.`
 }
 
 const WhoWeAre = () => {
@@ -61,7 +61,7 @@ const WhoWeAre = () => {
       <Box width={[1, 1 / 2]}>
         <Hero src="counseling.jpg" altText="Therapist and patient talking." />
         <Box p={4}>
-          <Heading as="h3" mb={6}>
+          <Heading as="h2" fontSize={3} mb={6}>
             Who we are
           </Heading>
 
@@ -101,7 +101,7 @@ const WhoWeAre = () => {
 
           <Box my={8}>
             <ImgMatch
-              src="supporting-hands.jpg"
+              src="student-library.jpg"
               altText="Friends comforting each others."
             />
           </Box>

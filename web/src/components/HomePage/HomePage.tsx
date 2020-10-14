@@ -22,6 +22,7 @@ import WhatWeDo from './WhatWeDo'
 import WhoWeAre from './WhoWeAre'
 import Faq from './Faq'
 import Resources from './Resources'
+import Blog from './Blog'
 
 // ___________________________________________________________________
 
@@ -32,7 +33,7 @@ const HomePage: React.FC = () => {
       <WhoWeAre />
       <Faq />
       <Resources />
-      <Divider py={11} />
+      <Blog />
     </S.HomePage>
   )
 }

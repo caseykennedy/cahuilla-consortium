@@ -15,6 +15,18 @@ const RootVariables = css`
     --root-size: 6rem;
 
     /* -------------------------------- 
+    Spacing System
+    -------------------------------- */
+    --space-unit: 1em;
+    --space-xxs:  calc(0.25 * var(--space-unit));
+    --space-xs:   calc(0.50 * var(--space-unit));
+    --space-sm:   calc(0.75 * var(--space-unit));
+    --space-md:   calc(1.25 * var(--space-unit));
+    --space-lg:   calc(2.00 * var(--space-unit));
+    --space-xl:   calc(3.25 * var(--space-unit));
+    --space-xxl:  calc(5.25 * var(--space-unit));
+
+    /* -------------------------------- 
     Typography
     -------------------------------- */
 
@@ -45,6 +57,12 @@ const RootVariables = css`
     :root {
       --root-size: 8rem;
       --text-base-size: 1.1em;
+    }
+  }
+
+  @media ${theme.mq.desktop} {
+    :root {
+      --text-base-size: 1.15em;
     }
   }
 `

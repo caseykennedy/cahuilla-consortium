@@ -140,7 +140,9 @@ const Typography = css`
   }
 
   mark {
-    background-color: ${theme.colors.quinary};
+    background-color: transparent;
+    border-bottom: 2px solid ${theme.colors.primary};
+    padding: 0 ${theme.space[1]};
   }
 
   h1,
@@ -153,7 +155,7 @@ const Typography = css`
     font-weight: ${theme.fontWeights.medium};
     line-height: ${theme.root.font.headingLineHeight};
     letter-spacing: 0.5px;
-    margin: 0 0 0.3em;
+    margin: 0 0 ${theme.space[2]};
     transition: ${theme.transition.all};
   }
 
@@ -225,7 +227,7 @@ const Typography = css`
     font-size: ${theme.fontSizes[2]};
     font-weight: 400;
     line-height: ${theme.root.font.bodyLineHeight};
-    margin-bottom: 1.75em;
+    margin: 0 0 ${theme.space[2]};
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[1]} * 1.25);

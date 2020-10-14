@@ -35,7 +35,7 @@ type CallbackTypes = {
 
 const billboardProps = {
   bg: theme.colors.tertiary,
-  title: `Women<br />are<br />sacred.`
+  title: `Love<br />shouldn't<br />hurt.`
 }
 
 const Faq = () => {
@@ -59,9 +59,9 @@ const Faq = () => {
         <Billboard active={billboardActive} {...billboardProps} />
       </Box>
       <Box width={[1, 1 / 2]}>
-        <Hero src="counseling.jpg" altText="Therapist and patient talking." />
+        <Hero src="stop-hand.jpg" altText="Girl holding hand up palm facing forward" />
         <Box p={4}>
-          <Heading as="h3" mb={6}>
+          <Heading as="h2" fontSize={4} mb={6}>
             Faq
           </Heading>
 
@@ -78,7 +78,7 @@ const Faq = () => {
 
           <hr />
 
-          <Accordion title="What is domestic violence?">
+          <Accordion title="What is domestic violence?" active={true}>
             <Flex className="content">
               <Box>
                 <Text as="p">
@@ -97,7 +97,7 @@ const Faq = () => {
             </Flex>
             <Flex className="content">
               <Box width={[1 / 4]}>
-                <Text as="p">Red flags</Text>
+                <Text as="p"><mark>Red flags</mark></Text>
               </Box>
               <Box width={[3 / 4]} pl={[0, 4]}>
                 <Box as="ul">

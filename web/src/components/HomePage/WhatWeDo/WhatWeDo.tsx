@@ -66,7 +66,7 @@ const WhatWeDo = () => {
       <Box width={[1, 1 / 2]}>
         <Hero src="group-hands.jpg" altText="Group raising hands in the air." />
         <Box p={4} id="what">
-          <Heading as="h3" mb={6}>
+          <Heading as="h2" fontSize={3} mb={6}>
             What we do
           </Heading>
 
@@ -81,7 +81,7 @@ const WhatWeDo = () => {
             Native communities.
           </Text>
 
-          <Heading as="h4" fontSize={5} fontFamily="display" mt={8}>
+          <Heading as="h4" color="gray" fontSize={5} fontFamily="display" mt={8}>
             Live a life
             <br />
             without violence.
@@ -94,7 +94,7 @@ const WhatWeDo = () => {
             />
           </Box>
 
-          <Heading as="h3" mb={6}>
+          <Heading as="h3" fontSize={3} mb={6}>
             How we can help
           </Heading>
 
@@ -109,7 +109,9 @@ const WhatWeDo = () => {
 
           <Text as="p" pr={4} mt={4}>
             Please talk to an Advocate to see how we may be able to assit in
-            your healing journey and restoration. Call us at{' '}
+            your healing journey and restoration.
+            <br />
+            Call us at{' '}
             <a href="tel:1-951-330-0479" aria-label="Call us">
               1 (951) 330-0479
             </a>
