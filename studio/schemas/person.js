@@ -18,45 +18,29 @@ export default {
       type: 'string'
     },
     {
-      title: 'Board Member',
-      name: 'boardMember',
-      type: 'boolean'
-    },
-    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: 'Some frontend will require a slug to be set to be able to show the person',
+      description:
+        'Some frontend will require a slug to be set to be able to show the person',
       options: {
         source: 'name',
         maxLength: 96
       }
     },
     {
-      name: 'headshot',
-      title: 'Headshot',
+      name: 'avatar',
+      title: 'Avatar',
       type: 'image',
       options: {
         hotspot: true
       }
-    },
-    {
-      name: 'lead',
-      title: 'Lead',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
-          lists: []
-        }
-      ]
-    },
-    {
-      name: 'bio',
-      title: 'Bio',
-      type: 'blockContent',
-    },
+    }
   ],
+  preview: {
+    select: {
+      title: 'name',
+      media: 'avatar'
+    }
+  }
 }

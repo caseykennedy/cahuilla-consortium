@@ -66,14 +66,15 @@ const WhoWeAre = () => {
           </Heading>
 
           <Text as="p" className="t--lead">
-            The Cahuilla Consortium was formed by the Lost Coyotes Band of
-            Cahuilla and Cupeno Indians, the Cahuilla Band of Indians, and the
-            Santa Rosa Band of Cahuilla Indians.
+            The Cahuilla Consortium was formed by the Lost Los Coyotes Band of
+            Cahuilla and Cupeńo Indians, the Cahuilla Band of Indians (Current
+            Lead), and the Santa Rosa Band of Cahuilla Indians.
           </Text>
 
           <Text as="p">
             We have been advocating for Victims of Domestic Vioilence, Sexual
-            Assault, Stalking, and Sex/Human Trafficking since 2010.
+            Assault, Stalking, and Sex/Human Trafficking since 2010. We can now
+            assist victims of crime.
           </Text>
 
           <hr />

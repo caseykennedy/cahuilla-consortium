@@ -27,7 +27,7 @@ export default {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'category' } }]
+      of: [{ type: 'reference', to: { type: 'productCategory' } }]
     },
     {
       name: 'excerpt',
@@ -50,6 +50,12 @@ export default {
       type: 'blockContent'
     },
     {
+      name: 'resources',
+      title: 'Resources',
+      type: 'array',
+      of: [{type: 'productResources'}]
+    },
+    {
       name: 'mainImage',
       title: 'Main Image',
       type: 'image',
@@ -67,9 +73,14 @@ export default {
       }
     },
     {
-      name: 'videoLink',
+      name: 'videoURL',
       title: 'Video URL',
-      type: 'string'
+      type: 'url'
+    },
+    {
+      name: 'videoURL2',
+      title: 'Video URL #2',
+      type: 'url'
     },
     {
       name: 'publishedAt',

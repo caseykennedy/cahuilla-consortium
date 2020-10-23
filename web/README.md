@@ -1,6 +1,6 @@
 # Cahuilla Consortium Organization Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8eef4c51-ad30-48f9-9dd4-169a5d568132/deploy-status)](https://app.netlify.com/sites/trusting-wiles-38de65/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/70e58e8d-7588-4ffd-aa74-bf669e8b64ce/deploy-status)](https://app.netlify.com/sites/ccvap/deploys)
 
 ## Features
 

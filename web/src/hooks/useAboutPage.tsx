@@ -1,56 +1,56 @@
-// useAboutPage hook
-// Hook for querying data
+// // useAboutPage hook
+// // Hook for querying data
 
-// ___________________________________________________________________
+// // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby'
+// import { graphql, useStaticQuery } from 'gatsby'
 
-// ___________________________________________________________________
+// // ___________________________________________________________________
 
-type Props = {
-  aboutPage: {
-    edges: {
-      node: {
-        pageTitle: {
-          image: {
-            asset: {
-              fluid: ImageShape
-            }
-          }
-          link: string
-          message: string
-          title: string
-        }
-      }
-    }[]
-  }
-}
+// type Props = {
+//   aboutPage: {
+//     edges: {
+//       node: {
+//         pageTitle: {
+//           image: {
+//             asset: {
+//               fluid: ImageShape
+//             }
+//           }
+//           link: string
+//           message: string
+//           title: string
+//         }
+//       }
+//     }[]
+//   }
+// }
 
-const useAboutPage = () => {
-  const data = useStaticQuery<Props>(graphql`
-    query AboutPageQuery {
-      aboutPage: allSanityAboutPage {
-        edges {
-          node {
-            pageTitle {
-              image {
-                asset {
-                  fluid(maxWidth: 1080) {
-                    ...GatsbySanityImageFluid
-                  }
-                }
-              }
-              link
-              message
-              title
-            }
-          }
-        }
-      }
-    }
-  `)
+// const useAboutPage = () => {
+//   const data = useStaticQuery<Props>(graphql`
+//     query AboutPageQuery {
+//       aboutPage: allSanityAboutPage {
+//         edges {
+//           node {
+//             pageTitle {
+//               image {
+//                 asset {
+//                   fluid(maxWidth: 1080) {
+//                     ...GatsbySanityImageFluid
+//                   }
+//                 }
+//               }
+//               link
+//               message
+//               title
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
 
-  return data.aboutPage.edges[0].node
-}
+//   return data.aboutPage.edges[0].node
+// }
 
-export default useAboutPage
+// export default useAboutPage

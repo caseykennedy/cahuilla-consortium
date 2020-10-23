@@ -45,8 +45,10 @@ type ThemeShape = {
   root: {
     mouseX: string
     mouseY: string
-    space: string
     font: {
+      [key: string]: string
+    }
+    space: {
       [key: string]: string
     }
   }
@@ -111,9 +113,8 @@ const theme: ThemeShape = {
 
   // Left/Right gutter
   gutter: {
-    tablet: '1.5rem',
-    desktop: '3rem',
-    axis: [4, 6],
+    x: [5, 6],
+    y: [4, 5]
   },
 
   // Typography
@@ -178,7 +179,6 @@ const theme: ThemeShape = {
   root: {
     mouseX: 'var(--mouse-x)',
     mouseY: 'var(--mouse-y)',
-    space: 'var(--root-size)',
     font: {
       // Base sizing
       baseSize: 'var(--text-base-size)',
@@ -197,6 +197,15 @@ const theme: ThemeShape = {
       // Line height
       headingLineHeight: 'var(--heading-line-height)',
       bodyLineHeight: 'var(--body-line-height)'
+    },    
+    space: {
+      xxs: 'var(--space-xxs)',
+      xs: 'var(--space-xs)',
+      sm: 'var(--space-sm)',
+      md: 'var(--space-md)',
+      lg: 'var(--space-lg)',
+      xl: 'var(--space-xl)',
+      xxl: 'var(--space-xxl)'
     }
   }
 }

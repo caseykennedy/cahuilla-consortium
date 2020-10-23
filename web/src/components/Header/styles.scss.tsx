@@ -30,6 +30,8 @@ export const Header = styled(Flex)`
   color: ${theme.colors.white};
   z-index: 9999;
 
+  mix-blend-mode: luminosity;
+
   @media ${theme.mq.tablet} {
     width: 50vw;
   }
@@ -46,9 +48,11 @@ export const Logo = styled(Flex)`
     justify-content: center;
     align-items: center;
     color: ${theme.colors.white};
+    mix-blend-mode: difference;
 
     svg {
       fill: ${theme.colors.white};
+      mix-blend-mode: difference;
     }
 
     .symbol {

@@ -12,7 +12,8 @@ export default {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: 'Some frontend will require a slug to be set to be able to show the post',
+      description:
+        'Some frontend will require a slug to be set to be able to show the post',
       options: {
         source: 'title',
         maxLength: 96
@@ -21,30 +22,31 @@ export default {
     {
       name: 'publishedAt',
       title: 'Published at',
-      description: 'You can use this field to schedule post where you show them',
+      description:
+        'You can use this field to schedule post where you show them',
       type: 'datetime'
-    },
-    {
-      name: 'excerpt',
-      title: 'Excerpt',
-      type: 'blockText'
     },
     {
       name: 'authors',
       title: 'Authors',
-      type: 'array',
-      of: [{ type: 'postAuthor' }]
-    },
-    {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'mainImage'
+      type: 'reference',
+      to: [{ type: 'person' }]
     },
     {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'category' } }]
+      of: [{ type: 'reference', to: { type: 'postCategory' } }]
+    },
+    {
+      name: 'figure',
+      title: 'Figure',
+      type: 'figure'
+    },
+    {
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'blockText'
     },
     {
       name: 'body',
@@ -56,21 +58,27 @@ export default {
     {
       title: 'Publishing date new–>old',
       name: 'publishingDateAsc',
-      by: [{ field: 'publishedAt', direction: 'asc' }, { field: 'title', direction: 'asc' }]
+      by: [
+        { field: 'publishedAt', direction: 'asc' },
+        { field: 'title', direction: 'asc' }
+      ]
     },
     {
       title: 'Publishing date old->new',
       name: 'publishingDateDesc',
-      by: [{ field: 'publishedAt', direction: 'desc' }, { field: 'title', direction: 'asc' }]
+      by: [
+        { field: 'publishedAt', direction: 'desc' },
+        { field: 'title', direction: 'asc' }
+      ]
     }
   ],
   preview: {
     select: {
       title: 'title',
       publishedAt: 'publishedAt',
-      image: 'mainImage'
+      image: 'figure'
     },
-    prepare ({ title = 'No title', publishedAt, image }) {
+    prepare({ title = 'No title', publishedAt, image }) {
       return {
         title,
         subtitle: publishedAt

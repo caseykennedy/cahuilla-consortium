@@ -81,7 +81,13 @@ const WhatWeDo = () => {
             Native communities.
           </Text>
 
-          <Heading as="h4" color="gray" fontSize={5} fontFamily="display" mt={8}>
+          <Heading
+            as="h4"
+            color="gray"
+            fontSize={5}
+            fontFamily="display"
+            mt={8}
+          >
             Live a life
             <br />
             without violence.
@@ -95,32 +101,44 @@ const WhatWeDo = () => {
           </Box>
 
           <Heading as="h3" fontSize={3} mb={6}>
-            How we can help
+            What we can help with
           </Heading>
 
           <ListBox>
             <li>Emergency short term &amp; basic needs</li>
-            <li>In-person support through Advocacy</li>
-            <li>Moving &amp; relocation</li>
-            <li>Small home repair &amp; locksmith</li>
+            <li>Emergency sheltering</li>
+            <li>Transitional housing</li>
             <li>Transport / Public transportation assistance</li>
+            <li>Small home repair &amp; locksmith (limited)</li>
             <li>Burial/Funeral assistance (limited)</li>
+            <li>Advocacy and Therapy</li>
           </ListBox>
 
           <Text as="p" pr={4} mt={4}>
-            Please talk to an Advocate to see how we may be able to assit in
-            your healing journey and restoration.
-            <br />
-            Call us at{' '}
+            Please talk to an Advocate to see how we may be able to assist in
+            your healing journey and restoration. Call us at{' '}
             <a href="tel:1-951-330-0479" aria-label="Call us">
               1 (951) 330-0479
-            </a>
-            .
+            </a>{' '}
+            (24/7 hotline) or 951-763-5547 (office/center).
           </Text>
 
-          <Text as="p" className="t--small" pr={[0, 10]}>
-            All services are dependent on available funds, however, we can work
-            with you to find other resources.
+          <p>
+            <small>
+              <strong>Service Area:</strong> Our service area consists of the
+              three consortium tribal member communities within the three
+              reservations. As well as, the surrounding communities of Riverside
+              County, San Diego County (north), and parts of San Bernardino
+              County. Additionally, we will also provide services to Non-Native
+              people in these service areas.
+            </small>
+          </p>
+
+          <Text as="p" pr={[0, 10]}>
+            <small>
+              All services are dependent on available funds, however, we can
+              work with you to find other resources.
+            </small>
           </Text>
         </Box>
       </Box>

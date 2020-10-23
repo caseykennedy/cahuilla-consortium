@@ -250,6 +250,7 @@ const Typography = css`
   small,
   .t--small {
     font-size: calc(${theme.fontSizes[1]} / 1.45);
+    line-height: 1;
   }
 
   .t-underline {
