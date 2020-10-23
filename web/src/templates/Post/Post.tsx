@@ -22,7 +22,7 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-const ProductTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
+const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
   const post = pageContext.post
   console.log('—————|— post —|—————')
   console.log(post)
@@ -74,6 +74,6 @@ const ProductTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
   )
 }
 
-export default ProductTemplate
+export default PostTemplate
 
 // ___________________________________________________________________

@@ -1,5 +1,7 @@
 # Cahuilla Consortium Organization Website built with [Gatsby](https://www.gatsbyjs.org/) & [Sanity.io](https://www.sanity.io)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/70e58e8d-7588-4ffd-aa74-bf669e8b64ce/deploy-status)](https://app.netlify.com/sites/ccvap/deploys)
+
 This example combines [Gatsby](https://www.gatsbyjs.org/) site generation with [Sanity](https://www.sanity.io) content management in a neat little website. Read [the blog post](https://www.sanity.io/blog/get-started-with-gatsby-and-structured-content) and [see the getting started video](https://www.youtube.com/watch?v=qU4lFYp3KiQ).
 
 - [Features](#features)
