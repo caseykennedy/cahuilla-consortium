@@ -6,7 +6,7 @@ import React, { useRef, useState } from 'react'
 
 // Libraries
 import Img from 'gatsby-image/withIEPolyfill'
-import { useSpring, config } from 'react-spring'
+import { Grid, Cell } from 'styled-css-grid'
 
 // Theme + Styles
 import * as S from './styles.scss'
@@ -14,6 +14,7 @@ import theme from '../../../../config/theme'
 
 // UI
 import { Box, Flex, Text, Heading } from '../../ui'
+import Divider from '../../ui/Divider'
 import ListBox from '../../ui/ListBox'
 
 // Components
@@ -25,6 +26,7 @@ import Hero from '../Hero'
 
 // Hooks
 import useScrollWatch from '../../../hooks/useScrollWatch'
+import usePerson from '../../../hooks/usePerson'
 
 // ___________________________________________________________________
 
@@ -36,6 +38,38 @@ type CallbackTypes = {
 const billboardProps = {
   bg: theme.colors.secondary,
   title: `Women<br />are<br />sacred.`
+}
+
+const Team = () => {
+  const team = usePerson()
+  return (
+    <Grid
+      columns={`repeat(auto-fit, minmax(180px, 1fr))`}
+      gap={theme.space[4]}
+      className="team"
+    >
+      {team.map(({ node: person }, idx) => (
+        <Cell key={idx} className="team__cell">
+          <Box mb={4} className="team__avatar">
+            {person.avatar && (
+              <Img
+                fluid={person.avatar.asset.fluid}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt={person.name}
+              />
+            )}
+          </Box>
+          <Text as="p" mb={1} fontSize={1}>
+            {person.name && person.name}
+          </Text>
+          <Text as="p" color="gray" mb={0} fontSize={1}>
+            {person.title && person.title}
+          </Text>
+        </Cell>
+      ))}
+    </Grid>
+  )
 }
 
 const WhoWeAre = () => {
@@ -77,7 +111,7 @@ const WhoWeAre = () => {
             assist victims of crime.
           </Text>
 
-          <hr />
+          <Divider bg="gray" my={5} />
 
           <Text as="p" fontWeight={500} mt={4}>
             Each Tribe is represented on our Advisory Committee:
@@ -91,23 +125,34 @@ const WhoWeAre = () => {
 
           <Flex justifyContent="flex-end">
             <Box width={2 / 3}>
-              <Text as="p" py={6}>
+              <Text as="p" pt={5}>
                 The Advisory Committee meets monthly to provide policy guidance
                 and to serve as a conduit to the tribal communities.
               </Text>
             </Box>
           </Flex>
 
-          <hr />
+          <Divider bg="gray" my={5} />
 
-          <Box my={8}>
+          <Box mb={6}>
+            <Box mb={5}>
+              <Heading as="h2" fontSize={3} mb={0}>
+                Meet our team
+              </Heading>
+            </Box>
+            <Team />
+          </Box>
+
+          {/* <Box my={8}>
             <ImgMatch
               src="student-library.jpg"
               altText="Friends comforting each others."
             />
-          </Box>
+          </Box> */}
 
-          <Accordion title="What is our purpose?" active={true}>
+          <Divider bg="black" my={0} />
+
+          <Accordion title="What is our purpose?" active={false}>
             <Flex className="content">
               <Box width={[1 / 4]}>
                 <Text as="p">Mission</Text>
@@ -130,13 +175,14 @@ const WhoWeAre = () => {
                   <li>- Housing</li>
                   <li>- Respite</li>
                   <li>- Vocation</li>
-                  <li>- Social</li>
+                  <li>- Community</li>
+                  <li>- Culture</li>
                 </Box>
               </Box>
             </Flex>
           </Accordion>
 
-          <Accordion title="How we seek to help" active={true}>
+          <Accordion title="How we seek to help" active={false}>
             <Flex className="content">
               <Box width={[1 / 4]}>
                 <Text as="p">Advocacy</Text>

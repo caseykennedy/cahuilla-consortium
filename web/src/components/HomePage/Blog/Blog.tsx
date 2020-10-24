@@ -48,7 +48,7 @@ const Post: React.FC<{ post: PostQuery }> = ({ post }) => {
             )}
           </Box>
         </Flex>
-        <Heading as="h4" mt={2} mb={4} className="text--xl">
+        <Heading as="h4" mt={2} mb={4} className="text--lg">
           {post.title}
         </Heading>
       </Box>
@@ -73,7 +73,7 @@ const Blog = () => {
         </Heading>
       </Box>
       <Flex width={[1, 5 / 6]} flexWrap="wrap">
-        <Grid columns="repeat(auto-fit,minmax(400px,1fr))" gap={theme.space[4]}>
+        <Grid columns="repeat(auto-fit,minmax(300px,1fr))" gap={theme.space[4]}>
           {posts.map(({ node: post }, idx) => (
             <Post post={post} key={idx} />
           ))}

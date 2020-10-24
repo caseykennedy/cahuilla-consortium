@@ -14,4 +14,16 @@ export const WhoWeAre = styled(Flex)`
 
   @media ${theme.mq.tablet} {
   }
+
+  .team {
+    &__cell {
+
+    }
+
+    &__avatar {
+      overflow: hidden;
+      /* mix-blend-mode: hard-light; */
+      filter: grayscale(20%);
+    }
+  }
 `

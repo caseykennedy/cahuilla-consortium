@@ -61,7 +61,7 @@ const Faq = () => {
       <Box width={[1, 1 / 2]}>
         <Hero src="stop-hand.jpg" altText="Girl holding hand up palm facing forward" />
         <Box p={4}>
-          <Heading as="h2" fontSize={4} mb={6}>
+          <Heading as="h2" fontSize={3} mb={6}>
             Faq
           </Heading>
 

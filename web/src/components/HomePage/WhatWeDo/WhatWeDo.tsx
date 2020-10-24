@@ -14,6 +14,7 @@ import theme from '../../../../config/theme'
 
 // UI
 import { Box, Flex, Text, Heading } from '../../ui'
+import Divider from '../../ui/Divider'
 import ListBox from '../../ui/ListBox'
 
 // Components
@@ -69,16 +70,14 @@ const WhatWeDo = () => {
           <Heading as="h2" fontSize={3} mb={6}>
             What we do
           </Heading>
-
           <Text as="p" className="t--lead">
-            Our mission is to work to end all victimization against our tribal
-            people through advocacy and education efforts that include
-            prevention, intervention, and the fostering of resiliency.
-          </Text>
-
-          <Text as="p" pr={[0, 10]}>
             It is our objective to promote the safety and well-being of our
             Native communities.
+          </Text>
+          <Text as="p" mb={5}>
+            We work to end all victimization against our tribal people through
+            advocacy and education efforts that include prevention,
+            intervention, and the fostering of resiliency.
           </Text>
 
           <Heading
@@ -100,8 +99,8 @@ const WhatWeDo = () => {
             />
           </Box>
 
-          <Heading as="h3" fontSize={3} mb={6}>
-            What we can help with
+          <Heading as="h3" fontSize={3} mb={3}>
+            What we can help you with
           </Heading>
 
           <ListBox>
@@ -114,14 +113,124 @@ const WhatWeDo = () => {
             <li>Advocacy and Therapy</li>
           </ListBox>
 
-          <Text as="p" pr={4} mt={4}>
+          <Text as="p" pr={4} my={4}>
             Please talk to an Advocate to see how we may be able to assist in
             your healing journey and restoration. Call us at{' '}
             <a href="tel:1-951-330-0479" aria-label="Call us">
-              1 (951) 330-0479
+              <mark>1 (951) 330-0479</mark>
             </a>{' '}
-            (24/7 hotline) or 951-763-5547 (office/center).
+            (24/7 hotline) or <mark>951-763-5547</mark> (office/center).
           </Text>
+
+          <Divider bg="black" my={0} />
+
+          <Accordion title="more ways we can help" active={false}>
+            <Flex className="content">
+              <Box width={1}>
+                <Text as="p">
+                  This list is a summary and is more of a snap-shot of what we
+                  can assist with. Every case is different and requires flexible
+                  planning.
+                </Text>
+              </Box>
+            </Flex>
+
+            <Flex className="content">
+              <Box width={[1, 1 / 4]} mb={5}>
+                <Text as="p" fontSize={1}>
+                  Immediate safety
+                </Text>
+              </Box>
+              <Box width={[1, 3 / 4]} pl={[0, 4]}>
+                <ListBox>
+                  <li>- Transportation to shelter/motel</li>
+                  <li>- Provide emergency motel stay </li>
+                  <li>
+                    - Provide emergency needs (food, baby items, toiletries,
+                    clothing, etc.)
+                  </li>
+                  <li>
+                    - Transport to other providers to obtain resources (Medical,
+                    BHS, Tribal Resources…)
+                  </li>
+                </ListBox>
+              </Box>
+            </Flex>
+
+            <Flex className="content">
+              <Box width={[1, 1 / 4]} mb={5}>
+                <Text as="p" fontSize={1}>
+                  Emergency housing
+                </Text>
+              </Box>
+              <Box width={[1, 3 / 4]} pl={[0, 4]}>
+                <ListBox>
+                  <li>30-90-day shelter stay at an area shelter</li>
+                  <li>
+                    Transportation to obtain services (Cal-Fresh, Medical, TANF,
+                    IHS, SSDI, DMV, CPS)
+                  </li>
+                  <li>Provide for: Groceries, Toiletries, baby items…</li>
+                  <li>Provide Fuel cards</li>
+                  <li>Provide short-term child care</li>
+                  <li>Assist with filling out and filing Protective Orders</li>
+                  <li>Provide court accompaniment </li>
+                  <li>In-house therapy</li>
+                  <li>Tele-therapy</li>
+                  <li>Group/support/talking circles (online)</li>
+                </ListBox>
+              </Box>
+            </Flex>
+
+            <Flex className="content">
+              <Box width={[1, 1 / 4]} mb={5}>
+                <Text as="p" fontSize={1}>
+                  Transitional housing
+                </Text>
+              </Box>
+              <Box width={[1, 3 / 4]} pl={[0, 4]}>
+                <ListBox>
+                  <li>
+                    Assist with procuring long-term housing (Provide Security
+                    Deposit)
+                  </li>
+                  <li>
+                    Can provide 3-24 months of rental assistance (payer of last
+                    resort)
+                  </li>
+                  <li>Assist with Utility hookup</li>
+                  <li>
+                    Can provide monthly utility assistance (payor of last
+                    resort)
+                  </li>
+                  <li>Assist with basic furnishings</li>
+                  <li>
+                    Assist with lock-smith service, “small” auto/home repairs as
+                    a direct result of a crime
+                  </li>
+                  <li>
+                    Advice on budgeting, cooking, cleaning, time management,
+                    paying bills, and other basic life-skills
+                  </li>
+                  <li>
+                    Referrals to other services (BHS, Educational Resources,
+                    Group/DV Classes, etc.
+                  </li>
+                </ListBox>
+              </Box>
+            </Flex>
+            <Flex className="content">
+              <Box width={1}>
+                <Text as="p">
+                  If you don’t see something listed that you need help with,
+                  please call and speak to an advocate. We may be able to offer
+                  support or refer you to another agency who can help.
+                </Text>
+              </Box>
+            </Flex>
+          </Accordion>
+
+          <br />
 
           <p>
             <small>

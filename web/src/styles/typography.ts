@@ -139,12 +139,6 @@ const Typography = css`
     font-variant-ligatures: discretionary-ligatures;
   }
 
-  mark {
-    background-color: transparent;
-    border-bottom: 2px solid ${theme.colors.primary};
-    padding: 0 ${theme.space[1]};
-  }
-
   h1,
   h2,
   h3,
@@ -242,12 +236,16 @@ const Typography = css`
     font-weight: 500;
   }
 
+  mark {
+    background-color: ${theme.colors.white};
+    padding: 0 ${theme.space[1]};
+  }
+
   .t--lead {
     font-size: calc(${theme.fontSizes[1]} * 1.5);
     margin-bottom: 1em;
   }
 
-  small,
   .t--small {
     font-size: calc(${theme.fontSizes[1]} / 1.45);
     line-height: 1;
@@ -282,7 +280,7 @@ const Typography = css`
     &:hover,
     &:focus {
       text-decoration: none;
-      color: ${darken(0.1, theme.colors.primary)};
+      color: ${darken(0.1, theme.colors.secondary)};
     }
   }
 

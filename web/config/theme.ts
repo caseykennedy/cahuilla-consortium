@@ -88,7 +88,7 @@ const theme: ThemeShape = {
 
     black: '#000105',
     white: '#ffffff',
-    gray: '#B6B2AF',
+    gray: '#a59e9f',
   },
 
   // Space
