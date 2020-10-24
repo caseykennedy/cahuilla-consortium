@@ -32,7 +32,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
   return (
     <>
-      {/* <Overlay
+      <Overlay
         id="nav-root"
         root="root"
         isOpen={isNavOpen}
@@ -41,7 +41,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
       >
         <NavLinks handleExit={() => setNavOpen(false)} isNavOpen={isNavOpen} />
-      </Overlay> */}
+      </Overlay>
 
       <S.Header as="header">
         <S.Logo>

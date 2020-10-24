@@ -7,12 +7,13 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // We import object and document schemas
 import blockContent from './blockContent'
 import blockText from './blockText'
-import postCategory from './postCategory'
+import faq from './faq'
 import figure from './figure'
 import mainImage from './mainImage'
 import pageTitle from './pageTitle'
 import person from './person'
 import post from './post'
+import postCategory from './postCategory'
 import siteSettings from './siteSettings'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -26,6 +27,7 @@ export default createSchema({
     // in the studio.
     blockContent,
     blockText,
+    faq,
     figure,
     mainImage,
     pageTitle,

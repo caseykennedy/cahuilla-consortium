@@ -230,25 +230,34 @@ const WhatWeDo = () => {
             </Flex>
           </Accordion>
 
-          <br />
+          <Accordion title="Service area" active={false}>
+            <Flex className="content">
+              <Box width={1}>
+                <Text as="p">
+                  Our service area consists of the three consortium tribal
+                  member communities within the three reservations. As well as
+                  the surrounding communities of Riverside County, San Diego
+                  County (north), and parts of San Bernardino County.
+                  Additionally, we will also provide services to{' '}
+                  <em>non-native</em> people in these service areas.
+                </Text>
+              </Box>
+            </Flex>
 
-          <p>
-            <small>
-              <strong>Service Area:</strong> Our service area consists of the
-              three consortium tribal member communities within the three
-              reservations. As well as, the surrounding communities of Riverside
-              County, San Diego County (north), and parts of San Bernardino
-              County. Additionally, we will also provide services to Non-Native
-              people in these service areas.
-            </small>
-          </p>
-
-          <Text as="p" pr={[0, 10]}>
-            <small>
-              All services are dependent on available funds, however, we can
-              work with you to find other resources.
-            </small>
-          </Text>
+            <Flex className="content">
+              <Box width={[1, 1 / 4]} mb={5}>
+                <Text as="p" fontSize={1}>
+                  <strong>please note:</strong>
+                </Text>
+              </Box>
+              <Box width={[1, 3 / 4]} pl={[0, 4]}>
+                <Text as="p">
+                  All services are dependent on available funds, however, we can
+                  work with you to find other resources.
+                </Text>
+              </Box>
+            </Flex>
+          </Accordion>
         </Box>
       </Box>
     </S.WhatWeDo>

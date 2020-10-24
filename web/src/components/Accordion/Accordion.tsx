@@ -147,7 +147,7 @@ const defaultProps = {
   title: 'title',
   color: theme.colors.text,
   chevronColor: theme.colors.text,
-  chevronWidth: theme.space[2],
+  chevronWidth: theme.space[4],
   borderColor: theme.colors.text,
   borderTop: false,
   colorActive: theme.colors.text

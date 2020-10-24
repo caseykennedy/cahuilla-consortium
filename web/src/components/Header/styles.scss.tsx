@@ -72,8 +72,12 @@ export const Logo = styled(Flex)`
 `
 
 export const Tools = styled(Flex)`
-  justify-content: space-between;
+  justify-content: flex-end;
   flex: 1;
+
+  @media ${theme.mq.desktop} {
+    justify-content: space-between;
+  }
 `
 
 // export const Nav = styled(Flex)`
@@ -99,10 +103,6 @@ export const Toggle = styled.div`
   align-items: flex-start;
   box-sizing: content-box;
   padding: ${theme.space[4]};
-
-  color: ${theme.colors.text};
-  font-size: calc(${theme.fontSizes[2]});
-  font-weight: 400;
   cursor: pointer;
 
   @media ${theme.mq.desktop} {
@@ -111,6 +111,7 @@ export const Toggle = styled.div`
 
   span {
     svg {
+      fill: ${theme.colors.white};
       width: ${theme.space[4]};
     }
   }

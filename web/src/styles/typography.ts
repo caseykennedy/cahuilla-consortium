@@ -236,6 +236,10 @@ const Typography = css`
     font-weight: 500;
   }
 
+  small {
+    line-height: calc(${theme.root.font.bodyLineHeight} / 1.15);
+  }
+
   mark {
     background-color: ${theme.colors.white};
     padding: 0 ${theme.space[1]};
@@ -247,8 +251,7 @@ const Typography = css`
   }
 
   .t--small {
-    font-size: calc(${theme.fontSizes[1]} / 1.45);
-    line-height: 1;
+    font-size: calc(${theme.fontSizes[1]} /s 1.5);
   }
 
   .t-underline {

@@ -20,7 +20,7 @@ const hiddenTypes = [
 
 export default () =>
   S.list()
-    .title('BC Leaks Content')
+    .title('CCVAP Content')
     .items([
       // Settings
       // _________________________________________________________________
@@ -59,6 +59,16 @@ export default () =>
         .title('Posts')
         .schemaType('post')
         .child(S.documentTypeList('post').title('Post'))
+
+        .icon(GoFile),
+
+      // FAQs
+      // _________________________________________________________________
+
+      S.listItem()
+        .title('FAQs')
+        .schemaType('faq')
+        .child(S.documentTypeList('faq').title('FAQ'))
 
         .icon(GoFile)
 

@@ -111,7 +111,7 @@ const WhoWeAre = () => {
             assist victims of crime.
           </Text>
 
-          <Divider bg="gray" my={5} />
+          <Divider bg="gray" my={4} />
 
           <Text as="p" fontWeight={500} mt={4}>
             Each Tribe is represented on our Advisory Committee:
@@ -132,7 +132,7 @@ const WhoWeAre = () => {
             </Box>
           </Flex>
 
-          <Divider bg="gray" my={5} />
+          <Divider bg="gray" my={4} />
 
           <Box mb={6}>
             <Box mb={5}>

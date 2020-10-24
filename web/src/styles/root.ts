@@ -49,8 +49,8 @@ const RootVariables = css`
     --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
     /* line-height */
-    --heading-line-height: 0.9;
-    --body-line-height: 1.25;
+    --heading-line-height: 1.15;
+    --body-line-height: 1.45;
   }
 
   @media ${theme.mq.tablet} {
