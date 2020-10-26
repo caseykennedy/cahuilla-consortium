@@ -24,21 +24,21 @@ export const Header = styled(Flex)`
   left: 0;
   margin-top: -${theme.headerHeight};
 
-  width: 100vw;
+  width: 100%;
   height: ${theme.headerHeight};
 
   color: ${theme.colors.white};
-  z-index: 9999;
+  z-index: 999;
 
   mix-blend-mode: luminosity;
 
   @media ${theme.mq.tablet} {
-    width: 50vw;
+    width: 50%;
   }
 `
 
 export const Logo = styled(Flex)`
-  padding: ${theme.space[4]};
+  padding: ${theme.space[4]} 0 ${theme.space[4]} ${theme.space[4]};
 
   @media ${theme.mq.tablet} {
   }
@@ -74,10 +74,6 @@ export const Logo = styled(Flex)`
 export const Tools = styled(Flex)`
   justify-content: flex-end;
   flex: 1;
-
-  @media ${theme.mq.desktop} {
-    justify-content: space-between;
-  }
 `
 
 // export const Nav = styled(Flex)`
@@ -105,7 +101,7 @@ export const Toggle = styled.div`
   padding: ${theme.space[4]};
   cursor: pointer;
 
-  @media ${theme.mq.desktop} {
+  @media (min-width: 1100px) {
     display: none;
   }
 

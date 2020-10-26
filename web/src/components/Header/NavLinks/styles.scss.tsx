@@ -6,7 +6,6 @@ import styled from 'styled-components'
 
 // Theme
 import theme from '../../../../config/theme'
-
 // Elements
 import { Flex, AnimatedFlex } from '../../ui'
 
@@ -16,7 +15,16 @@ import { Flex, AnimatedFlex } from '../../ui'
 export const NavLinks = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
+
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  background: ${theme.colors.primary}; */
+  height: 100%;
   width: 100%;
+  z-index: 999;
 `
 
 export const NavLink = styled(AnimatedFlex)`

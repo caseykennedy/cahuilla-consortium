@@ -3,7 +3,7 @@
 
 // ___________________________________________________________________
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'gatsby'
 
 import { Parallax } from 'react-scroll-parallax'
@@ -14,6 +14,7 @@ import Symbol from '../Symbol'
 import Wordmark from '../Wordmark'
 import Navigation from './Navigation'
 import NavLinks from './NavLinks'
+import Portal from '../Portal'
 import Overlay from '../Overlay'
 import Button from '../ui/Button'
 import Icon from '../Icons'
@@ -26,22 +27,33 @@ import * as S from './styles.scss'
 type HeaderShape = { mainRef: React.RefObject<HTMLDivElement> }
 
 const Header: React.FC<HeaderShape> = ({ mainRef }) => {
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const exitRef = useRef<HTMLDivElement>(null)
+
   // Navigation toggle
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleModal = () => setNavOpen(!isNavOpen)
 
   return (
     <>
-      <Overlay
+      <Portal
         id="nav-root"
-        root="root"
+        root="main-root"
         isOpen={isNavOpen}
         handleExit={() => setNavOpen(false)}
+        scrollRef={scrollRef}
         mainRef={mainRef}
-        className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
+        exitRef={exitRef}
       >
-        <NavLinks handleExit={() => setNavOpen(false)} isNavOpen={isNavOpen} />
-      </Overlay>
+        <Overlay
+          className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
+        >
+          <NavLinks
+            handleExit={() => setNavOpen(false)}
+            isNavOpen={isNavOpen}
+          />
+        </Overlay>
+      </Portal>
 
       <S.Header as="header">
         <S.Logo>
