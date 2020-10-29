@@ -7,6 +7,8 @@ import React, { useRef, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
+// Components
+import HideWindow from './HideWindow'
 import Header from '../Header'
 import Footer from '../Footer'
 
@@ -53,9 +55,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <ParallaxProvider>
         <S.Wrapper>
           <Header mainRef={mainRef} />
-          <S.Main ref={mainRef}>{children}</S.Main>
+          <S.Main ref={mainRef}>
+            {children}
+          </S.Main>
         </S.Wrapper>
         <Footer />
+        <HideWindow mainRef={mainRef} />
       </ParallaxProvider>
     </ThemeProvider>
   )

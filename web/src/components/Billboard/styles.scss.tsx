@@ -52,7 +52,6 @@ export const Billboard = styled(Flex)`
 `
 
 export const Telephone = styled(Box)`
-  padding: 0 ${theme.space[4]} ${theme.space[4]} ${theme.space[4]};
 
   @media ${theme.mq.tablet} {
   }
@@ -60,7 +59,7 @@ export const Telephone = styled(Box)`
 
 export const Footnote = styled(Box)`
   font-size: ${theme.fontSizes[1]};
-  padding: 0 ${theme.space[4]} ${theme.space[4]} ${theme.space[4]};
+  margin-top: ${theme.space[6]};
 
   @media ${theme.mq.tablet} {
   }

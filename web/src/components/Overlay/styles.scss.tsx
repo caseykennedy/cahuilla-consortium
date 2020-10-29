@@ -26,11 +26,11 @@ export const Overlay = styled(Flex)`
   right: 0;
   bottom: 0;
 
-  background: ${theme.colors.secondary};
+  background: ${theme.colors.background};
   color: ${theme.colors.white};
   visibility: hidden;
   opacity: 0;
-  transition: all 0.333s ease-in-out;
+  transition: all 0.222s ease-in-out;
   z-index: 9999;
 
   @media ${theme.mq.tablet} {

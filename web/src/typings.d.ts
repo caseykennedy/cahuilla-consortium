@@ -17,8 +17,3 @@ declare module 'gatsby-plugin-transition-link'
 declare module 'react-scroll-parallax'
 declare module 'react-image-lightbox'
 
-function createRef<T>(): RefObject<T>
-interface RefObject<T> {
-  // immutable
-  readonly current: T | null
-}

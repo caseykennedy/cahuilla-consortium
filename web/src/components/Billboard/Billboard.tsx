@@ -41,9 +41,10 @@ const Billboard: React.FC<Props> = ({ active, bg, message, title }) => {
   })
 
   return (
-    <S.Billboard bg={bg}>
+    <S.Billboard bg={bg} p={4}>
       <AnimatedFlex className="inner" style={fadeIn}>
-        <Box p={4} className={`contact ${!active ? 'hide' : 'show'}`}>
+        {/* <Box className={`contact ${!active ? 'hide' : 'show'}`}> */}
+        <Box>
           <Heading
             as="h1"
             className="t--uppercase"
@@ -51,14 +52,15 @@ const Billboard: React.FC<Props> = ({ active, bg, message, title }) => {
           />
           <Text as="p">{message}</Text>
         </Box>
-        <Flex className={`contact ${!active ? 'hide' : 'show'}`}>
+        {/* <Flex className={`contact ${!active ? 'hide' : 'show'}`}> */}
+        <Flex className={`contact show`}>
           <S.Telephone>
             <Text className="t--uppercase">Talk to an advocate</Text>
             <Text fontSize={theme.fontSizes[3]} fontWeight={500}>
               1 (951) 330-0479
             </Text>
           </S.Telephone>
-          <S.Footnote>Crime victim advocacy &amp; crises center</S.Footnote>
+          <S.Footnote>Crime victim advocacy center</S.Footnote>
         </Flex>
       </AnimatedFlex>
     </S.Billboard>

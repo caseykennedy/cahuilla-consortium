@@ -174,7 +174,7 @@ const theme: ThemeShape = {
   },
 
   border: '1px solid #000000',
-  shadow: '0 1rem 1rem rgb(0, 0, 0, 0.4)',
+  shadow: '0 0.25rem 0.5rem rgb(0, 0, 0, 0.3)',
 
   root: {
     mouseX: 'var(--mouse-x)',

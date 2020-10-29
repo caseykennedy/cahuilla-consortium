@@ -37,7 +37,7 @@ const HideAway = () => {
             </div>
           </Link>
         </S.Logo>
-        <Flex alignItems="center">
+        <Flex alignItems="center" pr={6}>
           <p>
             This website was produced by the Cahuilla Consortium under grant
             award #2019-VO-GX-0010, awarded by the Office for Victims of Crime,

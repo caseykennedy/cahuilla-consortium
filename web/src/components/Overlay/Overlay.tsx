@@ -13,7 +13,7 @@ import * as S from './styles.scss'
 
 type Props = {
   className: string
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 // ___________________________________________________________________

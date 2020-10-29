@@ -74,11 +74,13 @@ const WhatWeDo = () => {
             It is our objective to promote the safety and well-being of our
             Native communities.
           </Text>
-          <Text as="p" mb={5}>
+          <Text as="p">
             We work to end all victimization against our tribal people through
             advocacy and education efforts that include prevention,
             intervention, and the fostering of resiliency.
           </Text>
+
+          <Divider bg="gray" my={4} />
 
           <Heading
             as="h4"
