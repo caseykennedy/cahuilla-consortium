@@ -38,6 +38,7 @@ type PostData = {
 }
 
 type PostQuery = {
+  author: string
   title: string
   _rawExcerpt: string
   _rawBody: string
@@ -62,25 +63,6 @@ type PostQuery = {
   categories: {
     title: string
   }[]
-  authors: PostAuthor
-}
-
-type PostAuthor = {
-  name: string
-  role: string
-  avatar: {
-    asset: {
-      fluid: {
-        aspectRatio: number
-        base64: string
-        sizes: string
-        src: string
-        srcSet: string
-        srcSetWebp: string
-        srcWebp: string
-      }
-    }
-  }
 }
 
 type PostContextShape = {

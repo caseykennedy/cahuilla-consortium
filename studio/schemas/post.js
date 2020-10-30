@@ -27,10 +27,9 @@ export default {
       type: 'datetime'
     },
     {
-      name: 'authors',
-      title: 'Authors',
-      type: 'reference',
-      to: [{ type: 'person' }]
+      name: 'author',
+      title: 'Author',
+      type: 'string',
     },
     {
       name: 'categories',

@@ -71,9 +71,22 @@ const Footer: React.FC = () => {
             <Box width={[1, 1 / 2]}>
               <h4>Social</h4>
               <ul>
-                <li>facebook</li>
-                <li>instagram</li>
-                <li>twitter</li>
+                <li>
+                  <a
+                    href="//www.instagram.com/cahuilla_consortium"
+                    target="_blank"
+                  >
+                    facebook
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="//www.facebook.com/CahuillaConsortiumCCVAP"
+                    target="_blank"
+                  >
+                    instagram
+                  </a>
+                </li>
               </ul>
             </Box>
             <Box width={[1, 1 / 2]}>
@@ -88,12 +101,20 @@ const Footer: React.FC = () => {
                   info@cahuillaconsortium.org
                 </a>
                 <br />
-                <a
-                  href="tel:1 (800) 799-SAFE"
-                  aria-label="call us 1 (800) 799-SAFE"
-                >
-                  1 (800) 799-SAFE
-                </a>
+                <br />
+                <span>
+                  <a href="tel:951-330-0479" aria-label="call us 951-330-0479">
+                    1 (951) 330-0479
+                  </a>{' '}
+                  (hotline)
+                </span>
+                <br />
+                <span>
+                  <a href="tel: 951-763-5547" aria-label="call us 951-763-5547">
+                    1 (951) 763-5547
+                  </a>{' '}
+                  (office)
+                </span>
               </p>
             </Box>
           </Flex>

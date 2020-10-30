@@ -65,12 +65,12 @@ const Blog = () => {
   console.log(posts)
   return (
     <S.Blog id="blog">
-      <Box width={[1, 1 / 6]}>
+      <Box width={[1]}>
         <Heading as="h4" mb={4}>
           Blog
         </Heading>
       </Box>
-      <Flex width={[1, 5 / 6]} flexWrap="wrap">
+      <Flex width={[1]} flexWrap="wrap">
         <Grid columns="repeat(auto-fit,minmax(300px,1fr))" gap={theme.space[4]}>
           {posts.map(({ node: post }, idx) => (
             <Post post={post} key={idx} />

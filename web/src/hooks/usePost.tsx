@@ -13,6 +13,7 @@ const usePost = () => {
       posts: allSanityPost(sort: { order: DESC, fields: publishedAt }) {
         edges {
           node {
+            author
             title
             _rawExcerpt
             _rawBody
@@ -36,23 +37,6 @@ const usePost = () => {
             }
             categories {
               title
-            }
-            authors {
-              name
-              title
-              avatar {
-                asset {
-                  fluid(maxWidth: 300) {
-                    srcWebp
-                    srcSetWebp
-                    srcSet
-                    src
-                    sizes
-                    base64
-                    aspectRatio
-                  }
-                }
-              }
             }
           }
           previous {

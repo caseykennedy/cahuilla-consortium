@@ -11,6 +11,7 @@ exports.createPages = ({ graphql, actions }) => {
       posts: allSanityPost(sort: { order: DESC, fields: publishedAt }) {
         edges {
           node {
+            author
             title
             _rawExcerpt
             _rawBody
@@ -34,23 +35,6 @@ exports.createPages = ({ graphql, actions }) => {
             }
             categories {
               title
-            }
-            authors {
-              name
-              title
-              avatar {
-                asset {
-                  fluid(maxWidth: 300) {
-                    srcWebp
-                    srcSetWebp
-                    srcSet
-                    src
-                    sizes
-                    base64
-                    aspectRatio
-                  }
-                }
-              }
             }
           }
           previous {

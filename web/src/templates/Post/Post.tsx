@@ -65,7 +65,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
 
             <Flex width={1} mb={5} justifyContent="space-between">
               <Text as="p" color="gray" fontSize={1} fontWeight={500}>
-                by: {post.authors.name}
+                by: {post.author}
               </Text>
             </Flex>
 

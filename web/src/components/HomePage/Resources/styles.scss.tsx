@@ -39,7 +39,7 @@ export const ButtonGroup = styled(Flex)`
 
     height: calc(50vh);
     width: 100%;
-    padding: ${theme.space[6]};
+    padding: ${theme.space[4]};
     transition: ${theme.transition.all};
 
     &:last-child {
@@ -52,6 +52,7 @@ export const ButtonGroup = styled(Flex)`
 
     @media ${theme.mq.tablet} {
       border-left: ${buttonBorder};
+      padding: ${theme.space[6]};
     }
 
     div {
