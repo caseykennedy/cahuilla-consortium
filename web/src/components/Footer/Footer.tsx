@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
     <S.Footer id="contact">
       <Flex className="inner">
         <Flex className="panel">
-          <Box width={[1, 1 / 2]}>
+          <Box width={[1, 1, 1 / 2]}>
             <Heading as="h3">
               reach out anytime,
               <br />
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
               here for you.
             </Heading>
           </Box>
-          <Flex width={[1, 1 / 2]}>
+          <Flex width={[1, 1, 1 / 2]}>
             <Box width={[1, 1 / 2]}>
               <h4>Social</h4>
               <ul>
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
                   href="mailto:info@cahuillaconsortium.org?subject=Contact from cahuillaconsortium.org"
                   aria-label="email us"
                 >
-                  info@cahuillaconsortium.org
+                  info @cahuillaconsortium.org
                 </a>
                 <br />
                 <br />
