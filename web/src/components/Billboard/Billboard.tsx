@@ -51,11 +51,12 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
         <Box>
           <Heading
             as="h1"
+            mb={0}
             className="t--uppercase"
             dangerouslySetInnerHTML={{ __html: title }}
           />
 
-          <Text as="p">{message}</Text>
+          <Text as="p" className="t--small">{message}</Text>
         </Box>
         {/* <Flex className={`contact ${!active ? 'hide' : 'show'}`}> */}
         <Flex className={`contact show`} mt={[7, 0]}>

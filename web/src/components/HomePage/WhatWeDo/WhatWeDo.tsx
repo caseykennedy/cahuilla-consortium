@@ -38,10 +38,10 @@ const billboardProps = {
   active: true,
   arrow: true,
   bg: theme.colors.primary,
-  message: `The Vision of the Cahuilla Consortium Victim Advocacy Program
-  (CCVAP)is to END violence and victimization in our Tribal
-  communities. The CCVAP will support and promote the safety and
-  well-being of our community.`,
+  // message: `The Vision of the Cahuilla Consortium Victim Advocacy Program
+  // (CCVAP)is to END violence and victimization in our Tribal
+  // communities. The CCVAP will support and promote the safety and
+  // well-being of our community.`,
   title: `Keeping our people safe.`
 }
 
