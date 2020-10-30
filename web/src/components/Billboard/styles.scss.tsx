@@ -28,7 +28,7 @@ export const Billboard = styled(Flex)`
   @media ${theme.mq.tablet} {
     position: sticky;
     top: 0;
-    height: 100%;
+    height: 100vh;
   }
 
   .inner {
