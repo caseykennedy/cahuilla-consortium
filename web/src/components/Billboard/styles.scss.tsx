@@ -19,8 +19,8 @@ export const Billboard = styled(Flex)`
   overflow: hidden;
   padding-top: calc(${theme.headerHeight} + ${theme.space[4]});
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  height: auto;
+  width: 100%;
   z-index: 99;
 
   color: ${theme.colors.white};
@@ -28,7 +28,7 @@ export const Billboard = styled(Flex)`
   @media ${theme.mq.tablet} {
     position: sticky;
     top: 0;
-    width: 50vw;
+    height: 100%;
   }
 
   .inner {
