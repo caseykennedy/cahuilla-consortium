@@ -23,32 +23,22 @@ const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
   const post = pageContext.post
   const prev = pageContext.prev
   const next = pageContext.next
-  // console.log('—————|— Prev / Next —|—————')
-  // console.log(prev)
-  // console.log(next)
   return (
     <S.PrevNext width={1}>
-      {!prev ? (
-        <S.Button to={`/${path}`}>View all</S.Button>
-      ) : (
+      {prev && (
         <S.Button to={`/${path}/${prev.slug.current}`}>
           <Flex className="button__title">
-            previous
+            {prev.title}
             <span>
               <Icon name="nextArrow" />
             </span>
           </Flex>
-
-          {prev.title}
         </S.Button>
       )}
-      {!next ? (
-        <S.Button to={`/${path}`}>View all</S.Button>
-      ) : (
+      {next && (
         <S.Button to={`/${path}/${next.slug.current}`}>
-          {next.title}
           <Flex className="button__title button__title--next">
-            next
+            {next.title}
             <span>
               <Icon name="nextArrow" />
             </span>

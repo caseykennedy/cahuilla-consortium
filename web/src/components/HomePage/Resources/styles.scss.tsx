@@ -21,7 +21,7 @@ export const Resources = styled(Flex)`
 export const ButtonGroup = styled(Flex)`
   flex-wrap: wrap;
 
-  button {
+  a {
     background: ${theme.colors.tertiary};
     border-top: none;
     border-right: none;

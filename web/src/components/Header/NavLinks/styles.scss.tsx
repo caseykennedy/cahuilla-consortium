@@ -16,40 +16,22 @@ export const NavLinks = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
 
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-
-  background: ${theme.colors.primary}; */
   height: 100%;
   width: 100%;
   z-index: 999;
 `
 
 export const NavLink = styled(AnimatedFlex)`
+  /* justify-content: center; */
   flex-direction: column;
   width: 100%;
-  /* padding: ${theme.space[2]} 0; */
 
   .nav-mobile {
     &__link {
-      color: ${theme.colors.white};
-      font-size: ${theme.fontSizes[2]};
+      color: ${theme.colors.text};
+      font-size: ${theme.fontSizes[3]};
       text-transform: uppercase;
-      padding: ${theme.space[4]};
-    }
-
-    &-sub {
-      padding: ${theme.fontSizes[1]} 0 ${theme.fontSizes[1]} 0;
-      border-bottom: ${theme.border};
-
-      &__link {
-        display: block;
-        padding: ${theme.space[3]} ${theme.space[4]};
-        color: ${theme.colors.text};
-        font-size: calc(${theme.fontSizes[2]} / 1.15);
-      }
+      padding: ${theme.space[3]};
     }
   }
 `

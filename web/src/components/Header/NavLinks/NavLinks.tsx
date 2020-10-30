@@ -33,11 +33,9 @@ const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
 
   return (
     <S.NavLink onClick={handleExitOnClick} style={transition}>
-      <Box className="nav-mobile-sub">
-        <Link to={item.link} className="nav-mobile__link">
-          {item.name}
-        </Link>
-      </Box>
+      <Link to={item.link} className="nav-mobile__link">
+        {item.name}
+      </Link>
     </S.NavLink>
   )
 }
@@ -81,22 +79,22 @@ export default NavLinks
 const data = [
   {
     name: 'what we do',
-    link: '/what-we-do'
+    link: '/#what'
   },
   {
     name: 'who we are',
-    link: '/who-we-are'
+    link: '/#who'
   },
   {
-    name: 'volunteer',
-    link: '/volunteer'
+    name: 'FAQ',
+    link: '/#faq'
   },
   {
     name: 'blog',
-    link: '/blog'
+    link: '/#blog'
   },
   {
     name: 'contact',
-    link: '/contact'
+    link: '/#contact'
   }
 ]

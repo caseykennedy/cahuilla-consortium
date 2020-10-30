@@ -18,7 +18,7 @@ export const HideWindow = styled(motion.div)`
   /* mix-blend-mode: difference; */
 
   position: fixed;
-  top: ${theme.space[1]};
+  bottom: ${theme.space[1]};
   right: ${theme.space[1]};
   height: ${theme.space[5]};
   width: ${theme.space[5]};

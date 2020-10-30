@@ -113,7 +113,7 @@ const theme: ThemeShape = {
 
   // Left/Right gutter
   gutter: {
-    x: [5, 6],
+    x: [4, 5],
     y: [4, 5]
   },
 

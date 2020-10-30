@@ -62,20 +62,20 @@ const Resources = () => {
       </Box>
       <Box width={[1, 1 / 2]}>
         <S.ButtonGroup>
-          <button>
+          <a>
             <Heading as="h3">Get in touch</Heading>
             <Flex>
               <p>We're always here for you.</p>
               <Icon name="nextArrow" />
             </Flex>
-          </button>
-          <button>
+          </a>
+          <a>
             <Heading as="h3">Volunteer</Heading>
             <Flex>
               <p>Helping others is the best medicine.</p>
               <Icon name="nextArrow" />
             </Flex>
-          </button>
+          </a>
         </S.ButtonGroup>
       </Box>
     </S.Resources>

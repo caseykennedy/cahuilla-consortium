@@ -25,14 +25,13 @@ export const Header = styled(Flex)`
   margin-top: -${theme.headerHeight};
 
   width: 100%;
-  height: ${theme.headerHeight};
-
-  color: ${theme.colors.white};
   z-index: 999;
 
+  color: ${theme.colors.white};
   mix-blend-mode: luminosity;
 
   @media ${theme.mq.tablet} {
+    height: ${theme.headerHeight};
     width: 50%;
   }
 `
@@ -96,7 +95,7 @@ export const Tools = styled(Flex)`
 
 export const Toggle = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   box-sizing: content-box;
   padding: ${theme.space[4]};
   cursor: pointer;

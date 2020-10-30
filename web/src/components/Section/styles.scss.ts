@@ -8,14 +8,20 @@ import { Box, Flex } from '../ui'
 
 // ___________________________________________________________________
 
-export const Section = styled(Box)<{ border?: boolean; overflow?: string }>`
+type Props = {
+  border?: boolean
+  maxWidth?: number | number[] | string | string[]
+  overflow?: string
+}
+
+export const Section = styled(Box)<Props>`
   border-top: ${p => (!p.border ? 'none' : `${theme.border}`)};
   position: relative;
   overflow: ${p => (!p.overflow ? 'visible' : p.overflow)};
 
   .section__inner {
     margin: 0 auto;
-    max-width: ${theme.maxWidth};
+    max-width: ${p => (!p.maxWidth ? theme.maxWidth : p.maxWidth)};
     width: 100%;
   }
 `

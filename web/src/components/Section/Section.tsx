@@ -27,6 +27,7 @@ type Props = {
   pr?: number | number[] | string | string[]
   pl?: number | number[] | string | string[]
   id?: string
+  maxWidth?: number | number[] | string | string[]
   width?: number | number[] | string | string[]
   overflow?: string
 }
@@ -42,6 +43,7 @@ const Section: React.FC<Props> = ({
   pr,
   pl,
   id,
+  maxWidth,
   width,
   overflow
 }) => (
@@ -56,6 +58,7 @@ const Section: React.FC<Props> = ({
     width={width}
     overflow={overflow}
     className={className}
+    maxWidth={maxWidth}
   >
     <Box pr={pr} pl={pl} className="section__inner">
       {children}

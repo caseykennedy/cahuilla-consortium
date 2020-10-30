@@ -15,6 +15,7 @@ import theme from '../../../../config/theme'
 export const PrevNext = styled(Flex)`
   flex-wrap: wrap;
   border-top: ${theme.border};
+  border-bottom: ${theme.border};
 `
 
 export const Button = styled(Link)`
@@ -22,9 +23,8 @@ export const Button = styled(Link)`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  
-  background: ${theme.colors.background};
-  padding: ${theme.space[5]} ${theme.space[5]};
+
+  padding: ${theme.space[5]};
   width: 100%;
 
   color: ${theme.colors.text};
@@ -33,15 +33,16 @@ export const Button = styled(Link)`
   font-weight: 500;
   line-height: 1.15;
   text-transform: uppercase;
+  text-decoration: none;
 
   @media ${theme.mq.tablet} {
-    padding: ${theme.space[7]} ${theme.space[7]};
-    width: 50%;
+    padding: ${theme.space[4]};
+    /* width: 50%; */
     font-size: ${theme.fontSizes[3]};
   }
 
   &:hover {
-    background: ${theme.colors.primary};
+    background: ${darken(0.05, theme.colors.background)};
     color: ${theme.colors.text};
   }
 
@@ -58,17 +59,17 @@ export const Button = styled(Link)`
   .button {
     &__title {
       /* display: flex; */
+      align-items: center;
       justify-content: space-between;
-      margin-bottom: ${theme.space[7]};
-      font-size: ${theme.fontSizes[0]};
+      font-size: ${theme.fontSizes[2]};
 
       svg {
-        width: ${theme.iconWidth};
+        fill: ${theme.colors.text};
+        width: ${theme.space[5]};
         transform: rotate(-180deg);
       }
 
       &--next {
-        margin-top: ${theme.space[7]};
         margin-bottom: 0;
 
         svg {

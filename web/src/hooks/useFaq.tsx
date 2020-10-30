@@ -21,7 +21,7 @@ type FaqShape = {
 const useFaq = () => {
   const data = useStaticQuery<FaqShape>(graphql`
     query FaqQuery {
-      faq: allSanityFaq {
+      faq: allSanityFaq(sort: {fields: question, order: DESC}) {
         edges {
           node {
             _rawAnswer
