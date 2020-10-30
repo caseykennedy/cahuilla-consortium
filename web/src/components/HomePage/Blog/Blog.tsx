@@ -24,8 +24,6 @@ import usePost from '../../../hooks/usePost'
 
 // ___________________________________________________________________
 
-type PostProps = {}
-
 const blogPath = 'blog'
 
 const Post: React.FC<{ post: PostQuery }> = ({ post }) => {

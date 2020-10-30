@@ -62,14 +62,20 @@ const Resources = () => {
       </Box>
       <Box width={[1, 1 / 2]}>
         <S.ButtonGroup>
-          <a>
+          <a
+            href={`mailto: info@cahuillaconsortium.org?subject=Contact from CahuillaConsortium.org`}
+            target="_blank"
+          >
             <Heading as="h3">Get in touch</Heading>
             <Flex>
               <p>We're always here for you.</p>
               <Icon name="nextArrow" />
             </Flex>
           </a>
-          <a>
+          <a
+            href={`mailto: info@cahuillaconsortium.org?subject=Volunteer Request from CahuillaConsortium.org`}
+            target="_blank"
+          >
             <Heading as="h3">Volunteer</Heading>
             <Flex>
               <p>Helping others is the best medicine.</p>

@@ -85,6 +85,7 @@ const theme: ThemeShape = {
     secondary: '#52C3B8',
     tertiary: '#857AEB',
     quaternary: '#EFEDEB',
+    quinary: '#EFEDEB',
 
     black: '#000105',
     white: '#ffffff',

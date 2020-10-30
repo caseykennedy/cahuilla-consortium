@@ -59,7 +59,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
               )}
             </Box>
 
-            <Heading as="h4" mb={0} className="text--xl">
+            <Heading as="h4" mb={0} className="text--xxl">
               {post.title}
             </Heading>
 

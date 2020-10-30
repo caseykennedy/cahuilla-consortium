@@ -36,6 +36,7 @@ type CallbackTypes = {
 
 const billboardProps = {
   active: true,
+  arrow: true,
   bg: theme.colors.primary,
   message: `The Vision of the Cahuilla Consortium Victim Advocacy Program
   (CCVAP)is to END violence and victimization in our Tribal

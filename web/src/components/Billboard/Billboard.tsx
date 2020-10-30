@@ -13,6 +13,9 @@ import * as S from './styles.scss'
 // UI
 import { Box, Flex, Text, Heading, AnimatedFlex } from '../ui'
 
+// Components
+import Icon from '../Icons'
+
 // Hooks
 import useScrollWatch from '../../hooks/useScrollWatch'
 
@@ -24,11 +27,12 @@ type Props = {
 
 const defaultProps = {
   active: false,
+  arrow: false,
   bg: theme.colors.primary,
   title: `Keeping our people safe.`
 }
 
-const Billboard: React.FC<Props> = ({ active, bg, message, title }) => {
+const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
   // Navigation toggle
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleModal = () => setNavOpen(!isNavOpen)
@@ -50,17 +54,28 @@ const Billboard: React.FC<Props> = ({ active, bg, message, title }) => {
             className="t--uppercase"
             dangerouslySetInnerHTML={{ __html: title }}
           />
+
           <Text as="p">{message}</Text>
         </Box>
         {/* <Flex className={`contact ${!active ? 'hide' : 'show'}`}> */}
         <Flex className={`contact show`}>
-          <S.Telephone>
-            <Text className="t--uppercase">Talk to an advocate</Text>
-            <Text fontSize={theme.fontSizes[3]} fontWeight={500}>
-              1 (951) 330-0479
-            </Text>
-          </S.Telephone>
-          <S.Footnote>Crime victim advocacy center</S.Footnote>
+          <Flex flexDirection="column" flex={2}>
+            <S.Telephone>
+              <Text className="t--uppercase">Talk to an advocate</Text>
+
+              <Text fontSize={theme.fontSizes[3]} fontWeight={500}>
+                1 (951) 330-0479
+              </Text>
+            </S.Telephone>
+
+            <S.Footnote>Crime victim advocacy center</S.Footnote>
+          </Flex>
+
+          {arrow && (
+            <Box className="scroll-arrow">
+              <Icon name="nextArrow" color="white" />
+            </Box>
+          )}
         </Flex>
       </AnimatedFlex>
     </S.Billboard>

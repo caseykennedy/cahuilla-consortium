@@ -95,9 +95,9 @@ export const Tools = styled(Flex)`
 
 export const Toggle = styled.div`
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   box-sizing: content-box;
-  padding: ${theme.space[4]};
+  padding: 0 ${theme.space[4]} ${theme.space[4]} 0;
   cursor: pointer;
 
   @media (min-width: 1100px) {

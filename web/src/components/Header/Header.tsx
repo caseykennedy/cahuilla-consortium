@@ -69,7 +69,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
         <S.Tools>
           <S.Toggle onClick={toggleModal} aria-label="Toggle menu">
-            <Icon name="hamburger" color="black" />
+            <Icon name="hamburger" color="background" />
           </S.Toggle>
 
           <Navigation />

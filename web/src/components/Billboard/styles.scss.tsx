@@ -17,7 +17,7 @@ import { Box, Flex, AnimatedFlex } from '../ui'
 
 export const Billboard = styled(Flex)`
   overflow: hidden;
-  padding-top: calc(${theme.headerHeight} + ${theme.space[6]});
+  padding-top: calc(${theme.headerHeight} + ${theme.space[4]});
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -37,7 +37,7 @@ export const Billboard = styled(Flex)`
     flex-wrap: wrap;
 
     .contact {
-      flex-direction: column;
+      /* flex-direction: column; */
       flex-wrap: wrap;
       opacity: 0;
       transform: ${theme.transform.matrix.from};
@@ -46,6 +46,20 @@ export const Billboard = styled(Flex)`
         transition: ${theme.transition.all};
         opacity: 1;
         transform: ${theme.transform.matrix.to};
+      }
+    }
+  }
+
+  .scroll-arrow {
+    margin-top: auto;
+    margin-left: auto;
+
+    span {
+      transform: rotate(90deg);
+      width: ${theme.space[6]};
+
+      svg {
+
       }
     }
   }
