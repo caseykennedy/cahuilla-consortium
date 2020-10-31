@@ -50,7 +50,7 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
         {/* <Box className={`contact ${!active ? 'hide' : 'show'}`}> */}
         <Box>
           <Heading
-            as="h1"
+            as="h2"
             mb={0}
             className="t--uppercase"
             dangerouslySetInnerHTML={{ __html: title }}
@@ -62,7 +62,7 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
         <Flex className={`contact show`} mt={[7, 0]}>
           <Flex flexDirection="column" flex={2}>
             <S.Telephone>
-              <Text className="t--uppercase">Talk to an advocate</Text>
+              <Text fontSize={1} className="t--uppercase">Talk to an advocate</Text>
 
               <Text fontSize={theme.fontSizes[3]} fontWeight={500}>
                 1 (951) 330-0479

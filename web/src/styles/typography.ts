@@ -166,6 +166,7 @@ const Typography = css`
   .text--xxl {
     font-family: ${theme.fonts.display};
     font-size: calc(${theme.root.font.xl} * 1.25);
+    line-height: 0.75;
 
     @media ${theme.mq.desktop} {
       font-size: calc(${theme.root.font.xxl} / 1);
@@ -343,7 +344,7 @@ const Typography = css`
     li {
       list-style-position: outside;
       /* font-size: calc(${theme.root.font.baseSize} / 1); */
-      line-height: calc(${theme.root.font.bodyLineHeight} * 1.5);
+      line-height: calc(${theme.root.font.bodyLineHeight} * 1.15);
       font-size: ${theme.fontSizes[2]};
 
       @media ${theme.mq.tablet} {

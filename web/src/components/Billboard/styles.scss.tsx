@@ -73,7 +73,7 @@ export const Telephone = styled(Box)`
 
 export const Footnote = styled(Box)`
   font-size: ${theme.fontSizes[1]};
-  margin-top: ${theme.space[6]};
+  margin-top: ${theme.space[4]};
 
   @media ${theme.mq.tablet} {
   }

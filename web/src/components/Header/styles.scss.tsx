@@ -19,6 +19,7 @@ export const Header = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
 
+  background: ${theme.colors.primary};
   position: sticky;
   top: 0;
   left: 0;
@@ -28,9 +29,9 @@ export const Header = styled(Flex)`
   z-index: 999;
 
   color: ${theme.colors.white};
-  mix-blend-mode: luminosity;
 
   @media ${theme.mq.tablet} {
+    background: transparent;
     height: ${theme.headerHeight};
     width: 50%;
   }
@@ -47,11 +48,10 @@ export const Logo = styled(Flex)`
     justify-content: center;
     align-items: center;
     color: ${theme.colors.white};
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 
     svg {
       fill: ${theme.colors.white};
-      mix-blend-mode: difference;
     }
 
     .symbol {

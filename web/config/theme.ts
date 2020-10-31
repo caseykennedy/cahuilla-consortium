@@ -157,7 +157,7 @@ const theme: ThemeShape = {
 
   maxWidth: '1680px',
   siteWidth: '50vw',
-  headerHeight: '111px',
+  headerHeight: '80px',
 
   grid: {
     gap: '0.5rem'
