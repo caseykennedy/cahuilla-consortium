@@ -114,8 +114,8 @@ const theme: ThemeShape = {
 
   // Left/Right gutter
   gutter: {
-    x: [4, 5],
-    y: [4, 5]
+    x: [4],
+    y: [4]
   },
 
   // Typography
@@ -157,7 +157,7 @@ const theme: ThemeShape = {
 
   maxWidth: '1680px',
   siteWidth: '50vw',
-  headerHeight: '111px',
+  headerHeight: '80px',
 
   grid: {
     gap: '0.5rem'

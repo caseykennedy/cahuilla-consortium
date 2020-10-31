@@ -14,8 +14,6 @@ import theme from '../../../../config/theme'
 export const Nav = styled.nav`
   align-items: center;
   justify-content: flex-end;
-  
-  padding: ${theme.space[4]} calc(${theme.space[3]} * 1.75) ${theme.space[4]} 0;
   width: 100%;
   z-index: 999;
 

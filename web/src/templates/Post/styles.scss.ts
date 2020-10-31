@@ -14,8 +14,16 @@ import theme from '../../../config/theme'
 export const Post = styled(Box)`
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 760px;
   width: 100%;
+
+  @media ${theme.mq.tablet} {
+    max-width: 75%;
+  }
+
+  @media ${theme.mq.desktop} {
+    max-width: 50%;
+    padding-left: ${theme.space[4]};
+  }
 
   p {
     margin: 0 0 ${theme.space[5]} 0;

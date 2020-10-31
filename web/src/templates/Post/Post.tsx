@@ -37,8 +37,8 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
         desc={`${post.title} | `}
         individual={false}
       />
-      <S.PageTitle />
-      <Section pb={7}>
+      {/* <S.PageTitle /> */}
+      <Box pt={5} px={4} pb={7}>
         <S.Post>
           <Box width={1} mb={5}>
             <Text as="p" fontSize={1} fontWeight={500}>
@@ -85,7 +85,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
             </Flex>
           </Flex>
         </S.Post>
-      </Section>
+      </Box>
 
       <PrevNext pageContext={pageContext} />
     </Layout>

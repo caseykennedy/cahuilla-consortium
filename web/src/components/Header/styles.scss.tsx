@@ -19,25 +19,25 @@ export const Header = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
 
+  background: ${theme.colors.primary};
   position: sticky;
   top: 0;
   left: 0;
-  margin-top: -${theme.headerHeight};
+  padding: ${theme.space[2]} ${theme.space[4]};
 
   width: 100%;
   z-index: 999;
 
   color: ${theme.colors.white};
-  mix-blend-mode: luminosity;
 
   @media ${theme.mq.tablet} {
+    padding: 0 ${theme.space[4]};
     height: ${theme.headerHeight};
     width: 50%;
   }
 `
 
 export const Logo = styled(Flex)`
-  padding: ${theme.space[4]} 0 ${theme.space[4]} ${theme.space[4]};
 
   @media ${theme.mq.tablet} {
   }
@@ -47,14 +47,20 @@ export const Logo = styled(Flex)`
     justify-content: center;
     align-items: center;
     color: ${theme.colors.white};
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 
     svg {
       fill: ${theme.colors.white};
-      mix-blend-mode: difference;
+      /* mix-blend-mode: difference; */
     }
 
     .symbol {
+      /* display: none;
+
+      @media ${theme.mq.tablet} {
+        display: initial;
+      } */
+
       svg {
         width: 45px;
       }
@@ -65,6 +71,7 @@ export const Logo = styled(Flex)`
 
       svg {
         width: 90px;
+        transform: scale(0.9);
       }
     }
   }
@@ -97,7 +104,6 @@ export const Toggle = styled.div`
   display: flex;
   /* align-items: center; */
   box-sizing: content-box;
-  padding: 0 ${theme.space[4]} ${theme.space[4]} 0;
   cursor: pointer;
 
   @media (min-width: 1100px) {

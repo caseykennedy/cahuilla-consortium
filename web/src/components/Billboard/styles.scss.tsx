@@ -17,7 +17,7 @@ import { Box, Flex, AnimatedFlex } from '../ui'
 
 export const Billboard = styled(Flex)`
   overflow: hidden;
-  padding-top: calc(${theme.headerHeight} + ${theme.space[4]});
+  padding-top: calc(${theme.space[4]});
   position: relative;
   height: auto;
   width: 100%;
@@ -27,8 +27,8 @@ export const Billboard = styled(Flex)`
 
   @media ${theme.mq.tablet} {
     position: sticky;
-    top: 0;
-    height: 100vh;
+    top: ${theme.headerHeight};
+    height: calc(100vh - ${theme.headerHeight});
   }
 
   .inner {
@@ -73,7 +73,7 @@ export const Telephone = styled(Box)`
 
 export const Footnote = styled(Box)`
   font-size: ${theme.fontSizes[1]};
-  margin-top: ${theme.space[6]};
+  margin-top: ${theme.space[5]};
 
   @media ${theme.mq.tablet} {
   }
