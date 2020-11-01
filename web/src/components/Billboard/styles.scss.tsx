@@ -17,7 +17,7 @@ import { Box, Flex, AnimatedFlex } from '../ui'
 
 export const Billboard = styled(Flex)`
   overflow: hidden;
-  padding-top: calc(${theme.space[4]});
+  padding-top: calc(${theme.space[7]});
   position: relative;
   height: auto;
   width: 100%;
@@ -35,12 +35,14 @@ export const Billboard = styled(Flex)`
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 
     .contact {
       /* flex-direction: column; */
       flex-wrap: wrap;
       opacity: 0;
       transform: ${theme.transform.matrix.from};
+      width: 100%;
 
       &.show {
         transition: ${theme.transition.all};
@@ -66,14 +68,6 @@ export const Billboard = styled(Flex)`
 `
 
 export const Telephone = styled(Box)`
-
-  @media ${theme.mq.tablet} {
-  }
-`
-
-export const Footnote = styled(Box)`
-  font-size: ${theme.fontSizes[1]};
-  margin-top: ${theme.space[5]};
 
   @media ${theme.mq.tablet} {
   }

@@ -42,7 +42,7 @@ const billboardProps = {
   // (CCVAP)is to END violence and victimization in our Tribal
   // communities. The CCVAP will support and promote the safety and
   // well-being of our community.`,
-  title: `Keeping our people safe.`
+  title: `Keeping our<br />people safe.`
 }
 
 const WhatWeDo = () => {

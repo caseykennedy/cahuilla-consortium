@@ -166,7 +166,7 @@ const Typography = css`
   .text--xxl {
     font-family: ${theme.fonts.display};
     font-size: calc(${theme.root.font.xl} / 1);
-    line-height: 0.85;
+    line-height: 0.8;
 
     @media ${theme.mq.desktop} {
       font-size: calc(${theme.root.font.xxl} / 1);
@@ -175,7 +175,8 @@ const Typography = css`
 
   h2,
   .text--xl {
-    font-size: ${theme.root.font.lg};
+    font-size: calc(${theme.root.font.xl} / 1.15);
+    line-height: 0.8;
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.root.font.xl} * 1);
