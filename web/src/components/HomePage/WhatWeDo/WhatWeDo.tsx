@@ -42,7 +42,7 @@ const billboardProps = {
   // (CCVAP)is to END violence and victimization in our Tribal
   // communities. The CCVAP will support and promote the safety and
   // well-being of our community.`,
-  title: `Keeping our people safe.`
+  title: `Keeping our<br />people safe.`
 }
 
 const WhatWeDo = () => {
@@ -68,7 +68,7 @@ const WhatWeDo = () => {
       <Box width={[1, 1 / 2]}>
         <Hero src="group-hands.jpg" altText="Group raising hands in the air." />
         <Box p={4} id="what">
-          <Heading as="h2" fontSize={3} mb={6}>
+          <Heading as="h2" fontSize={3} mt={[6, 0, 0]} mb={6}>
             What we do
           </Heading>
           <Text as="p" className="t--lead">

@@ -55,7 +55,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         </Overlay>
       </Portal>
 
-      <S.Header as="header">
+      <S.Header as="header" px={[4, 5]}>
         <S.Logo>
           <Link to="/" aria-label="Back to home">
             <div className="symbol">

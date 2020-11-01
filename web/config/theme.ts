@@ -114,8 +114,8 @@ const theme: ThemeShape = {
 
   // Left/Right gutter
   gutter: {
-    x: [4, 5],
-    y: [4, 5]
+    x: [4],
+    y: [4]
   },
 
   // Typography
