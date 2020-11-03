@@ -6,10 +6,6 @@
 import React, { useRef, useState } from 'react'
 import { Link } from 'gatsby'
 
-import { Parallax } from 'react-scroll-parallax'
-
-import { Box, Flex, Text, Heading } from '../ui'
-
 import Symbol from '../Symbol'
 import Wordmark from '../Wordmark'
 import Navigation from './Navigation'

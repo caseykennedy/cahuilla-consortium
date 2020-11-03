@@ -12,5 +12,6 @@ export const WhatWeDo = styled(Flex)`
   flex-wrap: wrap;
 
   @media ${theme.mq.tablet} {
+    margin-top: -${theme.headerHeight};
   }
 `

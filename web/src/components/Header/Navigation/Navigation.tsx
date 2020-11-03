@@ -42,12 +42,8 @@ export default Navigation
 
 const data = [
   {
-    name: 'what we do',
+    name: 'start here',
     link: '/#what'
-  },
-  {
-    name: 'who we are',
-    link: '/#who'
   },
   {
     name: 'FAQ',

@@ -23,27 +23,22 @@ import useScrollWatch from '../../hooks/useScrollWatch'
 
 type Props = {
   message?: string
+  arrow?: boolean
 } & typeof defaultProps
 
 const defaultProps = {
   active: false,
-  arrow: false,
   bg: theme.colors.primary,
   title: `Keeping our people safe.`
 }
 
 const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
-  // Navigation toggle
-  const [isNavOpen, setNavOpen] = useState(false)
-  const toggleModal = () => setNavOpen(!isNavOpen)
-
   const fadeIn = useSpring({
     config: config.molasses,
     // delay: 160,
     from: { opacity: 0, transform: theme.transform.matrix.from },
     to: { opacity: 1, transform: theme.transform.matrix.to }
   })
-
   return (
     <S.Billboard bg={bg} p={4}>
       <AnimatedFlex className="inner" style={fadeIn}>
@@ -60,8 +55,8 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
             {message}
           </Text>
         </Box>
-        {/* <Flex className={`contact ${!active ? 'hide' : 'show'}`}> */}
-        <Flex className={`contact show`} mt={[7, 0]}>
+        {/* <Flex mt={[7, 0]} className={`contact ${!active ? 'hide' : 'show'}`}> */}
+        <Flex mt={[7, 0]} className={`contact show`}>
           <Flex flexDirection="column" flex={2}>
             <S.Telephone>
               <Text fontSize={1} className="t--uppercase">
@@ -73,7 +68,7 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
               </Text>
             </S.Telephone>
 
-            <Box mt={4} fontSize={1}>
+            <Box mt={[4, 2, 4]} fontSize={1}>
               Crime victim advocacy center
             </Box>
           </Flex>

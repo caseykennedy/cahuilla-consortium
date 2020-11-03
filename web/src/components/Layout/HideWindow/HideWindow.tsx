@@ -61,7 +61,7 @@ const HideWindow: React.FC<Props> = ({ mainRef }) => {
           className={`nav-bg ${!isHidden ? 'nav-bg--closed' : 'nav-bg--open'}`}
         >
           <Box p={4}>
-            <Heading as="h4" color="gray" fontSize={[4, 5]}>
+            <Heading as="h4" color="white" fontSize={[4, 5]}>
               If we can rediscover in ourselves the hidden beauty of this
               receptive devotion, if we can learn how to be still without
               inaction, how to ‘further life’ without willed purpose, how to

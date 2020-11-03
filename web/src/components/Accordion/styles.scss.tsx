@@ -46,15 +46,26 @@ export const AccordionToggle = styled(Flex)<{ bg?: string, colorActive?: string,
 
   border: none;
   outline: none;
-  transition: color 0.6s ease;
+  transition: background-color 0.222s ease;
 
   &:last-child {
     margin-bottom: 0;
   }
 
+  .title {
+    left: 0;
+    position: relative;
+    transition: left 0.222s ease;
+  }
+
   &:hover,
   &.active  {
+    background: ${darken(0.05, theme.colors.background)};
     color: ${p => p.colorActive};
+
+    .title {
+      left: ${theme.space[2]};
+    }
   }
 `
 

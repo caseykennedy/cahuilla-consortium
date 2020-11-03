@@ -19,16 +19,16 @@ export const Header = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
 
+  /* mix-blend-mode: difference; */
   background: ${theme.colors.primary};
+  /* border-bottom: 4px solid ${theme.colors.background}; */
   position: sticky;
   top: 0;
   left: 0;
+  
   padding: ${theme.space[2]} ${theme.space[4]};
-
   width: 100%;
   z-index: 999;
-
-  color: ${theme.colors.white};
 
   @media ${theme.mq.tablet} {
     padding: 0 ${theme.space[4]};
@@ -106,7 +106,7 @@ export const Toggle = styled.div`
   box-sizing: content-box;
   cursor: pointer;
 
-  @media (min-width: 1100px) {
+  @media ${theme.mq.tablet} {
     display: none;
   }
 

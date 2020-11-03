@@ -48,17 +48,17 @@ const billboardProps = {
 const WhatWeDo = () => {
   const scrollRef = useRef<HTMLDivElement>(null)
 
-  // Show/Hide Billboard content
-  const [billboardActive, setBillboardActive] = useState(false)
-  // Watch for scroll position
-  useScrollWatch((callbackData: CallbackTypes) => {
-    const { previousScrollTop, currentScrollTop } = callbackData
-    const scrollPos =
-      null !== scrollRef.current &&
-      scrollRef.current.getBoundingClientRect().top
+  // // Show/Hide Billboard content
+  // const [billboardActive, setBillboardActive] = useState(false)
+  // // Watch for scroll position
+  // useScrollWatch((callbackData: CallbackTypes) => {
+  //   const { previousScrollTop, currentScrollTop } = callbackData
+  //   const scrollPos =
+  //     null !== scrollRef.current &&
+  //     scrollRef.current.getBoundingClientRect().top
 
-    setBillboardActive(scrollPos > 128)
-  })
+  //   setBillboardActive(scrollPos > 128)
+  // })
 
   return (
     <S.WhatWeDo ref={scrollRef}>
@@ -68,7 +68,7 @@ const WhatWeDo = () => {
       <Box width={[1, 1 / 2]}>
         <Hero src="group-hands.jpg" altText="Group raising hands in the air." />
         <Box p={4} id="what">
-          <Heading as="h2" fontSize={3} mt={[6, 0, 0]} mb={6}>
+          <Heading as="h2" fontSize={3} mb={6}>
             What we do
           </Heading>
           <Text as="p" className="t--lead">
@@ -122,7 +122,11 @@ const WhatWeDo = () => {
             <a href="tel:1-951-330-0479" aria-label="Call us">
               <mark>1 (951) 330-0479</mark>
             </a>{' '}
-            (24/7 hotline) or <mark>951-763-5547</mark> (office/center).
+            (24/7 hotline) or{' '}
+            <a href="tel:1-951-763-5547" aria-label="Call us">
+              <mark>1 (951) 763-5547</mark>
+            </a>{' '}
+            (office/center).
           </Text>
 
           <Divider bg="black" my={0} />

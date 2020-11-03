@@ -2,22 +2,15 @@
 
 // ___________________________________________________________________
 
-// Core
-import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { readableColor, darken } from 'polished'
-
-// Theme
 import theme from '../../../config/theme'
-
-// Elements
-import { Box, Flex, AnimatedFlex } from '../ui'
+import { Box, Flex } from '../ui'
 
 // ___________________________________________________________________
 
 export const Billboard = styled(Flex)`
   overflow: hidden;
-  padding-top: calc(${theme.space[7]});
+  padding-top: calc(${theme.space[5]});
   position: relative;
   height: auto;
   width: 100%;
@@ -29,6 +22,10 @@ export const Billboard = styled(Flex)`
     position: sticky;
     top: ${theme.headerHeight};
     height: calc(100vh - ${theme.headerHeight});
+  }
+
+  @media ${theme.mq.desktop} {
+    padding-top: calc(${theme.space[5]});
   }
 
   .inner {

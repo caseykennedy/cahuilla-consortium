@@ -2,7 +2,7 @@
 
 // ___________________________________________________________________
 
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
@@ -62,7 +62,6 @@ const Post: React.FC<{ post: PostQuery }> = ({ post }) => {
 
 const Blog = () => {
   const posts = usePost()
-  console.log(posts)
   return (
     <S.Blog id="blog">
       <Box width={[1]}>

@@ -106,8 +106,15 @@ const Accordion: React.FC<Props> = ({
           pb={pb}
           pl={pl}
         >
-          <S.AccordionToggleInner width={2 / 3}>
-            <Heading as="h4" fontSize={fontSize} width={1}>
+          <S.AccordionToggleInner width={3 / 4}>
+            <Heading
+              fontFamily="heading"
+              fontSize={fontSize}
+              letterSpacing={0.75}
+              lineHeight={1.25}
+              width={1}
+              className="title"
+            >
               {title}
             </Heading>
             {subTitle && (
@@ -140,12 +147,13 @@ export default Accordion
 // ___________________________________________________________________
 
 const defaultProps = {
-  pt: [4],
-  pb: [4],
+  pt: [3],
+  pb: [3],
   pr: [0],
   pl: [0],
   title: 'title',
   color: theme.colors.text,
+  fontSize: 2,
   chevronColor: theme.colors.text,
   chevronWidth: theme.space[4],
   borderColor: theme.colors.text,

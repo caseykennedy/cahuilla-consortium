@@ -23,7 +23,7 @@ export const ButtonGroup = styled(Flex)`
 
   a {
     background: ${theme.colors.tertiary};
-    border-top: none;
+    border-top: ${buttonBorder};
     border-right: none;
     border-bottom: ${buttonBorder};
     border-left: none;
@@ -37,12 +37,13 @@ export const ButtonGroup = styled(Flex)`
 
     text-align: left;
 
-    height: calc(50vh);
+    height: calc(25vh);
     width: 100%;
     padding: ${theme.space[4]};
     transition: ${theme.transition.all};
 
     &:last-child {
+      border-top: none;
       border-bottom: none;
     }
 
@@ -51,7 +52,9 @@ export const ButtonGroup = styled(Flex)`
     }
 
     @media ${theme.mq.tablet} {
+      border-top: none;
       border-left: ${buttonBorder};
+      height: calc(50vh);
       padding: ${theme.space[6]};
     }
 

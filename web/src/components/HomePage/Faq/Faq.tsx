@@ -4,21 +4,15 @@
 
 import React, { useRef, useState } from 'react'
 
-// Libraries
-import Img from 'gatsby-image/withIEPolyfill'
-import { useSpring, config } from 'react-spring'
-
 // Theme + Styles
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
 // UI
 import { Box, Flex, Text, Heading } from '../../ui'
-import ListBox from '../../ui/ListBox'
 import Divider from '../../ui/Divider'
 
 // Components
-import ImgMatch from '../../ImgMatch'
 import Accordion from '../../Accordion'
 import Billboard from '../../Billboard'
 import BlockContent from '../../BlockContent'

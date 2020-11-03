@@ -19,12 +19,12 @@ export const Nav = styled.nav`
 
   display: none;
 
-  @media (min-width: 1100px) {
+  @media ${theme.mq.tablet} {
     display: flex;
   }
 
   .nav-link {
-    margin-left: ${theme.space[3]};
+    margin-left: ${theme.space[2]};
     position: relative;
     cursor: pointer;
 
@@ -50,16 +50,18 @@ export const Nav = styled.nav`
       letter-spacing: 0.5px;
 
       &::before {
-        position: absolute;
-        content: '';
         background: ${theme.colors.white};
-        width: 100%;
+        content: '';
+        display: initial;
+
+        position: absolute;
         height: 2px;
-        bottom: 0;
+        width: 100%;
         right: 0;
+        bottom: 0;
         z-index: 0;
 
-        transition: width 0.222s ease-in-out;
+        transition: display 0.222s ease-in-out;
       }
 
       &.active,
@@ -67,8 +69,7 @@ export const Nav = styled.nav`
         /* color: ${theme.colors.tertiary}; */
 
         &::before {
-          width: 0;
-          left: 0;
+          display: none;
         }
       }
     }

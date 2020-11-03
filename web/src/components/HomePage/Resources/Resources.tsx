@@ -35,7 +35,7 @@ type CallbackTypes = {
 }
 
 const billboardProps = {
-  bg: theme.colors.tertiary,
+  bg: theme.colors.primary,
   title: `Live a life without violence.`
 }
 
@@ -45,15 +45,15 @@ const Resources = () => {
   // Show/Hide Billboard content
   const [billboardActive, setBillboardActive] = useState(false)
 
-  // Watch for scroll position
-  useScrollWatch((callbackData: CallbackTypes) => {
-    const { previousScrollTop, currentScrollTop } = callbackData
-    const scrollPos =
-      null !== scrollRef.current &&
-      scrollRef.current.getBoundingClientRect().top
+  // // Watch for scroll position
+  // useScrollWatch((callbackData: CallbackTypes) => {
+  //   const { previousScrollTop, currentScrollTop } = callbackData
+  //   const scrollPos =
+  //     null !== scrollRef.current &&
+  //     scrollRef.current.getBoundingClientRect().top
 
-    setBillboardActive(scrollPos < 128)
-  })
+  //   setBillboardActive(scrollPos < 128)
+  // })
 
   return (
     <S.Resources id="resources" ref={scrollRef}>
@@ -66,7 +66,7 @@ const Resources = () => {
             href={`mailto: info@cahuillaconsortium.org?subject=Contact from CahuillaConsortium.org`}
             target="_blank"
           >
-            <Heading as="h3">Get in touch</Heading>
+            <Heading fontFamily="heading" className="text--lg">Get in touch</Heading>
             <Flex>
               <p>We're always here for you.</p>
               <Icon name="nextArrow" />
@@ -76,7 +76,7 @@ const Resources = () => {
             href={`mailto: info@cahuillaconsortium.org?subject=Volunteer Request from CahuillaConsortium.org`}
             target="_blank"
           >
-            <Heading as="h3">Volunteer</Heading>
+            <Heading fontFamily="heading" className="text--lg">Volunteer</Heading>
             <Flex>
               <p>Helping others is the best medicine.</p>
               <Icon name="nextArrow" />

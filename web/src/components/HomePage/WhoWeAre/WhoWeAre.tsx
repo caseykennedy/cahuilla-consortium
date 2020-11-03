@@ -36,6 +36,7 @@ type CallbackTypes = {
 }
 
 const billboardProps = {
+  active: true,
   bg: theme.colors.secondary,
   title: `Women<br />are<br />sacred.`
 }
@@ -44,7 +45,7 @@ const Team = () => {
   const team = usePerson()
   return (
     <Grid
-      columns={`repeat(auto-fit, minmax(180px, 1fr))`}
+      columns={`repeat(auto-fit, minmax(152px, 1fr))`}
       gap={theme.space[4]}
       className="team"
     >
@@ -75,22 +76,22 @@ const Team = () => {
 const WhoWeAre = () => {
   const scrollRef = useRef<HTMLDivElement>(null)
 
-  // Show/Hide Billboard content
-  const [billboardActive, setBillboardActive] = useState(false)
-  // Watch for scroll position
-  useScrollWatch((callbackData: CallbackTypes) => {
-    const { previousScrollTop, currentScrollTop } = callbackData
-    const scrollPos =
-      null !== scrollRef.current &&
-      scrollRef.current.getBoundingClientRect().top
+  // // Show/Hide Billboard content
+  // const [billboardActive, setBillboardActive] = useState(false)
+  // // Watch for scroll position
+  // useScrollWatch((callbackData: CallbackTypes) => {
+  //   const { previousScrollTop, currentScrollTop } = callbackData
+  //   const scrollPos =
+  //     null !== scrollRef.current &&
+  //     scrollRef.current.getBoundingClientRect().top
 
-    setBillboardActive(scrollPos < 128)
-  })
+  //   setBillboardActive(scrollPos < 128)
+  // })
 
   return (
     <S.WhoWeAre id="who" ref={scrollRef}>
       <Box width={[1, 1 / 2]}>
-        <Billboard active={billboardActive} {...billboardProps} />
+        <Billboard {...billboardProps} />
       </Box>
       <Box width={[1, 1 / 2]}>
         <Hero src="counseling.jpg" altText="Therapist and patient talking." />
