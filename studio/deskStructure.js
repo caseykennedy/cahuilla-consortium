@@ -1,7 +1,7 @@
 import S from '@sanity/desk-tool/structure-builder'
 import {
   MdPeople,
-  MdStop,
+  MdViewQuilt,
   MdSettings,
   MdLibraryBooks,
   MdQuestionAnswer,
@@ -69,7 +69,33 @@ export default () =>
         .schemaType('faq')
         .child(S.documentTypeList('faq').title('FAQ'))
 
-        .icon(MdQuestionAnswer)
+        .icon(MdQuestionAnswer),
+
+      // What we do
+      // _________________________________________________________________
+
+      S.listItem()
+        .title('What We Do')
+        .child(
+          S.editor()
+            .id('whatWeDo')
+            .schemaType('whatWeDo')
+            .documentId('whatWeDo')
+        )
+        .icon(MdViewQuilt),
+
+      // What we do
+      // _________________________________________________________________
+
+      S.listItem()
+        .title('Who We Are')
+        .child(
+          S.editor()
+            .id('whoWeAre')
+            .schemaType('whoWeAre')
+            .documentId('whoWeAre')
+        )
+        .icon(MdViewQuilt),
 
       // End
       // _________________________________________________________________

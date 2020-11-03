@@ -21,7 +21,7 @@ export const Post = styled(Box)`
   }
 
   @media ${theme.mq.desktop} {
-    max-width: 50%;
+    max-width: 800px;
     padding-left: ${theme.space[4]};
   }
 

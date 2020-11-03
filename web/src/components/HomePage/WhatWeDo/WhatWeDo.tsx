@@ -237,7 +237,7 @@ const WhatWeDo = () => {
             </Flex>
           </Accordion>
 
-          <Accordion title="Service area" active={false}>
+          <Accordion title="Service area" active={true}>
             <Flex className="content">
               <Box width={1}>
                 <Text as="p">
