@@ -89,7 +89,7 @@ const WhatWeDo = () => {
             dangerouslySetInnerHTML={{ __html: page.statement }}
           />
 
-          <Box width={1} mb={[6]}>
+          <Box width={1} mb={[6]} style={{mixBlendMode: 'luminosity'}}>
             {page.figure && (
               <Img
                 fluid={page.figure.asset.fluid}

@@ -24,7 +24,7 @@ export const Nav = styled.nav`
   }
 
   .nav-link {
-    margin-left: ${theme.space[2]};
+    margin-left: ${theme.space[3]};
     position: relative;
     cursor: pointer;
 
