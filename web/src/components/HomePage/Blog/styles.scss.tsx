@@ -33,5 +33,13 @@ export const Blog = styled(Flex)`
 
     .title {
     }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: inherit;
+      }
+    }
   }
 `

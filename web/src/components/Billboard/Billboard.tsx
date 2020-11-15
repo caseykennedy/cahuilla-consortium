@@ -60,7 +60,7 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
           <Flex flexDirection="column" flex={2}>
             <S.Telephone>
               <Text fontSize={1} className="t--uppercase">
-                Talk to an advocate
+                Talk to an advocate (24/7)
               </Text>
 
               <Text fontSize={3} fontWeight={500}>

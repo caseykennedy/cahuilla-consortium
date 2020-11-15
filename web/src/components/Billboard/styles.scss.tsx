@@ -10,7 +10,7 @@ import { Box, Flex } from '../ui'
 
 export const Billboard = styled(Flex)`
   overflow: hidden;
-  padding-top: calc(${theme.space[5]});
+  padding-top: calc(${theme.space[9]});
   position: relative;
   height: auto;
   width: 100%;
@@ -19,13 +19,13 @@ export const Billboard = styled(Flex)`
   color: ${theme.colors.white};
 
   @media ${theme.mq.tablet} {
+    padding-top: calc(${theme.space[5]});
     position: sticky;
     top: ${theme.headerHeight};
     height: calc(100vh - ${theme.headerHeight});
   }
 
   @media ${theme.mq.desktop} {
-    padding-top: calc(${theme.space[5]});
   }
 
   .inner {

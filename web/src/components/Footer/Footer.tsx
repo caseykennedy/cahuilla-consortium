@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
     <S.Footer id="contact">
       <Flex className="inner">
         <Flex className="panel">
-          <Box width={[1, 1, 1 / 2]}>
+          <Box width={[1, 1, 1 / 2]} mb={[5, 0]}>
             <Heading as="h3">
               reach out anytime,
               <br />
@@ -66,8 +66,8 @@ const Footer: React.FC = () => {
               here for you.
             </Heading>
           </Box>
-          <Flex width={[1, 1, 1 / 2]}>
-            <Box width={[1, 1 / 2]}>
+          <Flex width={[1, 1, 1 / 2]} flexWrap="wrap">
+            <Box width={[1, 1 / 2]} mb={[5, 0]}>
               <h4>Social</h4>
               <ul>
                 <li>
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
                   <a href="tel:951-330-0479" aria-label="call us 951-330-0479">
                     1 (951) 330-0479
                   </a>{' '}
-                  (hotline)
+                  (24/7 hotline)
                 </span>
                 <br />
                 <span>

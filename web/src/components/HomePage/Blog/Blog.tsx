@@ -29,33 +29,35 @@ const blogPath = 'blog'
 const Post: React.FC<{ post: PostQuery }> = ({ post }) => {
   return (
     <Cell className="post">
-      <Box>
-        <Text as="p" fontSize={1} fontWeight={500} mb={2}>
-          {post.publishedAt}
-        </Text>
-        <Flex width={1} justifyContent="flex-end">
-          <Box width={1 / 3}>
-            {post.figure && (
-              <Img
-                fluid={post.figure.asset.fluid}
-                objectFit="cover"
-                objectPosition="50% 50%"
-                alt={post.title}
-                className="article__img"
-              />
-            )}
-          </Box>
-        </Flex>
-        <Heading as="h4" mt={2} mb={4} className="text--lg">
-          {post.title}
-        </Heading>
-      </Box>
-      <Box>
-        {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
-        <Text as="span" fontSize={2} mt={4}>
-          <Link to={`/${blogPath}/${post.slug.current}`}>Read more</Link>
-        </Text>
-      </Box>
+      <Link to={`/${blogPath}/${post.slug.current}`}>
+        <Box>
+          <Text as="p" fontSize={1} fontWeight={500} mb={2}>
+            {post.publishedAt}
+          </Text>
+          <Flex width={1} justifyContent="flex-end">
+            <Box width={1 / 3}>
+              {post.figure && (
+                <Img
+                  fluid={post.figure.asset.fluid}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                  alt={post.title}
+                  className="article__img"
+                />
+              )}
+            </Box>
+          </Flex>
+          <Heading as="h4" mt={2} mb={4} className="text--lg">
+            {post.title}
+          </Heading>
+        </Box>
+        <Box>
+          {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
+          <Text as="span" fontSize={2} mt={4}>
+            <Link to={`/${blogPath}/${post.slug.current}`}>Read more</Link>
+          </Text>
+        </Box>
+      </Link>
     </Cell>
   )
 }

@@ -15,6 +15,8 @@ import Overlay from '../Overlay'
 import Button from '../ui/Button'
 import Icon from '../Icons'
 
+import { Box, Flex } from '../ui'
+
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
@@ -54,12 +56,12 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
       <S.Header as="header" px={[4, 5]}>
         <S.Logo>
           <Link to="/" aria-label="Back to home">
-            <div className="symbol">
+            <Flex className="symbol">
               <Symbol />
-            </div>
-            <div className="wordmark">
+            </Flex>
+            <Flex className="wordmark">
               <Wordmark />
-            </div>
+            </Flex>
           </Link>
         </S.Logo>
 

@@ -33,6 +33,9 @@ const serializers = {
         case 'li':
           return <li>{props.children}</li>
 
+        case 'em':
+          return <em>{props.children}</em>
+
         default:
           return <p>{props.children}</p>
       }
