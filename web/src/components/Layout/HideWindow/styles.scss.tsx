@@ -48,7 +48,6 @@ export const Overlay = styled(Flex)`
   }
 `
 
-
 export const HideWindow = styled(motion.div)`
   /* background: ${theme.colors.black}; */
   border: 2px solid ${theme.colors.black};
@@ -60,18 +59,17 @@ export const HideWindow = styled(motion.div)`
   position: fixed;
   bottom: ${theme.space[1]};
   right: ${theme.space[1]};
-  height: ${theme.space[5]};
-  width: ${theme.space[5]};
+  height: ${theme.space[6]};
+  width: ${theme.space[6]};
 
   cursor: pointer;
   transition: background-color 0.222s ease-in-out 0s;
   z-index: 999999;
 
-  display: none;
-
-  @media ${theme.mq.tablet} {
-    display: flex;
-  }
+  /* display: none; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   svg {
     fill: ${theme.colors.black};
