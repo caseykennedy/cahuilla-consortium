@@ -23,19 +23,22 @@ import { Box, Flex, Text, Heading } from '../../components/ui'
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
+// Hooks
+import useSiteSettings from '../../hooks/useSiteSettings'
+
 // ___________________________________________________________________
 
 const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
   const post = pageContext.post
-  console.log('—————|— post —|—————')
-  console.log(post)
+  const siteSettings = useSiteSettings()
   return (
     <Layout>
       <SEO
-        pathname={`/implants/${post.slug.current}`}
-        title={`${post.title} | `}
-        desc={`${post.title} | `}
-        individual={false}
+        article={true}
+        banner={`${post.figure.asset.fluid.src}`}
+        title={`${post.title} | ${siteSettings.titleShort}`}
+        desc={`${post.title}`}
+        pathname={`/blog/${post.slug.current}`}
       />
       {/* <S.PageTitle /> */}
       <Box pt={5} px={4} pb={7}>
