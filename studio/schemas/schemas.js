@@ -11,6 +11,7 @@ import blockText from './blockText'
 import contact from './contact'
 import faq from './faq'
 import figure from './figure'
+import hiddenQuote from './hiddenQuote'
 import howWeSeekToHelp from './howWeSeekToHelp'
 import mainImage from './mainImage'
 import moreWaysWeCanHelp from './moreWaysWeCanHelp'
@@ -39,6 +40,7 @@ export default createSchema({
     contact,
     faq,
     figure,
+    hiddenQuote,
     howWeSeekToHelp,
     mainImage,
     moreWaysWeCanHelp,

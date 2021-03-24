@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import React, { useRef, useState } from 'react'
-import { Link } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 
 // UI
 import { Box, Heading } from '../../ui'
@@ -13,20 +13,24 @@ import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
 // Components
-import Icon from '../../Icons'
 import Hide from '../../Hide'
 import Show from '../../Show'
-import ImgMatch from '../../ImgMatch'
 import Portal from '../../Portal'
-import Overlay from '../../Overlay'
 
 // ___________________________________________________________________
 
+type QuoteShape = {
+  quote: {
+    nodes: {
+      quote: string
+      source: string
+    }[]
+  }
+}
+
 type Props = {
   mainRef: React.RefObject<HTMLDivElement>
-} & typeof defaultProps
-
-const defaultProps = {}
+}
 
 const HideWindow: React.FC<Props> = ({ mainRef }) => {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -36,16 +40,18 @@ const HideWindow: React.FC<Props> = ({ mainRef }) => {
   const [isHidden, setIsHidden] = useState(false)
   const toggleModal = () => setIsHidden(!isHidden)
 
-  // Framer animation
-  const motionProps = {
-    initial: 'hidden',
-    animate: 'visible',
-    transition: { delay: 0.5, duration: 0.5 },
-    variants: {
-      hidden: { height: 0, opacity: 0 },
-      visible: { height: theme.headerHeight, opacity: 1 }
+  // Get the quote from Sanity
+  const data = useStaticQuery<QuoteShape>(graphql`
+    query QuoteQuery {
+      quote: allSanityHiddenQuote {
+        nodes {
+          quote
+          source
+        }
+      }
     }
-  }
+  `)
+  const quote = data.quote.nodes[0]
   return (
     <>
       <Portal
@@ -62,16 +68,11 @@ const HideWindow: React.FC<Props> = ({ mainRef }) => {
         >
           <Box p={4}>
             <Heading as="h4" color="gray" fontSize={[4, 5]}>
-              If we can rediscover in ourselves the hidden beauty of this
-              receptive devotion, if we can learn how to be still without
-              inaction, how to ‘further life’ without willed purpose, how to
-              serve without demanding prestige, and how to nourish without
-              domination: then we shall be women again out of whose earth the
-              light may shine.
+              {quote.quote}
             </Heading>
 
             <Heading as="p" color="gray" fontSize={[2, 3]}>
-              —Helen M. Luke, The Way of Woman. Awakening the Perennial Feminine
+              —{quote.source}
             </Heading>
           </Box>
         </S.Overlay>
@@ -89,7 +90,3 @@ const HideWindow: React.FC<Props> = ({ mainRef }) => {
 }
 
 export default HideWindow
-
-// ___________________________________________________________________
-
-HideWindow.defaultProps = defaultProps

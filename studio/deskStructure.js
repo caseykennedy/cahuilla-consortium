@@ -48,6 +48,19 @@ export default () =>
         )
         .icon(MdViewQuilt),
 
+      // Hidden Quote
+      // _________________________________________________________________
+
+      S.listItem()
+        .title('Hidden Quote')
+        .child(
+          S.editor()
+            .id('hiddenQuote')
+            .schemaType('hiddenQuote')
+            .documentId('hiddenQuote')
+        )
+        .icon(MdViewQuilt),
+
       // People
       // _________________________________________________________________
       S.listItem()
