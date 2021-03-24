@@ -17,7 +17,7 @@ import { Box, Flex, Text, Heading, AnimatedFlex } from '../ui'
 import Icon from '../Icons'
 
 // Hooks
-import useScrollWatch from '../../hooks/useScrollWatch'
+import useContact from '../../hooks/useContact'
 
 // ___________________________________________________________________
 
@@ -33,6 +33,7 @@ const defaultProps = {
 }
 
 const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
+  const contact = useContact()
   const fadeIn = useSpring({
     config: config.molasses,
     // delay: 160,
@@ -64,7 +65,7 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
               </Text>
 
               <Text fontSize={3} fontWeight={500}>
-                1 (951) 330-0479
+                {contact.hotline}
               </Text>
             </S.Telephone>
 

@@ -35,6 +35,19 @@ export default () =>
         )
         .icon(MdSettings),
 
+      // Contact
+      // _________________________________________________________________
+
+      S.listItem()
+        .title('Company Contact')
+        .child(
+          S.editor()
+            .id('companyContact')
+            .schemaType('contact')
+            .documentId('companyContact')
+        )
+        .icon(MdViewQuilt),
+
       // People
       // _________________________________________________________________
       S.listItem()
@@ -84,7 +97,7 @@ export default () =>
         )
         .icon(MdViewQuilt),
 
-      // What we do
+      // Who we are
       // _________________________________________________________________
 
       S.listItem()
@@ -95,7 +108,7 @@ export default () =>
             .schemaType('whoWeAre')
             .documentId('whoWeAre')
         )
-        .icon(MdViewQuilt),
+        .icon(MdViewQuilt)
 
       // End
       // _________________________________________________________________

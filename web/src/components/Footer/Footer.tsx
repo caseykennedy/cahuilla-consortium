@@ -15,6 +15,8 @@ import ImgMatch from '../ImgMatch'
 import Symbol from '../Symbol'
 import Wordmark from '../Wordmark'
 
+import useContact from '../../hooks/useContact'
+
 // ___________________________________________________________________
 
 const Year = () => {
@@ -53,6 +55,7 @@ const HideAway = () => {
 }
 
 const Footer: React.FC = () => {
+  const contact = useContact()
   return (
     <S.Footer id="contact">
       <Flex className="inner">
@@ -94,23 +97,23 @@ const Footer: React.FC = () => {
                 You can reach us at:
                 <br />
                 <a
-                  href="mailto:info@cahuillaconsortium.org?subject=Contact from cahuillaconsortium.org"
+                  href={`mailto:${contact.email}?subject=Contact from cahuillaconsortium.org`}
                   aria-label="email us"
                 >
-                  info @cahuillaconsortium.org
+                  {contact.email}
                 </a>
                 <br />
                 <br />
                 <span>
-                  <a href="tel:951-330-0479" aria-label="call us 951-330-0479">
-                    1 (951) 330-0479
+                  <a href={`hotline: ${contact.hotline}`} aria-label={`call us: ${contact.hotline}`}>
+                  {contact.hotline}
                   </a>{' '}
                   (24/7 hotline)
                 </span>
                 <br />
                 <span>
-                  <a href="tel: 951-763-5547" aria-label="call us 951-763-5547">
-                    1 (951) 763-5547
+                  <a href={`tel: ${contact.telephone}`} aria-label={`call us: ${contact.telephone}`}>
+                  {contact.telephone}
                   </a>{' '}
                   (office)
                 </span>

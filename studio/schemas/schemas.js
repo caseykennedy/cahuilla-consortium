@@ -8,6 +8,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import billboard from './billboard'
 import blockContent from './blockContent'
 import blockText from './blockText'
+import contact from './contact'
 import faq from './faq'
 import figure from './figure'
 import howWeSeekToHelp from './howWeSeekToHelp'
@@ -35,6 +36,7 @@ export default createSchema({
     billboard,
     blockContent,
     blockText,
+    contact,
     faq,
     figure,
     howWeSeekToHelp,

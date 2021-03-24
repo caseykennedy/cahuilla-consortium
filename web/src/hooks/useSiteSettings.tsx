@@ -11,21 +11,26 @@ type Props = {
   settings: {
     edges: {
       node: {
+        author: string
+        backgroundColor: string
+        banner: {
+          asset: {
+            fluid: ImageShape
+          }
+        }
+        description: string
+        googleAnalyticsID: string
+        headline: string
+        language: string
+        logo: string
+        ogLanguage: string
+        ogSiteName: string
         themeColor: string
         title: string
         titleAlt: string
         titleShort: string
         url: string
         userTwitter: string
-        ogSiteName: string
-        ogLanguage: string
-        logo: string
-        language: string
-        headline: string
-        googleAnalyticsID: string
-        description: string
-        backgroundColor: string
-        author: string
       }
     }[]
   }
@@ -37,21 +42,34 @@ const useSiteSettings = () => {
       settings: allSanitySiteSettings {
         edges {
           node {
+            author
+            backgroundColor
+            banner {
+              asset {
+                fluid {
+                  srcWebp
+                  srcSetWebp
+                  srcSet
+                  src
+                  sizes
+                  base64
+                  aspectRatio
+                }
+              }
+            }
+            description
+            googleAnalyticsID
+            headline
+            language
+            logo
+            ogLanguage
+            ogSiteName
             themeColor
             title
             titleAlt
             titleShort
             url
             userTwitter
-            ogSiteName
-            ogLanguage
-            logo
-            language
-            headline
-            googleAnalyticsID
-            description
-            backgroundColor
-            author
           }
         }
       }

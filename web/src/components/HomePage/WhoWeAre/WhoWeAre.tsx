@@ -29,11 +29,6 @@ import usePerson from '../../../hooks/usePerson'
 
 // ___________________________________________________________________
 
-type CallbackTypes = {
-  previousScrollTop: number
-  currentScrollTop: number
-}
-
 const billboardProps = {
   active: true,
   bg: theme.colors.secondary,

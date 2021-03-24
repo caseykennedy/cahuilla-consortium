@@ -27,6 +27,11 @@ export default {
       type: "string",
     },
     {
+      name: "banner",
+      title: "Banner",
+      type: "figure",
+    },
+    {
       name: "url",
       title: "URL",
       type: "string",
