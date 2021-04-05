@@ -17,7 +17,7 @@ const SocialShare: React.FC<{ name: string; slug: string }> = ({
   name,
   slug
 }) => {
-  const shareSlug = `https://orthoimplantcompany.com/${slug}`
+  const shareSlug = `https://www.cahuillaconsortium.org/blog/${slug}`
 
   switch (name) {
     case 'facebook':
