@@ -15,7 +15,7 @@ import Overlay from '../Overlay'
 import Button from '../ui/Button'
 import Icon from '../Icons'
 
-import { Box, Flex } from '../ui'
+import { Flex } from '../ui'
 
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
