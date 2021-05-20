@@ -3,15 +3,13 @@
 // ___________________________________________________________________
 
 // Core
-import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { readableColor, darken } from 'polished'
 
 // Theme
 import theme from '../../../config/theme'
 
 // Elements
-import { Box, Flex, AnimatedFlex } from '../ui'
+import { Flex } from '../ui'
 
 // ___________________________________________________________________
 
@@ -38,9 +36,7 @@ export const Header = styled(Flex)`
 `
 
 export const Logo = styled(Flex)`
-
-  @media ${theme.mq.tablet} {
-  }
+  height: ${theme.headerHeight};
 
   a {
     display: flex;
@@ -80,6 +76,7 @@ export const Logo = styled(Flex)`
 export const Tools = styled(Flex)`
   justify-content: flex-end;
   flex: 1;
+  height: ${theme.headerHeight};
 `
 
 // export const Nav = styled(Flex)`
