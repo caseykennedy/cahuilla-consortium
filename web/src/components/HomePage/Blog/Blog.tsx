@@ -83,8 +83,8 @@ const Blog = () => {
 
         <Box mt={6}>
           {hasMore && (
-            <Box onClick={handleLoadMore}>
-              Load More <Icon name="plus" />
+            <Box onClick={handleLoadMore} className="load-more">
+              Load More +
             </Box>
           )}
         </Box>

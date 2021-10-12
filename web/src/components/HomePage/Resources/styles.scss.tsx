@@ -55,7 +55,7 @@ export const ButtonGroup = styled(Flex)`
       border-top: none;
       border-left: ${buttonBorder};
       height: calc(50vh);
-      padding: ${theme.space[6]};
+
     }
 
     div {
@@ -72,7 +72,7 @@ export const ButtonGroup = styled(Flex)`
 
         svg {
           fill: ${theme.colors.white};
-          width: 56px;
+          width: ${theme.space[5]};
         }
       }
     }

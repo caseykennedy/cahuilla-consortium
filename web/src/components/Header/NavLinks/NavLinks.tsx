@@ -51,7 +51,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
       leave: {
         opacity: 0
       },
-      trail: 160,
+      trail: 40,
       unique: true
     }
   )

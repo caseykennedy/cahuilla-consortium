@@ -61,12 +61,14 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
           <Flex flexDirection="column" flex={2}>
             <S.Telephone>
               <Text fontSize={1} className="t--uppercase">
-                Talk to an advocate (24/7)
+                Talk to an advocate
               </Text>
 
-              <Text fontSize={3} fontWeight={500}>
-                {contact.hotline}
-              </Text>
+              <Text
+                fontSize={3}
+                fontWeight={500}
+                dangerouslySetInnerHTML={{ __html: contact.hotline }}
+              />
             </S.Telephone>
 
             <Box mt={[4, 2, 4]} fontSize={1}>

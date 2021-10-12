@@ -63,7 +63,7 @@ export const Logo = styled(Flex)`
     }
 
     .wordmark {
-      margin-left: ${theme.space[2]};
+      margin-left: ${theme.space[1]};
 
       svg {
         width: 90px;

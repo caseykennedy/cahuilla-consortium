@@ -15,18 +15,23 @@ import { Flex, AnimatedFlex } from '../../ui'
 export const NavLinks = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
+  padding-top: ${theme.space[5]};
   width: 100%;
   z-index: 999;
 `
 
 export const NavLink = styled(AnimatedFlex)`
+  padding: ${theme.space[4]};
   width: 100%;
 
   a {
     color: ${theme.colors.white};
     font-size: ${theme.fontSizes[3]};
     text-transform: uppercase;
-    padding: ${theme.space[3]};
     width: 100%;
+
+    &:hover {
+      color: white;
+    }
   }
 `

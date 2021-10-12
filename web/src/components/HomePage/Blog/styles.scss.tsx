@@ -42,4 +42,17 @@ export const Blog = styled(Flex)`
       }
     }
   }
+
+  .load-more {
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    svg {
+      fill: ${theme.colors.text};
+    }
+  }
 `

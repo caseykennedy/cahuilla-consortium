@@ -85,7 +85,8 @@ const WhatWeDo = () => {
             color="gray"
             fontSize={5}
             fontFamily="display"
-            mt={8}
+            mt={3}
+            mb={1}
             dangerouslySetInnerHTML={{ __html: page.statement }}
           />
 
