@@ -72,7 +72,7 @@ const Faq = () => {
 
           <Divider bg="gray" my={0} />
 
-          <Accordion title="What is domestic violence?" active={true}>
+          <Accordion title="What is domestic violence?" active={false}>
             <Flex className="content">
               <Box>
                 <Text as="p">

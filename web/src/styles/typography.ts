@@ -122,6 +122,8 @@ const Typography = css`
   }
 
   body {
+    color: ${theme.colors.text};
+
     font-size: ${theme.root.font.baseSize};
     font-family: ${theme.fonts.body};
     font-weight: ${theme.fontWeights.regular};
@@ -139,6 +141,10 @@ const Typography = css`
     font-variant-ligatures: discretionary-ligatures;
   }
 
+  mark {
+    background-color: ${theme.colors.quinary};
+  }
+
   h1,
   h2,
   h3,
@@ -146,71 +152,86 @@ const Typography = css`
   h5,
   h6 {
     font-family: ${theme.fonts.heading};
-    font-weight: ${theme.fontWeights.medium};
+    font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.headingLineHeight};
-    letter-spacing: 0.5px;
-    margin: 0 0 ${theme.space[2]};
+    letter-spacing: ${theme.root.font.headingLetterSpacing};
+    margin: 0 0 ${theme.space[3]};
     transition: ${theme.transition.all};
+
+    text-transform: capitalize;
+
+    strong {
+      font-weight: ${theme.fontWeights.regular};
+    }
   }
 
   .text--xxxl {
-    font-size: calc(${theme.root.font.xxxl} / 1);
-    line-height: calc(${theme.root.font.headingLineHeight} / 1);
+    font-size: calc(${theme.fontSizes[4]});
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.xxxl} * 1);
+      font-size: calc(${theme.fontSizes[6]} / 1);
+    }
+
+    @media ${theme.mq.desktop} {
+      font-size: calc(${theme.fontSizes[7]} / 1);
     }
   }
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.root.font.xl} * 1.25);
-    line-height: 0.75;
+    font-size: calc(${theme.fontSizes[3]});
+
+    @media ${theme.mq.tablet} {
+      font-size: calc(${theme.fontSizes[6]} / 1.25);
+      line-height: calc(${theme.root.font.headingLineHeight} / 1.15);
+    }
 
     @media ${theme.mq.desktop} {
-      font-size: calc(${theme.root.font.xxl} / 1);
+      font-size: ${theme.fontSizes[6]};
     }
   }
 
   h2,
   .text--xl {
-    font-size: calc(${theme.root.font.xl} / 1.15);
-    line-height: 0.8;
+    font-size: calc(${theme.fontSizes[4]} / 1.15);
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.xl} * 1.25);
+      font-size: calc(${theme.fontSizes[5]} / 1.25);
+      line-height: calc(${theme.root.font.headingLineHeight} / 1.15);
+    }
+
+    @media ${theme.mq.desktop} {
+      font-size: ${theme.fontSizes[5]};
     }
   }
 
   h3,
   .text--lg {
-    font-size: ${theme.root.font.md};
-    /* line-height: ${theme.root.font.bodyLineHeight}; */
+    font-size: calc(${theme.fontSizes[3]});
 
     @media ${theme.mq.tablet} {
-      font-size: ${theme.root.font.lg};
+      font-size: calc(${theme.fontSizes[4]});
     }
   }
 
   h4,
   .text--md {
-    font-size: ${theme.fontSizes[2]};
-    /* line-height: ${theme.root.font.bodyLineHeight}; */
+    font-size: calc(${theme.fontSizes[3]} / 1.25);
+    margin: 0 0 ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
+      font-size: calc(${theme.fontSizes[3]});
     }
   }
 
   h5,
   .text--sm {
-    font-size: ${theme.root.font.xs};
-    /* font-weight: 400; */
-    line-height: ${theme.root.font.bodyLineHeight};
-    text-transform: uppercase;
+    font-size: ${theme.fontSizes[2]};
+  }
 
-    @media ${theme.mq.tablet} {
-      font-size: ${theme.root.font.sm};
-    }
+  .text--xs {
+    font-size: ${theme.fontSizes[1]};
+    line-height: 1.15;
   }
 
   .text--xs {

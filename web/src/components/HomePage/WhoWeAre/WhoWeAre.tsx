@@ -48,7 +48,10 @@ const Team = () => {
           <Box mb={4} className="team__avatar">
             {person.avatar && (
               <Img
-                fluid={person.avatar.asset.fluid}
+                fluid={{
+                  ...person.avatar.asset.fluid,
+                  aspectRatio: 1 / 1.5
+                }}
                 objectFit="cover"
                 objectPosition="50% 50%"
                 alt={person.name}
@@ -133,7 +136,7 @@ const WhoWeAre = () => {
 
           <Divider bg="black" my={0} />
 
-          <Accordion title="What is our purpose?" active={true}>
+          <Accordion title="What is our purpose?">
             <Flex className="content">
               <Box width={[1 / 4]}>
                 <Text as="p">Mission</Text>
@@ -160,7 +163,7 @@ const WhoWeAre = () => {
             </Flex>
           </Accordion>
 
-          <Accordion title="How we seek to help" active={true}>
+          <Accordion title="How we seek to help">
             <Flex className="content">
               <Box width={[1 / 4]}>
                 <Text as="p">Advocacy</Text>

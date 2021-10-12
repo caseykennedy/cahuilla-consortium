@@ -186,7 +186,7 @@ const WhatWeDo = () => {
             </Flex>
           </Accordion>
 
-          <Accordion title="Service area" active={true}>
+          <Accordion title="Service area" active={false}>
             <Flex className="content">
               <Box width={1}>
                 {page.serviceArea._rawBody && (

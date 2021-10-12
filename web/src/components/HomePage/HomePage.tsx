@@ -8,14 +8,6 @@ import React from 'react'
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
-// UI
-import { Box, Flex, Heading, Text } from '../ui'
-import Divider from '../ui/Divider'
-
-// Components
-import Accordion from '../Accordion'
-import ImgMatch from '../ImgMatch'
-
 // Sections
 import Hero from './Hero'
 import WhatWeDo from './WhatWeDo'

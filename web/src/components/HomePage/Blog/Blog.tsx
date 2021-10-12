@@ -18,9 +18,11 @@ import { Box, Flex, Text, Heading } from '../../ui'
 
 // Components
 import BlockContent from '../../BlockContent'
+import Icon from '../../Icons'
 
 // Hooks
 import usePost from '../../../hooks/usePost'
+import useLoadMore from '../../../hooks/useLoadMore'
 
 // ___________________________________________________________________
 
@@ -35,7 +37,7 @@ const Post: React.FC<{ post: PostQuery }> = ({ post }) => {
             {post.publishedAt}
           </Text>
           <Flex width={1} justifyContent="flex-end">
-            <Box width={1 / 3}>
+            <Box width={1 / 3} mb={4}>
               {post.figure && (
                 <Img
                   fluid={post.figure.asset.fluid}
@@ -47,7 +49,7 @@ const Post: React.FC<{ post: PostQuery }> = ({ post }) => {
               )}
             </Box>
           </Flex>
-          <Heading as="h4" mt={2} mb={4} className="text--lg">
+          <Heading as="h4" mt={2} mb={4} className="text--md">
             {post.title}
           </Heading>
         </Box>
@@ -64,6 +66,7 @@ const Post: React.FC<{ post: PostQuery }> = ({ post }) => {
 
 const Blog = () => {
   const posts = usePost()
+  const {list, handleLoadMore, hasMore} = useLoadMore(posts)
   return (
     <S.Blog id="blog">
       <Box width={[1]}>
@@ -73,10 +76,18 @@ const Blog = () => {
       </Box>
       <Flex width={[1]} flexWrap="wrap">
         <Grid columns="repeat(auto-fit,minmax(300px,1fr))" gap={theme.space[4]}>
-          {posts.map(({ node: post }, idx) => (
+          {list.map(({ node: post }, idx) => (
             <Post post={post} key={idx} />
           ))}
         </Grid>
+
+        <Box mt={6}>
+          {hasMore && (
+            <Box onClick={handleLoadMore}>
+              Load More <Icon name="plus" />
+            </Box>
+          )}
+        </Box>
       </Flex>
     </S.Blog>
   )

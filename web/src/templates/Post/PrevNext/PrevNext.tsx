@@ -20,7 +20,6 @@ import theme from '../../../../config/theme'
 const path = 'blog'
 
 const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
-  const post = pageContext.post
   const prev = pageContext.prev
   const next = pageContext.next
   return (

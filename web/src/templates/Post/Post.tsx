@@ -60,7 +60,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
               )}
             </Box>
 
-            <Heading as="h4" mb={0} className="text--xxl">
+            <Heading as="h1" mb={0} className="text--xl">
               {post.title}
             </Heading>
 
@@ -88,7 +88,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
         </S.Post>
       </Box>
 
-      <PrevNext pageContext={pageContext} />
+      {/* <PrevNext pageContext={pageContext} /> */}
     </Layout>
   )
 }
