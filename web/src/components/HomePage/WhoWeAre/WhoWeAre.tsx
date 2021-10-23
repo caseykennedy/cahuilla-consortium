@@ -6,7 +6,7 @@ import React, { useRef } from 'react'
 
 // Libraries
 import Img from 'gatsby-image/withIEPolyfill'
-import { Grid, Cell } from 'styled-css-grid'
+import { Grid } from 'theme-ui'
 
 // Theme + Styles
 import * as S from './styles.scss'
@@ -39,12 +39,12 @@ const Team = () => {
   const team = usePerson()
   return (
     <Grid
-      columns={`repeat(auto-fit, minmax(152px, 1fr))`}
+      columns={[2, 3]}
       gap={theme.space[4]}
       className="team"
     >
       {team.map(({ node: person }, idx) => (
-        <Cell key={idx} className="team__cell">
+        <Box key={idx} className="team__cell">
           <Box mb={4} className="team__avatar">
             {person.avatar && (
               <Img
@@ -64,7 +64,7 @@ const Team = () => {
           <Text as="p" color="gray" mb={0} fontSize={1}>
             {person.title && person.title}
           </Text>
-        </Cell>
+        </Box>
       ))}
     </Grid>
   )

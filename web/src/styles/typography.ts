@@ -368,17 +368,8 @@ const Typography = css`
 
     li {
       list-style-position: outside;
-      /* font-size: calc(${theme.root.font.baseSize} / 1); */
       line-height: calc(${theme.root.font.bodyLineHeight} * 1.15);
       font-size: ${theme.fontSizes[2]};
-
-      @media ${theme.mq.tablet} {
-        font-size: ${theme.fontSizes[1]};
-      }
-
-      @media ${theme.mq.tablet} {
-        /* font-size: calc(${theme.root.font.baseSize} / 1.25); */
-      }
     }
   }
 `

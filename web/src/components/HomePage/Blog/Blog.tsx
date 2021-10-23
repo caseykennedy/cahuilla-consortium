@@ -6,15 +6,12 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
-// Libraries
-import { Grid } from 'theme-ui'
-
 // Theme + Styles
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
 // UI
-import { Box, Flex, Text, Heading } from 'theme-ui'
+import { Box, Flex, Text, Heading, Grid } from 'theme-ui'
 
 // Components
 import BlockContent from '../../BlockContent'
@@ -31,13 +28,13 @@ const blogPath = 'blog'
 const Post: React.FC<{ post: PostQuery }> = ({ post }) => {
   return (
     <Flex className="post">
-      <Link to={`/${blogPath}/${post.slug.current}`}>
+      <Link to={`/${blogPath}/${post.slug.current}`} className="inner">
         <Box>
-          <Text as="p" fontSize={1} fontWeight={500} mb={2}>
+          <Text as="p" mb={2}>
             {post.publishedAt}
           </Text>
-          <Flex width={1} justifyContent="flex-end">
-            <Box width={1 / 2} mb={4}>
+          <Flex sx={{ justifyContent: 'flex-end', width: '100%' }}>
+            <Box mb={4} sx={{ flex: 0.5 }}>
               {post.figure && (
                 <Img
                   fluid={{
@@ -58,7 +55,7 @@ const Post: React.FC<{ post: PostQuery }> = ({ post }) => {
         </Box>
         <Box>
           {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
-          <Text as="span" fontSize={2} mt={4}>
+          <Text as="span" mt={4}>
             <Link to={`/${blogPath}/${post.slug.current}`}>Read more</Link>
           </Text>
         </Box>
@@ -72,13 +69,16 @@ const Blog = () => {
   const { list, handleLoadMore, hasMore } = useLoadMore(posts)
   return (
     <S.Blog id="blog">
-      <Box width={[1]}>
+      <Box>
         <Heading as="h4" mb={4}>
-          Blog
+          Latest Blog
         </Heading>
       </Box>
-      <Flex width={[1]} flexWrap="wrap">
-        <Grid columns={`repeat(auto-fit,minmax(300px,1fr))`} gap={theme.space[4]}>
+      <Flex sx={{flexDirection: 'column'}}>
+        <Grid
+          columns={`repeat(auto-fit,minmax(300px,1fr))`}
+          gap={theme.space[4]}
+        >
           {list.map(({ node: post }, idx) => (
             <Post post={post} key={idx} />
           ))}

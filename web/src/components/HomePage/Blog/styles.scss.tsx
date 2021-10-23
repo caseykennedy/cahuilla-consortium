@@ -12,7 +12,7 @@ import { Box, Flex } from 'theme-ui'
 
 export const Blog = styled(Flex)`
   flex-wrap: wrap;
-  padding: ${theme.space[8]} ${theme.space[4]} ${theme.space[4]};
+  padding: ${theme.space[4]};
   background: ${theme.colors.background};
 
   .post {

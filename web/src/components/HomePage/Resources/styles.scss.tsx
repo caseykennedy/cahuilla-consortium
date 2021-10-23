@@ -4,7 +4,7 @@
 
 import styled from 'styled-components'
 import theme from '../../../../config/theme'
-import { Box, Flex } from '../../ui'
+import { Box, Flex } from 'theme-ui'
 import { darken } from 'polished'
 
 // ___________________________________________________________________
@@ -37,7 +37,7 @@ export const ButtonGroup = styled(Flex)`
 
     text-align: left;
 
-    height: calc(25vh);
+    height: 25vh;
     width: 100%;
     padding: ${theme.space[4]};
     transition: ${theme.transition.all};
@@ -48,7 +48,8 @@ export const ButtonGroup = styled(Flex)`
     }
 
     &:hover {
-      background: ${darken(0.025, theme.colors.tertiary)};
+      background: ${darken(0.05, theme.colors.tertiary)};
+      color: ${theme.colors.white};
     }
 
     @media ${theme.mq.tablet} {
