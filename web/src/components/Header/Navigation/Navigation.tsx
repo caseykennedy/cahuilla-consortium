@@ -51,7 +51,7 @@ const data = [
   },
   {
     name: 'blog',
-    link: '/#blog'
+    link: '/blog'
   },
   {
     name: 'contact',

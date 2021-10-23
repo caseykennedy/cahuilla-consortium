@@ -1,4 +1,4 @@
-// Home page
+// Blog page
 
 // ___________________________________________________________________
 
@@ -8,17 +8,17 @@ import React from 'react'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import HomePage from '../components/HomePage'
+import BlogPage from '../components/BlogPage'
 
 // ___________________________________________________________________
 
-const Index = () => {
+const Blog = () => {
   return (
     <Layout>
       <SEO />
-        <HomePage />
+      <BlogPage />
     </Layout>
   )
 }
 
-export default Index
+export default Blog

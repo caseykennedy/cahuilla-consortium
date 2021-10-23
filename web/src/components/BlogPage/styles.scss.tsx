@@ -1,24 +1,22 @@
-// Blog Styles:
+// BlogPage Styles:
 
 // ___________________________________________________________________
 
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-import theme from '../../../../config/theme'
-import { Box, Flex } from 'theme-ui'
+import { Box, Flex, Heading } from 'theme-ui'
+
+import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-export const Blog = styled(Flex)`
-  flex-wrap: wrap;
-  padding: ${theme.space[8]} ${theme.space[4]} ${theme.space[4]};
-  background: ${theme.colors.background};
+export const BlogPage = styled.div`
+  padding: ${theme.space[4]};
 
   .post {
     border: 1px solid ${theme.colors.gray};
-    padding: ${theme.space[4]};
-    transition: background-color 0.777s ease-in-out 0s;
+    transition: ${theme.transition.all};
 
     &:hover {
       background: ${darken(0.05, theme.colors.background)};
@@ -35,11 +33,12 @@ export const Blog = styled(Flex)`
       -webkit-box-orient: vertical;
     }
 
-    a {
+    .inner {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       text-decoration: none;
+      padding: ${theme.space[4]};
 
       &:hover {
         color: inherit;

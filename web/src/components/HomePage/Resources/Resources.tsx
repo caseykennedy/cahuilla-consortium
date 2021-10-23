@@ -2,11 +2,7 @@
 
 // ___________________________________________________________________
 
-import React, { useRef, useState, useLayoutEffect } from 'react'
-
-// Libraries
-import Img from 'gatsby-image/withIEPolyfill'
-import { useSpring, config } from 'react-spring'
+import * as React from 'react'
 
 // Theme + Styles
 import * as S from './styles.scss'
@@ -14,25 +10,12 @@ import theme from '../../../../config/theme'
 
 // UI
 import { Box, Flex, Text, Heading } from '../../ui'
-import ListBox from '../../ui/ListBox'
 
 // Components
-import ImgMatch from '../../ImgMatch'
-import Accordion from '../../Accordion'
 import Billboard from '../../Billboard'
 import Icon from '../../Icons'
 
-import Hero from '../Hero'
-
-// Hooks
-import useScrollWatch from '../../../hooks/useScrollWatch'
-
 // ___________________________________________________________________
-
-type CallbackTypes = {
-  previousScrollTop: number
-  currentScrollTop: number
-}
 
 const billboardProps = {
   bg: theme.colors.primary,
@@ -40,48 +23,24 @@ const billboardProps = {
 }
 
 const Resources = () => {
-  const scrollRef = useRef<HTMLDivElement>(null)
-
-  // Show/Hide Billboard content
-  const [billboardActive, setBillboardActive] = useState(false)
-
-  // // Watch for scroll position
-  // useScrollWatch((callbackData: CallbackTypes) => {
-  //   const { previousScrollTop, currentScrollTop } = callbackData
-  //   const scrollPos =
-  //     null !== scrollRef.current &&
-  //     scrollRef.current.getBoundingClientRect().top
-
-  //   setBillboardActive(scrollPos < 128)
-  // })
-
   return (
-    <S.Resources id="resources" ref={scrollRef}>
+    <S.Resources id="resources">
       <Box width={[1, 1 / 2]}>
-        <Billboard active={billboardActive} {...billboardProps} />
+        <Billboard active={false} {...billboardProps} />
       </Box>
       <Box width={[1, 1 / 2]}>
         <S.ButtonGroup>
-          <a
-            href={`mailto: info@cahuillaconsortium.org?subject=Contact from CahuillaConsortium.org`}
-            target="_blank"
-          >
-            <Heading fontFamily="heading" className="text--lg">Get in touch</Heading>
-            <Flex>
-              <p>We're always here for you.</p>
-              <Icon name="nextArrow" />
-            </Flex>
-          </a>
-          <a
-            href={`mailto: info@cahuillaconsortium.org?subject=Volunteer Request from CahuillaConsortium.org`}
-            target="_blank"
-          >
-            <Heading fontFamily="heading" className="text--lg">Volunteer</Heading>
-            <Flex>
-              <p>Helping others is the best medicine.</p>
-              <Icon name="nextArrow" />
-            </Flex>
-          </a>
+          {data.map((resource, key) => (
+            <a href={`mailto:${resource.link}`} target="_blank" key={key}>
+              <Heading fontFamily="heading" className="text--lg">
+                {resource.title}
+              </Heading>
+              <Flex>
+                <p>{resource.desc}</p>
+                <Icon name="nextArrow" />
+              </Flex>
+            </a>
+          ))}
         </S.ButtonGroup>
       </Box>
     </S.Resources>
@@ -89,3 +48,20 @@ const Resources = () => {
 }
 
 export default Resources
+
+// ___________________________________________________________________
+
+const data = [
+  {
+    title: 'Get in touch',
+    desc: "We're always here for you.",
+    link:
+      'info@cahuillaconsortium.org?subject=Contact from CahuillaConsortium.org'
+  },
+  {
+    title: 'Volunteer',
+    desc: 'Helping others is the best medicine.',
+    link:
+      'info@cahuillaconsortium.org?subject=Volunteer Request from CahuillaConsortium.org'
+  }
+]

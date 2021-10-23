@@ -31,7 +31,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
-    // `gatsby-plugin-transition-link`,
+    'gatsby-plugin-theme-ui',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
     'gatsby-plugin-offline',
@@ -72,8 +72,8 @@ module.exports = {
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
         // Defaults to null
-        defaultDataLayer: { platform: 'gatsby' },
-      },
+        defaultDataLayer: { platform: 'gatsby' }
+      }
     },
     {
       resolve: `gatsby-plugin-nprogress`,

@@ -267,8 +267,12 @@ const Typography = css`
   }
 
   .t--lead {
-    font-size: calc(${theme.fontSizes[1]} * 1.5);
+    font-size: calc(${theme.fontSizes[2]} * 1.25);
     margin-bottom: 1em;
+
+    @media ${theme.mq.tablet} {
+      font-size: calc(${theme.fontSizes[3]});
+    }
   }
 
   .t--small {

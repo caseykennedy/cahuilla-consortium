@@ -2,11 +2,10 @@
 
 // ___________________________________________________________________
 
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 
 // Libraries
 import Img from 'gatsby-image/withIEPolyfill'
-import { useSpring, config } from 'react-spring'
 
 // Theme + Styles
 import * as S from './styles.scss'
@@ -18,7 +17,6 @@ import Divider from '../../ui/Divider'
 import ListBox from '../../ui/ListBox'
 
 // Components
-import ImgMatch from '../../ImgMatch'
 import Accordion from '../../Accordion'
 import Billboard from '../../Billboard'
 import BlockContent from '../../BlockContent'
@@ -90,7 +88,7 @@ const WhatWeDo = () => {
             dangerouslySetInnerHTML={{ __html: page.statement }}
           />
 
-          <Box width={1} mb={[6]} style={{mixBlendMode: 'luminosity'}}>
+          <Box width={1} mb={[6]} style={{ mixBlendMode: 'luminosity' }}>
             {page.figure && (
               <Img
                 fluid={page.figure.asset.fluid}

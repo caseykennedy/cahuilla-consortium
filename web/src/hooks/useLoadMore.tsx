@@ -5,7 +5,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 
 // ___________________________________________________________________
 
-const maxPosts = 8
+const maxPosts = 4
 
 // Hook
 const useLoadMore = (posts: any) => {
