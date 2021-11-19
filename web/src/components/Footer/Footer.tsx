@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
               <ul>
                 <li>
                   <a
-                    href="//www.instagram.com/cahuilla_consortium"
+                    href="https://www.facebook.com/CahuillaConsortiumCCVAP"
                     target="_blank"
                   >
                     facebook
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="//www.facebook.com/CahuillaConsortiumCCVAP"
+                    href="https://www.instagram.com/cahuilla_consortium"
                     target="_blank"
                   >
                     instagram
