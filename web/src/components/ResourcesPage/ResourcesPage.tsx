@@ -32,7 +32,7 @@ const Post: React.FC<{ post: ResourceQuery }> = ({ post }) => {
           {/* <Text as="p" mb={2}>
             {post.publishedAt}
           </Text> */}
-          <Heading as="h4" mt={2} mb={4} className="text--md">
+          <Heading as="h4" className="text--md">
             {post.title}
           </Heading>
           <Flex sx={{ justifyContent: 'flex-end', width: '100%' }}>
