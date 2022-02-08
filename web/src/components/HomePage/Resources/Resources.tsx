@@ -28,21 +28,7 @@ const Resources = () => {
       <Box width={[1, 1 / 2]}>
         <Billboard active={false} {...billboardProps} />
       </Box>
-      <Box width={[1, 1 / 2]}>
-        <S.ButtonGroup>
-          {data.map((resource, key) => (
-            <a href={`mailto:${resource.link}`} target="_blank" key={key}>
-              <Heading fontFamily="heading" className="text--lg">
-                {resource.title}
-              </Heading>
-              <Flex>
-                <p>{resource.desc}</p>
-                <Icon name="nextArrow" />
-              </Flex>
-            </a>
-          ))}
-        </S.ButtonGroup>
-      </Box>
+      <Box width={[1, 1 / 2]}/>
     </S.Resources>
   )
 }

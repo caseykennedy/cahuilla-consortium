@@ -15,6 +15,8 @@ import theme from '../../../../config/theme'
 // UI
 import { Box } from '../../ui'
 
+import data from '../nav.json'
+
 // ___________________________________________________________________
 
 const Navigation = () => {
@@ -37,24 +39,3 @@ const Navigation = () => {
 }
 
 export default Navigation
-
-// ___________________________________________________________________
-
-const data = [
-  {
-    name: 'start here',
-    link: '/#what'
-  },
-  {
-    name: 'FAQ',
-    link: '/#faq'
-  },
-  {
-    name: 'blog',
-    link: '/blog'
-  },
-  {
-    name: 'contact',
-    link: '/#contact'
-  }
-]

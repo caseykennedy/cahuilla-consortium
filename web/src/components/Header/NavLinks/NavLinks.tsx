@@ -12,6 +12,8 @@ import { Box, Text } from '../../ui'
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 
+import data from '../nav.json'
+
 // ___________________________________________________________________
 
 type LinkProps = {
@@ -70,24 +72,3 @@ const NavLinks: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
 }
 
 export default NavLinks
-
-// ___________________________________________________________________
-
-const data = [
-  {
-    name: 'start here',
-    link: '/#what'
-  },
-  {
-    name: 'FAQ',
-    link: '/#faq'
-  },
-  {
-    name: 'blog',
-    link: '/blog'
-  },
-  {
-    name: 'contact',
-    link: '/#contact'
-  }
-]

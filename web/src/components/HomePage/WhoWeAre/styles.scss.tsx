@@ -10,14 +10,12 @@ import { Box, Flex } from '../../ui'
 
 export const WhoWeAre = styled(Flex)`
   flex-wrap: wrap;
-  
 
   @media ${theme.mq.tablet} {
   }
 
   .team {
     &__cell {
-
     }
 
     &__avatar {

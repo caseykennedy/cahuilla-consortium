@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
       <WhatWeDo />
       <WhoWeAre />
       <Faq />
-      <Resources />
+      {/* <Resources /> */}
       <Blog />
     </S.HomePage>
   )

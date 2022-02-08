@@ -11,6 +11,7 @@ import blockText from './blockText'
 import contact from './contact'
 import faq from './faq'
 import figure from './figure'
+import file from './file'
 import hiddenQuote from './hiddenQuote'
 import howWeSeekToHelp from './howWeSeekToHelp'
 import mainImage from './mainImage'
@@ -18,6 +19,7 @@ import moreWaysWeCanHelp from './moreWaysWeCanHelp'
 import person from './person'
 import post from './post'
 import postCategory from './postCategory'
+import resource from './resource'
 import serviceArea from './serviceArea'
 import siteSettings from './siteSettings'
 import whatWeDo from './whatWeDo'
@@ -40,6 +42,7 @@ export default createSchema({
     contact,
     faq,
     figure,
+    file,
     hiddenQuote,
     howWeSeekToHelp,
     mainImage,
@@ -47,6 +50,7 @@ export default createSchema({
     person,
     post,
     postCategory,
+    resource,
     serviceArea,
     siteSettings,
     whatWeDo,

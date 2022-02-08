@@ -88,6 +88,15 @@ export default () =>
 
         .icon(MdLibraryBooks),
 
+      // Resource
+      // _________________________________________________________________
+      S.listItem()
+        .title('Resources')
+        .schemaType('resource')
+        .child(S.documentTypeList('resource').title('Resource'))
+
+        .icon(MdLibraryBooks),
+
       // FAQs
       // _________________________________________________________________
       S.listItem()
