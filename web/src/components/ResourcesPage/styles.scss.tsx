@@ -39,6 +39,7 @@ export const ResourcesPage = styled.div`
       justify-content: space-between;
       text-decoration: none;
       padding: ${theme.space[4]};
+      width: 100%;
 
       &:hover {
         color: inherit;

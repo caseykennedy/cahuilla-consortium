@@ -32,9 +32,6 @@ const Post: React.FC<{ post: ResourceQuery }> = ({ post }) => {
           {/* <Text as="p" mb={2}>
             {post.publishedAt}
           </Text> */}
-          <Heading as="h4" className="text--md">
-            {post.title}
-          </Heading>
           <Flex sx={{ justifyContent: 'flex-end', width: '100%' }}>
             <Box mb={4} sx={{ flex: 1 }}>
               {post.figure && (
@@ -51,6 +48,9 @@ const Post: React.FC<{ post: ResourceQuery }> = ({ post }) => {
               )}
             </Box>
           </Flex>
+          <Heading as="h4" mb={3} className="text--md">
+            {post.title}
+          </Heading>
         </Box>
         <Box>
           {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
@@ -75,7 +75,7 @@ const ResourcesPage: React.FC = () => {
           Resources
         </Heading>
       </Box>
-      <Flex>
+      <Box>
         <Grid
           columns={`repeat(auto-fit,minmax(300px,1fr))`}
           gap={theme.space[4]}
@@ -84,7 +84,7 @@ const ResourcesPage: React.FC = () => {
             <Post post={post} key={idx} />
           ))}
         </Grid>
-      </Flex>
+      </Box>
     </S.ResourcesPage>
   )
 }
