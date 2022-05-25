@@ -111,6 +111,7 @@ type ResourceQuery = {
       url: string
     }
   }
+  isVideo: boolean
   author: string
   title: string
   _rawExcerpt: string

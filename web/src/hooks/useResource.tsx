@@ -20,6 +20,7 @@ const useResources = () => {
                 url
               }
             }
+            isVideo
             title
             _rawExcerpt
             _rawBody

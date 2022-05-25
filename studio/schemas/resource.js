@@ -25,6 +25,11 @@ export default {
       type: 'file'
     },
     {
+      name: 'isVideo',
+      title: 'Video',
+      type: 'boolean'
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       description:

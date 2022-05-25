@@ -59,4 +59,13 @@ export const ResourcesPage = styled.div`
       fill: ${theme.colors.text};
     }
   }
+
+  .is-video {
+    background: ${theme.colors.secondary};
+    border-radius: 3px;
+    color: ${theme.colors.white};
+    font-size: ${theme.fontSizes[1]};
+    font-weight: 600;
+    padding: ${theme.space[1]} ${theme.space[2]};
+  }
 `

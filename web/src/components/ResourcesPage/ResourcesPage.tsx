@@ -54,11 +54,20 @@ const Post: React.FC<{ post: ResourceQuery }> = ({ post }) => {
         </Box>
         <Box>
           {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
-          <Text as="span" mt={4}>
-            <a href={post.asset.asset.url} target="_blank">
-              Download
-            </a>
-          </Text>
+          <Flex
+            sx={{
+              mt: 4,
+              alignItems: 'center',
+              justifyContent: 'space-between'
+            }}
+          >
+            <Text as="span">
+              <a href={post.asset.asset.url} target="_blank">
+                Download
+              </a>
+            </Text>
+            {post.isVideo && <div className="is-video">Video</div>}
+          </Flex>
         </Box>
       </a>
     </Flex>
