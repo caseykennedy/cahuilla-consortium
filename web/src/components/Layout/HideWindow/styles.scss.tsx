@@ -3,15 +3,14 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { AnimatedFlex, Flex } from '../../ui'
-import { motion } from 'framer-motion'
 import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
 const overlayWidth = '100vw'
 
-export const Overlay = styled(Flex)`
+export const Overlay = styled.div`
+  display: flex;
   justify-content: flex-start;
   flex-direction: column;
 
@@ -48,7 +47,7 @@ export const Overlay = styled(Flex)`
   }
 `
 
-export const HideWindow = styled(motion.div)`
+export const HideWindow = styled.a`
   /* background: ${theme.colors.black}; */
   border: 2px solid ${theme.colors.black};
   border-radius: 99px;
