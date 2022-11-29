@@ -75,7 +75,7 @@ const Blog = () => {
       </Box>
       <Flex sx={{ flexDirection: 'column' }}>
         <Grid
-          columns={`repeat(auto-fit,minmax(300px,1fr))`}
+          columns={[1, 2, 4]}
           gap={theme.space[4]}
         >
           {list.map(({ node: post }, idx) => (

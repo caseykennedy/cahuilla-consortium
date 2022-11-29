@@ -1,19 +1,12 @@
 // Layout:
-// TODO: create hook for siteMetaData
-
-// _____________________________________________________________
 
 import React, { useRef, useState } from 'react'
-import { ThemeProvider } from 'styled-components'
 
-// Components
 import HideWindow from './HideWindow'
 import Header from '../Header'
 import Footer from '../Footer'
 
-import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import 'swiper/css/swiper.css'
 
 // _____________________________________________________________
 
