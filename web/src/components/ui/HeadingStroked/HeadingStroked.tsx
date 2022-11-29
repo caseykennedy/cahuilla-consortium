@@ -1,6 +1,6 @@
 // Heading with inner stroke
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 
@@ -8,9 +8,9 @@ import styled from 'styled-components'
 import { Heading } from '..'
 
 // Theme
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type Props = {
   fillColor?: string
@@ -32,4 +32,4 @@ HeadingStroked.defaultProps = {
 
 export default HeadingStroked
 
-// ___________________________________________________________________
+// _____________________________________________________________

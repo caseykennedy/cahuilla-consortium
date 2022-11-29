@@ -97,6 +97,15 @@ export default () =>
 
         .icon(MdLibraryBooks),
 
+      // Resource
+      // _________________________________________________________________
+      S.listItem()
+        .title('Policies')
+        .schemaType('policy')
+        .child(S.documentTypeList('policy').title('Policy'))
+
+        .icon(MdLibraryBooks),
+
       // FAQs
       // _________________________________________________________________
       S.listItem()

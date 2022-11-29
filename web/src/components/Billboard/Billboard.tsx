@@ -1,13 +1,13 @@
 // Header:
 // Site Header with logo
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React, { useState, useRef } from 'react'
 import { useSpring, config } from 'react-spring'
 
 // Theme + Styles
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // UI
@@ -19,7 +19,7 @@ import Icon from '../Icons'
 // Hooks
 import useContact from '../../hooks/useContact'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type Props = {
   message?: string
@@ -60,18 +60,19 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
         <Flex mt={[7, 0]} className={`contact show`}>
           <Flex flexDirection="column" flex={2}>
             <S.Telephone>
-              <Text fontSize={1} className="t--uppercase">
+              <Text fontSize={1} fontWeight={500} lineHeight={1} className="t--uppercase">
                 Talk to an advocate
               </Text>
 
               <Text
                 fontSize={3}
                 fontWeight={500}
+                lineHeight={1}
                 dangerouslySetInnerHTML={{ __html: contact.hotline }}
               />
             </S.Telephone>
 
-            <Box mt={[4, 2, 4]} fontSize={1}>
+            <Box mt={[4, 2, 4]} fontSize={2} fontWeight={500}>
               Crime victim advocacy center
             </Box>
           </Flex>
@@ -89,6 +90,6 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
 
 export default Billboard
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 Billboard.defaultProps = defaultProps

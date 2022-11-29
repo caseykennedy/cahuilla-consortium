@@ -1,12 +1,12 @@
 // Section Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import { Box, Flex } from '../ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type Props = {
   border?: boolean

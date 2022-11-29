@@ -1,7 +1,7 @@
 // Previous / Next pre-footer
 // TODO: button bg image
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React from 'react'
 
@@ -13,9 +13,9 @@ import { Flex } from '../../../components/ui'
 
 // Theme
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const path = 'blog'
 

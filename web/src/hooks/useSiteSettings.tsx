@@ -1,11 +1,12 @@
 // useSiteSettings hook
 // Hook for querying site settings data
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import { graphql, useStaticQuery } from 'gatsby'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type Props = {
   settings: {
@@ -15,7 +16,8 @@ type Props = {
         backgroundColor: string
         banner: {
           asset: {
-            fluid: ImageShape
+            gatsbyImageData: IGatsbyImageData
+            url: string
           }
         }
         description: string
@@ -46,15 +48,13 @@ const useSiteSettings = () => {
             backgroundColor
             banner {
               asset {
-                fluid {
-                  srcWebp
-                  srcSetWebp
-                  srcSet
-                  src
-                  sizes
-                  base64
-                  aspectRatio
-                }
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                )
+                url
               }
             }
             description

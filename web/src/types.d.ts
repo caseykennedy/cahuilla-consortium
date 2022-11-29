@@ -12,7 +12,7 @@ type ImageShape = {
 }
 
 // Create Ref
-// ___________________________________________________________________
+// _____________________________________________________________
 
 function createRef<T>(): RefObject<T>
 interface RefObject<T> {
@@ -21,7 +21,7 @@ interface RefObject<T> {
 }
 
 // Post shape
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type PostShape = {
   posts: {
@@ -49,15 +49,8 @@ type PostQuery = {
   }
   figure: {
     asset: {
-      fluid: {
-        src: string
-        aspectRatio: number
-        base64: string
-        sizes: string
-        srcSet: string
-        srcSetWebp: string
-        srcWebp: string
-      }
+      gatsbyImageData: IGatsbyImageData
+      url: string
     }
   }
   categories: {
@@ -86,7 +79,7 @@ type PostContextShape = {
 }
 
 // Resource shape
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type ResourceShape = {
   resources: {
@@ -123,15 +116,8 @@ type ResourceQuery = {
   }
   figure: {
     asset: {
-      fluid: {
-        src: string
-        aspectRatio: number
-        base64: string
-        sizes: string
-        srcSet: string
-        srcSetWebp: string
-        srcWebp: string
-      }
+      gatsbyImageData: IGatsbyImageData
+      url: string
     }
   }
   categories: {
@@ -141,7 +127,74 @@ type ResourceQuery = {
 
 type ResourceContextShape = {
   pageContext: {
-    post: PostQuery
+    post: ResourceQuery
+    prev: {
+      _rawExcerpt: string
+      title: string
+      slug: {
+        current: string
+      }
+    }
+    next: {
+      _rawExcerpt: string
+      title: string
+      slug: {
+        current: string
+      }
+    }
+  }
+}
+
+// Policy shape
+// _____________________________________________________________
+
+type PolicyShape = {
+  policies: {
+    edges: PolicyEdges[]
+  }
+}
+
+type PolicyEdges = {
+  node: PolicyQuery
+}
+
+type PolicyData = {
+  policy: PolicyQuery
+}
+
+type PolicyQuery = {
+  asset: {
+    asset: {
+      description: string
+      id: string
+      title: string
+      url: string
+    }
+  }
+  isVideo: boolean
+  author: string
+  title: string
+  _rawExcerpt: string
+  _rawBody: string
+  _id: string
+  publishedAt: string
+  slug: {
+    current: string
+  }
+  figure: {
+    asset: {
+      gatsbyImageData: IGatsbyImageData
+      url: string
+    }
+  }
+  categories: {
+    title: string
+  }[]
+}
+
+type PolicyContextShape = {
+  pageContext: {
+    post: PolicyQuery
     prev: {
       _rawExcerpt: string
       title: string
@@ -160,20 +213,13 @@ type ResourceContextShape = {
 }
 
 // Person shape
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type PersonNode = {
   avatar: {
     asset: {
-      fluid: {
-        src: string
-        aspectRatio: number
-        base64: string
-        sizes: string
-        srcSet: string
-        srcSetWebp: string
-        srcWebp: string
-      }
+      gatsbyImageData: IGatsbyImageData
+      url: string
     }
   }
   name: string

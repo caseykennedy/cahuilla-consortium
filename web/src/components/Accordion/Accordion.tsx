@@ -1,16 +1,16 @@
 // Accordion:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React, { useState, useRef } from 'react'
 
 import { Box, Flex, Text, Heading } from '../ui'
 import Icon from '../Icons'
 
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type Props = {
   active?: boolean
@@ -31,7 +31,7 @@ type Props = {
   pl?: number | number[] | string
 }
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const Accordion: React.FC<Props> = ({
   active,
@@ -144,7 +144,7 @@ const Accordion: React.FC<Props> = ({
 
 export default Accordion
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const defaultProps = {
   pt: [3],

@@ -1,23 +1,22 @@
 // Footer:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import * as React from 'react'
 import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 
-import { Text, Heading, Box, Flex } from '../ui'
+import { Heading, Box, Flex } from '../ui'
 
-import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
 // Components
-import ImgMatch from '../ImgMatch'
 import Symbol from '../Symbol'
 import Wordmark from '../Wordmark'
 
 import useContact from '../../hooks/useContact'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const Year = () => {
   return new Date().getFullYear()
@@ -105,17 +104,22 @@ const Footer: React.FC = () => {
                 <br />
                 <br />
                 <span>
-                  <a href={`hotline: ${contact.hotline}`} aria-label={`call us: ${contact.hotline}`}>
-                  {contact.hotline}
-                  </a>{' '}
-                  (24/7 hotline)
+                  <a
+                    href={`hotline: ${contact.hotline}`}
+                    aria-label={`call us: ${contact.hotline}`}
+                  >
+                    {contact.hotline}
+                  </a>
                 </span>
                 <br />
                 <span>
-                  <a href={`tel: ${contact.telephone}`} aria-label={`call us: ${contact.telephone}`}>
-                  {contact.telephone}
-                  </a>{' '}
-                  (office)
+                  OFFICE:{' '}
+                  <a
+                    href={`tel: ${contact.telephone}`}
+                    aria-label={`call us: ${contact.telephone}`}
+                  >
+                    {contact.telephone}
+                  </a>
                 </span>
               </p>
             </Box>
@@ -123,9 +127,13 @@ const Footer: React.FC = () => {
         </Flex>
 
         <div className="bg">
-          <ImgMatch
-            src="bg-footer-humming-bird.jpg"
-            altText="Humming bird and flowers"
+          <StaticImage
+            src="../../images/bg-footer-humming-bird.jpg"
+            alt="Humming bird and flowers"
+            placeholder="blurred"
+            objectFit="cover"
+            quality={60}
+            aspectRatio={600 / 450}
           />
         </div>
       </Flex>

@@ -1,37 +1,38 @@
 // Header Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 // Core
 import styled from 'styled-components'
 
 // Theme
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 // Elements
 import { Flex } from '../ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
-export const Header = styled(Flex)`
+export const Header = styled(Flex)<{ isIndex: boolean }>`
   flex-direction: row;
   flex-wrap: wrap;
 
   /* mix-blend-mode: difference; */
   background: ${theme.colors.primary};
-  /* border-bottom: 4px solid ${theme.colors.background}; */
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.15);
+  backdrop-filter: blur(7px);
   position: sticky;
   top: 0;
   left: 0;
-  
-  padding: ${theme.space[2]} ${theme.space[4]};
+
+  padding: 0 ${theme.space[4]};
+  height: ${theme.headerHeight};
   width: 100%;
   z-index: 999;
 
   @media ${theme.mq.tablet} {
-    padding: 0 ${theme.space[4]};
-    height: ${theme.headerHeight};
-    width: 50%;
+    background: ${p => (p.isIndex ? theme.colors.background : 'transparent')};
+    width: ${p => (p.isIndex ? '100%' : '50%')};
   }
 `
 
@@ -42,28 +43,27 @@ export const Logo = styled(Flex)`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ${theme.colors.white};
+    color: ${theme.colors.text};
     /* mix-blend-mode: difference; */
 
     svg {
-      fill: ${theme.colors.white};
+      fill: ${theme.colors.text};
       /* mix-blend-mode: difference; */
     }
 
     .symbol {
-      /* display: none;
-
-      @media ${theme.mq.tablet} {
-        display: initial;
-      } */
-
       svg {
         width: 45px;
       }
     }
 
     .wordmark {
+      display: none;
       margin-left: ${theme.space[1]};
+
+      @media ${theme.mq.desktop} {
+        display: flex;
+      }
 
       svg {
         width: 90px;

@@ -14,5 +14,9 @@
   {
     "name": "resources",
     "link": "/resources"
+  },
+  {
+    "name": "policies",
+    "link": "/policies"
   }
 ]

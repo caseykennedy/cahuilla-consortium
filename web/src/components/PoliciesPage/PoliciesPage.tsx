@@ -1,6 +1,4 @@
-// ResourcesPage:
-
-// _____________________________________________________________
+// PoliciesPage:
 
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -13,24 +11,18 @@ import { Box, Flex, Text, Heading, Grid } from 'theme-ui'
 
 // Components
 import BlockContent from '../BlockContent'
-import Icon from '../Icons'
 
 // Hooks
-import useResource from '../../hooks/useResource'
+import usePolicies from '../../hooks/usePolicies'
 import useLoadMore from '../../hooks/useLoadMore'
 
 // _____________________________________________________________
-
-const blogPath = 'blog'
 
 const Post: React.FC<{ post: ResourceQuery }> = ({ post }) => {
   return (
     <Flex className="post">
       <a href={post.asset.asset.url} className="inner" target="_blank">
         <Box>
-          {/* <Text as="p" mb={2}>
-            {post.publishedAt}
-          </Text> */}
           <Flex sx={{ justifyContent: 'flex-end', width: '100%' }}>
             <Box mb={4} sx={{ flex: 1 }}>
               {post.figure && (
@@ -70,28 +62,25 @@ const Post: React.FC<{ post: ResourceQuery }> = ({ post }) => {
   )
 }
 
-const ResourcesPage: React.FC = () => {
-  const posts = useResource()
+const PoliciesPage: React.FC = () => {
+  const posts = usePolicies()
   const { list, handleLoadMore, hasMore } = useLoadMore(posts)
   return (
-    <S.ResourcesPage>
+    <S.PoliciesPage>
       <Box>
         <Heading as="h3" mt={2} mb={3}>
-          Resources
+          Policies
         </Heading>
       </Box>
       <Box>
-        <Grid
-          columns={`repeat(auto-fit,minmax(300px,1fr))`}
-          gap={theme.space[4]}
-        >
+        <Grid columns={[1, 2, 3]} gap={theme.space[4]}>
           {posts.map(({ node: post }, idx) => (
             <Post post={post} key={idx} />
           ))}
         </Grid>
       </Box>
-    </S.ResourcesPage>
+    </S.PoliciesPage>
   )
 }
 
-export default ResourcesPage
+export default PoliciesPage

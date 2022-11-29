@@ -1,12 +1,12 @@
 // Billboard Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import { Box, Flex } from '../ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const Billboard = styled(Flex)`
   overflow: hidden;
@@ -19,9 +19,11 @@ export const Billboard = styled(Flex)`
   color: ${theme.colors.white};
 
   @media ${theme.mq.tablet} {
+    padding-top: calc(${theme.headerHeight} + ${theme.space[4]});
     position: sticky;
-    top: ${theme.headerHeight};
-    height: calc(100vh - ${theme.headerHeight});
+    top: 0;
+    height: 100vh;
+    /* height: calc(100vh - ${theme.headerHeight}); */
   }
 
   .inner {
@@ -50,7 +52,7 @@ export const Billboard = styled(Flex)`
 
     span {
       transform: rotate(90deg);
-      width: ${theme.space[6]};
+      width: ${theme.space[5]};
 
       svg {
       }

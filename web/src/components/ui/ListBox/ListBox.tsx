@@ -1,6 +1,6 @@
 // ListBox:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 // Core
 import * as React from 'react'
@@ -8,10 +8,10 @@ import { Link } from 'gatsby'
 
 import Icon from '../../Icons'
 
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type Props = {
   children?: React.ReactNode
@@ -29,6 +29,6 @@ const ListBox: React.FC<Props> = ({ children }) => {
 
 export default ListBox
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 ListBox.defaultProps = defaultProps

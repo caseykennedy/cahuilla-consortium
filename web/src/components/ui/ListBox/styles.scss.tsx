@@ -1,15 +1,15 @@
 // ListBox Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { darken } from 'polished'
 
 import { Box, Flex, Heading } from '..'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const ListBox = styled(Box)`
   border-top: 1px solid ${theme.colors.gray};

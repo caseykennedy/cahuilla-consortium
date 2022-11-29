@@ -1,14 +1,14 @@
 // Footer styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 import { Box, Flex, Heading } from '../ui'
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 import pattern from './assets/hummingbird-pattern.png'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const Footer = styled.footer`
   @media ${theme.mq.tablet} {
@@ -22,8 +22,8 @@ export const Footer = styled.footer`
 
     background: linear-gradient(
       180deg,
-      ${theme.colors.tertiary} 21.88%,
-      ${theme.colors.primary} 84.39%
+      ${theme.colors.quinary} 21.88%,
+      ${theme.colors.secondary} 84.39%
     );
     box-shadow: ${theme.shadow};
     color: ${theme.colors.white};
@@ -50,15 +50,17 @@ export const Footer = styled.footer`
   }
 
   .bg {
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
 
     mix-blend-mode: luminosity;
-    opacity: 0.75;
+    opacity: 0.85;
   }
 `
 

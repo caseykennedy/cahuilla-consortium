@@ -1,7 +1,7 @@
 // Previous / Next pre-footer
 // TODO: button bg image
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React from 'react'
 
@@ -9,9 +9,9 @@ import React from 'react'
 import Icon from '../../../components/Icons'
 
 // Theme
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const SocialShare: React.FC<{ name: string; slug: string }> = ({
   name,

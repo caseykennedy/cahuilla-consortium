@@ -1,10 +1,10 @@
 // useResource hook
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import { graphql, useStaticQuery } from 'gatsby'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const useResources = () => {
   const data = useStaticQuery<ResourceShape>(graphql`
@@ -31,15 +31,13 @@ const useResources = () => {
             }
             figure {
               asset {
-                fluid(maxWidth: 800) {
-                  srcWebp
-                  srcSetWebp
-                  srcSet
-                  src
-                  sizes
-                  base64
-                  aspectRatio
-                }
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 1
+                )
               }
             }
             categories {

@@ -1,6 +1,6 @@
 // ResourcesPage Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 import { darken } from 'polished'
@@ -9,7 +9,7 @@ import { Box, Flex, Heading } from 'theme-ui'
 
 import theme from '../../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const ResourcesPage = styled.div`
   padding: ${theme.space[4]};

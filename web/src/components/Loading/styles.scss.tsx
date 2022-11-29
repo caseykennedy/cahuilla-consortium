@@ -1,15 +1,15 @@
 // Loading Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 import { darken } from 'polished'
 
 import { AnimatedFlex } from '../ui'
 
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const Loading = styled(AnimatedFlex)`
   flex-wrap: wrap;

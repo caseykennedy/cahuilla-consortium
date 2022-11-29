@@ -1,21 +1,21 @@
 // Layout Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 import { animated } from 'react-spring'
 
 import { Box, Flex } from '../ui'
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const Wrapper = styled(Flex)`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
 
-  width: 100vw;
+  width: 100%;
   /* min-height: 100vh; */
   position: relative;
   background: ${theme.colors.background};
@@ -50,4 +50,4 @@ export const Aside = styled(Flex)`
   }
 `
 
-// ___________________________________________________________________
+// _____________________________________________________________

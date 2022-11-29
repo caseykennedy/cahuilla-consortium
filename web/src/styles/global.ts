@@ -1,16 +1,16 @@
 // Global styles
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import { createGlobalStyle } from 'styled-components'
 
-import theme from '../../config/theme'
+import theme from '../gatsby-plugin-theme-ui'
 
 import RootVars from './root'
 import Reset from './reset'
 import Typography from './typography'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const GlobalStyles = createGlobalStyle`
   ${RootVars}

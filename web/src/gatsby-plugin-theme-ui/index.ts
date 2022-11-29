@@ -1,7 +1,7 @@
 // Theme / Design system:
 
 // Types
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type ThemeShape = {
   breakpoints: string[]
@@ -55,9 +55,9 @@ type ThemeShape = {
 }
 
 // Begin theme
-// ___________________________________________________________________
+// _____________________________________________________________
 
-const breakpoints: string[] = ['900px', '1024px']
+const breakpoints: string[] = ['860px', '1024px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -66,7 +66,7 @@ const breakpoints: string[] = ['900px', '1024px']
 
 const theme: ThemeShape = {
   // Breakpoints
-  // ___________________________________________________________________
+  // _____________________________________________________________
 
   breakpoints,
   mq: {
@@ -75,25 +75,25 @@ const theme: ThemeShape = {
   },
 
   // Color palette
-  // ___________________________________________________________________
+  // _____________________________________________________________
 
   colors: {
     text: '#000105',
-    background: '#EFEDEB',
+    background: '#f3f3f3',
     
-    primary: '#E87414',
-    secondary: '#52C3B8',
-    tertiary: '#857AEB',
-    quaternary: '#EFEDEB',
-    quinary: '#EFEDEB',
+    primary: '#D0A145',
+    secondary: '#9BC2CC',
+    tertiary: '#A998CB',
+    quaternary: '#F2E2C2',
+    quinary: '#F2C87D',
 
     black: '#000105',
     white: '#ffffff',
-    gray: '#a59e9f',
+    gray: '#B5AFA5',
   },
 
   // Space
-  // ___________________________________________________________________
+  // _____________________________________________________________
 
   space: [
     '0',                     // 0
@@ -119,7 +119,7 @@ const theme: ThemeShape = {
   },
 
   // Typography
-  // ___________________________________________________________________
+  // _____________________________________________________________
 
   fonts: {
     body: `"San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
@@ -153,7 +153,7 @@ const theme: ThemeShape = {
   strokeWidth: '2px',
 
   // Base
-  // ___________________________________________________________________
+  // _____________________________________________________________
 
   maxWidth: '1680px',
   siteWidth: '50vw',

@@ -1,10 +1,10 @@
 // Typography
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import { css } from 'styled-components'
-import theme from '../../config/theme'
-import { darken } from 'polished'
+import theme from '../gatsby-plugin-theme-ui'
+import { lighten } from 'polished'
 
 // Staatliches Regular
 import StaatlichesEot from './fonts/Staatliches-Regular.eot'
@@ -36,7 +36,7 @@ import BergenMonoRegularWoff2 from './fonts/BergenMono-Regular.woff2'
 import BergenMonoRegularWoff from './fonts/BergenMono-Regular.woff'
 import BergenMonoRegularOtf from './fonts/BergenMono-Regular.otf'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const Typography = css`
   /* Staatliches */
@@ -193,15 +193,11 @@ const Typography = css`
 
   h2,
   .text--xl {
-    font-size: calc(${theme.fontSizes[4]} / 1.15);
-
-    @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[5]} / 1.25);
-      line-height: calc(${theme.root.font.headingLineHeight} / 1.15);
-    }
+    font-size: calc(${theme.fontSizes[5]} / 1);
+    line-height: calc(${theme.root.font.headingLineHeight} / 1.15);
 
     @media ${theme.mq.desktop} {
-      font-size: ${theme.fontSizes[5]};
+      font-size: calc(${theme.fontSizes[6]} / 1.25);
     }
   }
 
@@ -268,7 +264,8 @@ const Typography = css`
 
   .t--lead {
     font-size: calc(${theme.fontSizes[2]} * 1.25);
-    margin-bottom: 1em;
+    line-height: calc(${theme.root.font.bodyLineHeight} * 0.925);
+    margin-bottom: ${theme.space[3]};
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[3]});
@@ -276,10 +273,10 @@ const Typography = css`
   }
 
   .t--small {
-    font-size: calc(${theme.fontSizes[1]} /s 1.5);
+    font-size: calc(${theme.fontSizes[1]} / s 1.5);
   }
 
-  .t-underline {
+  .t--underline {
     text-decoration: underline;
   }
 
@@ -297,6 +294,7 @@ const Typography = css`
   }
 
   a {
+    font-weight: 500;
     text-decoration: underline;
     position: relative;
     z-index: 1;
@@ -308,7 +306,7 @@ const Typography = css`
     &:hover,
     &:focus {
       text-decoration: none;
-      color: ${darken(0.1, theme.colors.secondary)};
+      color: ${lighten(0.1, theme.colors.text)};
     }
   }
 
@@ -376,4 +374,4 @@ const Typography = css`
 
 export default Typography
 
-// ___________________________________________________________________
+// _____________________________________________________________

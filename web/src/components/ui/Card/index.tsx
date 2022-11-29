@@ -1,15 +1,15 @@
 // Card Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 import { darken } from 'polished'
 
 import { Box, Flex, Heading, AnimatedBox } from '..'
 
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const Card = styled(AnimatedBox)`
   /* max-width: 333px; */

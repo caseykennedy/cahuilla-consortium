@@ -1,6 +1,6 @@
 // Blog page
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 // Libraries
 import React from 'react'
@@ -10,14 +10,14 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import BlogPage from '../components/BlogPage'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const Blog = () => {
   return (
-    <Layout>
+    <>
       <SEO />
       <BlogPage />
-    </Layout>
+    </>
   )
 }
 

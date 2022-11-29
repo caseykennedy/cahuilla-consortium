@@ -1,15 +1,15 @@
 // Homepage Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 import { darken } from 'polished'
 
 import { Box, Flex, Heading } from '../ui'
 
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const HomePage = styled.div`
   width: 100%;

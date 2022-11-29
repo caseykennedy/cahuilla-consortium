@@ -1,13 +1,13 @@
 // Elements:
 // Box and Flex layout components using Styled System
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 import { animated } from 'react-spring'
 
 // Theme
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 import {
   space,
@@ -50,7 +50,7 @@ import {
   OverflowProps
 } from 'styled-system'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 // Box
 
@@ -218,5 +218,5 @@ export const Text = styled.div<ElementProps>`
 
 Box.displayName = 'Text'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 // End Component

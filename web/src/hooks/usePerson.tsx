@@ -1,29 +1,27 @@
 // usePerson hook
 // Hook for querying data
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import { graphql, useStaticQuery } from 'gatsby'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const usePerson = () => {
   const data = useStaticQuery<PersonShape>(graphql`
     query PersonQuery {
-      people: allSanityPerson(sort: {fields: name, order: DESC}) {
+      people: allSanityPerson(sort: { fields: name, order: DESC }) {
         edges {
           node {
             avatar {
               asset {
-                fluid(maxWidth: 300) {
-                  srcWebp
-                  srcSetWebp
-                  srcSet
-                  src
-                  sizes
-                  base64
-                  aspectRatio
-                }
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 0.85
+                )
               }
               crop {
                 top

@@ -1,14 +1,14 @@
 // Blog Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 import { Box, Flex } from 'theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const Blog = styled(Flex)`
   flex-wrap: wrap;

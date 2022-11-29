@@ -1,13 +1,13 @@
 // Resources Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 import { Box, Flex } from 'theme-ui'
 import { darken } from 'polished'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const buttonBorder = `4px solid ${theme.colors.background}`
 

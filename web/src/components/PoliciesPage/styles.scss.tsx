@@ -1,17 +1,12 @@
-// BlogPage Styles:
-
-// _____________________________________________________________
+// PoliciesPage Styles:
 
 import styled from 'styled-components'
 import { darken } from 'polished'
-
-import { Box, Flex, Heading } from 'theme-ui'
-
 import theme from '../../gatsby-plugin-theme-ui'
 
 // _____________________________________________________________
 
-export const BlogPage = styled.div`
+export const PoliciesPage = styled.div`
   padding: ${theme.space[4]};
 
   .post {
@@ -39,6 +34,7 @@ export const BlogPage = styled.div`
       justify-content: space-between;
       text-decoration: none;
       padding: ${theme.space[4]};
+      width: 100%;
 
       &:hover {
         color: inherit;
@@ -57,5 +53,14 @@ export const BlogPage = styled.div`
     svg {
       fill: ${theme.colors.text};
     }
+  }
+
+  .is-video {
+    background: ${theme.colors.secondary};
+    border-radius: 3px;
+    color: ${theme.colors.white};
+    font-size: ${theme.fontSizes[1]};
+    font-weight: 600;
+    padding: ${theme.space[1]} ${theme.space[2]};
   }
 `

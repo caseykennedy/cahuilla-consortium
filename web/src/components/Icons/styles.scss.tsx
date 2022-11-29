@@ -1,15 +1,15 @@
 // Icon Component Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 // Core
 import styled from 'styled-components'
 
 // Theme
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 // Begin Styles
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const IconStyle = styled.span`
   font-size: 1rem;

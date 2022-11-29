@@ -1,13 +1,13 @@
 // useScrollWatch utility hook
 // Checks for window scroll position with throttling
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 // Core
 import { useEffect, useState } from 'react'
 import { throttle } from 'lodash'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type CallbackTypes = {
   previousScrollTop: number

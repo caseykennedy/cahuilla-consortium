@@ -1,6 +1,6 @@
 // Navigation
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React from 'react'
 import { Link } from 'gatsby'
@@ -10,14 +10,14 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // Theme + Styles
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
 import { Box } from '../../ui'
 
 import data from '../nav.json'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const Navigation = () => {
   return (

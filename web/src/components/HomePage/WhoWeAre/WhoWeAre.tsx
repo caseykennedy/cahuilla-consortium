@@ -1,16 +1,16 @@
 // Who We Are Section:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React, { useRef } from 'react'
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 
 // Libraries
-import Img from 'gatsby-image/withIEPolyfill'
 import { Grid } from 'theme-ui'
 
 // Theme + Styles
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
 import { Box, Flex, Text, Heading } from '../../ui'
@@ -27,7 +27,7 @@ import Hero from '../Hero'
 import useWhoWeAre from '../../../hooks/useWhoWeAre'
 import usePerson from '../../../hooks/usePerson'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const billboardProps = {
   active: true,
@@ -38,23 +38,17 @@ const billboardProps = {
 const Team = () => {
   const team = usePerson()
   return (
-    <Grid
-      columns={[2, 3]}
-      gap={theme.space[4]}
-      className="team"
-    >
+    <Grid columns={[2, 3]} gap={theme.space[4]} className="team">
       {team.map(({ node: person }, idx) => (
         <Box key={idx} className="team__cell">
           <Box mb={4} className="team__avatar">
             {person.avatar && (
-              <Img
-                fluid={{
-                  ...person.avatar.asset.fluid,
-                  aspectRatio: 1 / 1.5
-                }}
+              <GatsbyImage
+                image={person.avatar.asset.gatsbyImageData}
                 objectFit="cover"
                 objectPosition="50% 50%"
                 alt={person.name}
+                className="article__img"
               />
             )}
           </Box>
@@ -92,7 +86,13 @@ const WhoWeAre = () => {
         <Billboard {...billboardProps} />
       </Box>
       <Box width={[1, 1 / 2]}>
-        <Hero src="counseling.jpg" altText="Therapist and patient talking." />
+        <Hero>
+          <StaticImage
+            src="../../../images/counseling.jpg"
+            alt="Therapist and patient talking."
+            placeholder="blurred"
+          />
+        </Hero>
         <Box p={4}>
           <Heading as="h2" fontSize={3} mb={6}>
             Who we are
@@ -126,7 +126,7 @@ const WhoWeAre = () => {
 
           <Box mb={6}>
             <Box mb={5}>
-              <Heading as="h2" fontSize={3} mb={0}>
+              <Heading as="h2" fontSize={3} mb={6}>
                 Meet our team
               </Heading>
             </Box>

@@ -1,12 +1,12 @@
 // Resources Section:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import * as React from 'react'
 
 // Theme + Styles
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
 import { Box, Flex, Text, Heading } from '../../ui'
@@ -15,7 +15,7 @@ import { Box, Flex, Text, Heading } from '../../ui'
 import Billboard from '../../Billboard'
 import Icon from '../../Icons'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const billboardProps = {
   bg: theme.colors.primary,
@@ -35,7 +35,7 @@ const Resources = () => {
 
 export default Resources
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const data = [
   {

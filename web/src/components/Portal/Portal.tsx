@@ -4,7 +4,7 @@
 
 // TODO: https://upmostly.com/tutorials/modal-components-react-custom-hooks
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React, { useLayoutEffect } from 'react'
 import ReactDOM from 'react-dom'
@@ -15,10 +15,10 @@ import {
   clearAllBodyScrollLocks
 } from 'body-scroll-lock'
 
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type Props = {
   mainRef: React.RefObject<HTMLDivElement>
@@ -33,7 +33,7 @@ type Props = {
   focusAfterExit?: HTMLElement
 }
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const Portal: React.FC<Props> = ({
   children,
@@ -214,4 +214,4 @@ const Portal: React.FC<Props> = ({
 
 export default Portal
 
-// ___________________________________________________________________
+// _____________________________________________________________

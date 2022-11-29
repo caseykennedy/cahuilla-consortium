@@ -1,12 +1,12 @@
 // Faq Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 import { Box, Flex } from '../../ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const Faq = styled(Flex)`
   flex-wrap: wrap;

@@ -1,13 +1,13 @@
 // Lightbox Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 import Lightbox from 'react-spring-lightbox'
-import theme from '../../../../../config/theme'
+import theme from '../../../../gatsby-plugin-theme-ui'
 import { Box, Flex } from '../../../../elements'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const Gallery = styled(Lightbox)`
 

@@ -1,7 +1,7 @@
 // SEO Component
 // ref: https://www.
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React from 'react'
 import Helmet from 'react-helmet'
@@ -12,7 +12,7 @@ import useSiteSettings from '../../hooks/useSiteSettings'
 import Facebook from './facebook'
 import Twitter from './twitter'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type Props = {
   banner?: string
@@ -53,7 +53,7 @@ const SEO = ({
   const seo = {
     title: `${title}` || settings.titleAlt,
     description: `${desc}` || settings.description,
-    image: `${banner || settings.banner.asset.fluid.src}`,
+    image: `${banner || settings.banner.asset.url}`,
     url: `${settings.url}${pathname || ''}`
   }
 
@@ -64,7 +64,7 @@ const SEO = ({
   const schemaOrgProduct = {
     '@context': 'http://schema.org/',
     '@type': 'Product',
-    brand: settings.siteName,
+    brand: settings.ogSiteName,
     name: productName,
     image: seo.image,
     description: seo.description,
@@ -156,7 +156,7 @@ const SEO = ({
         name: settings.author,
         logo: {
           '@type': 'ImageObject',
-          url: `${settings.banner.asset.fluid.src}`
+          url: `${settings.banner.asset.url}`
         }
       },
       datePublished: node ? node.birthTime : '2019-03-10T10:30:00+01:00',

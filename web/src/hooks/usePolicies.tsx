@@ -1,5 +1,4 @@
-// usePost hook
-// Hook for querying data
+// usePolicies hook
 
 // _____________________________________________________________
 
@@ -7,18 +6,26 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 // _____________________________________________________________
 
-const usePost = () => {
-  const data = useStaticQuery<PostShape>(graphql`
-    query PostQuery {
-      posts: allSanityPost(sort: { order: DESC, fields: publishedAt }) {
+const usePolicies = () => {
+  const data = useStaticQuery<PolicyShape>(graphql`
+    query PoliciesQuery {
+      policies: allSanityPolicy(sort: { order: DESC, fields: publishedAt }) {
         edges {
           node {
-            author
+            asset {
+              asset {
+                description
+                id
+                title
+                url
+              }
+            }
+            isVideo
             title
             _rawExcerpt
             _rawBody
             _id
-            publishedAt(formatString: "MMMM DD, yyyy")
+            publishedAt(formatString: "dddd — MMMM DD, yyyy")
             slug {
               current
             }
@@ -31,7 +38,6 @@ const usePost = () => {
                   formats: [AUTO, AVIF, WEBP]
                   aspectRatio: 1
                 )
-                url
               }
             }
             categories {
@@ -57,7 +63,7 @@ const usePost = () => {
     }
   `)
 
-  return data.posts.edges
+  return data.policies.edges
 }
 
-export default usePost
+export default usePolicies

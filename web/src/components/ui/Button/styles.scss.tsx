@@ -1,15 +1,15 @@
 // Button Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { lighten } from 'polished'
 
 import { Box, Flex, Heading } from '..'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const Button = styled(Box)<{ invert?: boolean }>`
   display: flex;

@@ -1,11 +1,11 @@
 // HomePage:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React from 'react'
 
 // Theme + Styles
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // Sections
@@ -16,7 +16,7 @@ import Faq from './Faq'
 import Resources from './Resources'
 import Blog from './Blog'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const HomePage: React.FC = () => {
   return (

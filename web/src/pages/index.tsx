@@ -1,6 +1,6 @@
 // Home page
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 // Libraries
 import React from 'react'
@@ -10,14 +10,14 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import HomePage from '../components/HomePage'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const Index = () => {
   return (
-    <Layout>
+    <>
       <SEO />
         <HomePage />
-    </Layout>
+    </>
   )
 }
 

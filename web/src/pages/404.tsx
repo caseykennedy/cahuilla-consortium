@@ -1,6 +1,6 @@
 // 404 Page
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 // Libraries
 import React from 'react'
@@ -9,9 +9,9 @@ import React from 'react'
 import { Box } from '../components/ui'
 
 // Theme
-import theme from '../../config/theme'
+import theme from '../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const fourofourPage = () => {
   return <Box>404</Box>
@@ -19,4 +19,4 @@ const fourofourPage = () => {
 
 export default fourofourPage
 
-// ___________________________________________________________________
+// _____________________________________________________________

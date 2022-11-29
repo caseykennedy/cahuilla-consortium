@@ -1,6 +1,6 @@
 // Button:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 // Core
 import * as React from 'react'
@@ -8,10 +8,10 @@ import { Link } from 'gatsby'
 
 import Icon from '../../Icons'
 
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type Props = {
   children?: React.ReactNode
@@ -35,6 +35,6 @@ const Button: React.FC<Props> = ({ children, to, invert }) => {
 
 export default Button
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 Button.defaultProps = defaultProps

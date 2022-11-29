@@ -1,12 +1,13 @@
 // Faq Section:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React, { useRef, useState } from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 // Theme + Styles
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
 import { Box, Flex, Text, Heading } from '../../ui'
@@ -23,7 +24,7 @@ import Hero from '../Hero'
 import useScrollWatch from '../../../hooks/useScrollWatch'
 import useFaq from '../../../hooks/useFaq'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type CallbackTypes = {
   previousScrollTop: number
@@ -55,10 +56,13 @@ const Faq = () => {
         <Billboard active={billboardActive} {...billboardProps} />
       </Box>
       <Box width={[1, 1 / 2]}>
-        <Hero
-          src="stop-hand.jpg"
-          altText="Girl holding hand up palm facing forward"
-        />
+        <Hero>
+          <StaticImage
+            src="../../../images/stop-hand.jpg"
+            alt="Girl holding hand up palm facing forward"
+            placeholder="blurred"
+          />
+        </Hero>
         <Box p={4}>
           <Heading as="h2" fontSize={3} mb={6}>
             Faq

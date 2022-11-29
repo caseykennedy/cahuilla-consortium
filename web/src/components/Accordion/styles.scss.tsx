@@ -1,19 +1,19 @@
 // Accordion Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 // Core
 import styled from 'styled-components'
 import { darken } from 'polished'
 
 // Theme
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 // UI
 import { Box, Flex } from '../ui'
 
 // Begin Styles
-// ___________________________________________________________________
+// _____________________________________________________________
 
 // export const AccordionContainer = styled.div<{ chevronColor: string }>`
 

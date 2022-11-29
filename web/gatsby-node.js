@@ -1,13 +1,12 @@
 // gatsby-node.js
 
-// Video Post Pages
-// ___________________________________________________________________
+// Blog Post Pages
 async function createPostPages(graphql, actions) {
   // Get Gatsby‘s method for creating new pages
   const { createPage } = actions
   const PostTemplate = require.resolve('./src/templates/Post/index.ts')
 
-  // Query Gatsby‘s GraphAPI for all the categories that come from Sanity
+  // Query Gatsby‘s GraphAPI for all the categories that come from Sanityd
   // You can query this API on http://localhost:8000/___graphql
   const result = await graphql(`
     {
@@ -19,21 +18,19 @@ async function createPostPages(graphql, actions) {
             _rawExcerpt
             _rawBody
             _id
-            publishedAt(formatString: "dddd — MMMM DD, yyyy")
+            publishedAt(formatString: "MMMM DD, yyyy")
             slug {
               current
             }
             figure {
               asset {
-                fluid(maxWidth: 800) {
-                  srcWebp
-                  srcSetWebp
-                  srcSet
-                  src
-                  sizes
-                  base64
-                  aspectRatio
-                }
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 1
+                )
               }
             }
             categories {
@@ -86,7 +83,7 @@ async function createPostPages(graphql, actions) {
 }
 
 // Create Pages
-// ___________________________________________________________________
+// _____________________________________________________________
 exports.createPages = async ({ graphql, actions }) => {
   await createPostPages(graphql, actions)
 }

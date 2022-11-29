@@ -17,6 +17,7 @@ import howWeSeekToHelp from './howWeSeekToHelp'
 import mainImage from './mainImage'
 import moreWaysWeCanHelp from './moreWaysWeCanHelp'
 import person from './person'
+import policy from './policy'
 import post from './post'
 import postCategory from './postCategory'
 import resource from './resource'
@@ -48,6 +49,7 @@ export default createSchema({
     mainImage,
     moreWaysWeCanHelp,
     person,
+    policy,
     post,
     postCategory,
     resource,

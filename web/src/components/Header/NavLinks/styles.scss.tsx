@@ -1,16 +1,16 @@
 // Navigation Styles:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import styled from 'styled-components'
 
 // Theme
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 // Elements
 import { Flex, AnimatedFlex } from '../../ui'
 
 // Begin Styles
-// ___________________________________________________________________
+// _____________________________________________________________
 
 export const NavLinks = styled(Flex)`
   flex-direction: row;

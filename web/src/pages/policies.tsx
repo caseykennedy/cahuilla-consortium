@@ -1,4 +1,4 @@
-// Resources
+// Policies
 
 // _____________________________________________________________
 
@@ -8,17 +8,15 @@ import React from 'react'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import ResourcesPage from '../components/ResourcesPage'
+import PoliciesPage from '../components/PoliciesPage'
 
 // _____________________________________________________________
 
-const Resources = () => {
-  return (
-    <>
-      <SEO />
-      <ResourcesPage />
-    </>
-  )
-}
+const Policies = () => (
+  <>
+    <SEO />
+    <PoliciesPage />
+  </>
+)
 
-export default Resources
+export default Policies

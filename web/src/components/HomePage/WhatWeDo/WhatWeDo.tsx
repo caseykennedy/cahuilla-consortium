@@ -1,15 +1,13 @@
 // What We Do Section:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React, { useRef } from 'react'
-
-// Libraries
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 
 // Theme + Styles
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
 import { Box, Flex, Text, Heading } from '../../ui'
@@ -26,7 +24,7 @@ import Hero from '../Hero'
 // Hooks
 import useWhatWeDo from '../../../hooks/useWhatWeDo'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type CallbackTypes = {
   previousScrollTop: number
@@ -47,6 +45,7 @@ const billboardProps = {
 const WhatWeDo = () => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const page = useWhatWeDo()
+  console.log('page:', page)
 
   // // Show/Hide Billboard content
   // const [billboardActive, setBillboardActive] = useState(false)
@@ -66,40 +65,43 @@ const WhatWeDo = () => {
         <Billboard {...billboardProps} />
       </Box>
       <Box width={[1, 1 / 2]}>
-        <Hero src="group-hands.jpg" altText="Group raising hands in the air." />
+        <Hero>
+          <StaticImage
+            src="../../../images/group-hands.jpg"
+            alt="Group raising hands in the air."
+            placeholder="blurred"
+          />
+        </Hero>
         <Box p={4} id="what">
           <Heading as="h2" fontSize={3} mb={6}>
             What we do
           </Heading>
-          <Text as="p" className="t--lead">
+          <Text as="p" fontWeight={500}>
             {page.lead && page.lead}
           </Text>
           {page._rawBody && <BlockContent blocks={page._rawBody || []} />}
 
-          <Divider bg="gray" my={4} />
-
           <Heading
             as="h4"
-            color="gray"
             fontSize={5}
             fontFamily="display"
-            mt={3}
+            mt={2}
             mb={1}
             dangerouslySetInnerHTML={{ __html: page.statement }}
           />
 
-          <Box width={1} mb={[6]} style={{ mixBlendMode: 'luminosity' }}>
+          <Box width={1} mb={4} style={{ filter: 'grayscale(100%)' }}>
             {page.figure && (
-              <Img
-                fluid={page.figure.asset.fluid}
+              <GatsbyImage
+                image={page.figure.asset.gatsbyImageData}
                 objectFit="cover"
                 objectPosition="50% 50%"
-                alt={page.figure.alt}
+                alt="alt"
               />
             )}
           </Box>
 
-          <Heading as="h3" fontSize={3} mb={3}>
+          <Heading as="h3" fontSize={3} mb={6}>
             What we can help you with
           </Heading>
 

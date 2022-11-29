@@ -1,6 +1,6 @@
 // Loading:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React from 'react'
 import { useSpring, config } from 'react-spring'
@@ -15,9 +15,9 @@ import Divider from '../ui/Divider'
 // Theme
 import GlobalStyles from '../../styles/global'
 import * as S from './styles.scss'
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const Loading = () => {
   const pageAnimation = useSpring({

@@ -1,14 +1,14 @@
 // Blog Section:
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // Theme + Styles
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
 import { Box, Flex, Text, Heading, Grid } from 'theme-ui'
@@ -21,7 +21,7 @@ import Icon from '../../Icons'
 import usePost from '../../../hooks/usePost'
 import useLoadMore from '../../../hooks/useLoadMore'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const blogPath = 'blog'
 
@@ -30,28 +30,27 @@ const Post: React.FC<{ post: PostQuery }> = ({ post }) => {
     <Flex className="post">
       <Link to={`/${blogPath}/${post.slug.current}`} className="inner">
         <Box>
-          <Text as="p" mb={2}>
-            {post.publishedAt}
-          </Text>
           <Flex sx={{ justifyContent: 'flex-end', width: '100%' }}>
-            <Box mb={4} sx={{ flex: 0.5 }}>
+            <Box sx={{ flex: 1 }}>
               {post.figure && (
-                <Img
-                  fluid={{
-                    ...post.figure.asset.fluid,
-                    aspectRatio: 1 / 1
-                  }}
+                <GatsbyImage
+                  image={post.figure.asset.gatsbyImageData}
                   objectFit="cover"
                   objectPosition="50% 50%"
                   alt={post.title}
-                  className="article__img"
+                  // className="article__img"
                 />
               )}
             </Box>
           </Flex>
-          <Heading as="h4" mt={2} mb={4} className="text--md">
-            {post.title}
-          </Heading>
+          <div>
+            <Text as="p" mt={4} sx={{ fontSize: 1, fontWeight: 500 }}>
+              {post.publishedAt}
+            </Text>
+            <Heading as="h4" mt={1} mb={2} className="text--md">
+              {post.title}
+            </Heading>
+          </div>
         </Box>
         <Box>
           {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
@@ -74,7 +73,7 @@ const Blog = () => {
           Latest Blog
         </Heading>
       </Box>
-      <Flex sx={{flexDirection: 'column'}}>
+      <Flex sx={{ flexDirection: 'column' }}>
         <Grid
           columns={`repeat(auto-fit,minmax(300px,1fr))`}
           gap={theme.space[4]}

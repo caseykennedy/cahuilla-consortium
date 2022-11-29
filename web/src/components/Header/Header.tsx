@@ -1,7 +1,7 @@
 // Header:
 // Site Header with logo
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React, { useRef, useState } from 'react'
 import { Link } from 'gatsby'
@@ -17,20 +17,23 @@ import Icon from '../Icons'
 
 import { Flex } from '../ui'
 
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
-type HeaderShape = { mainRef: React.RefObject<HTMLDivElement> }
+type HeaderShape = {
+  mainRef: React.RefObject<HTMLDivElement>
+  pathname?: string
+}
 
-const Header: React.FC<HeaderShape> = ({ mainRef }) => {
+const Header: React.FC<HeaderShape> = ({ mainRef, pathname }) => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const exitRef = useRef<HTMLDivElement>(null)
-
   // Navigation toggle
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleModal = () => setNavOpen(!isNavOpen)
+  const isIndex = pathname === '/'
 
   return (
     <>
@@ -53,7 +56,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         </Overlay>
       </Portal>
 
-      <S.Header as="header" px={[4, 5]}>
+      <S.Header as="header" px={[4, 5]} isIndex={!isIndex}>
         <S.Logo>
           <Link to="/" aria-label="Back to home">
             <Flex className="symbol">

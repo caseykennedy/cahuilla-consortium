@@ -1,7 +1,7 @@
 // NavLinks:
 // Navigation links
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import React from 'react'
 import { Link } from 'gatsby'
@@ -9,12 +9,12 @@ import { useTransition } from 'react-spring'
 
 import { Box, Text } from '../../ui'
 
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 import data from '../nav.json'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type LinkProps = {
   item: any
@@ -27,7 +27,7 @@ type NavLinksProps = {
   isNavOpen: boolean
 }
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
   return (

@@ -1,11 +1,12 @@
 // useWhatWeDo hook
 // Hook for querying data
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 import { graphql, useStaticQuery } from 'gatsby'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
-// ___________________________________________________________________
+// _____________________________________________________________
 
 type Props = {
   whatWeDo: {
@@ -18,15 +19,8 @@ type Props = {
         }
         figure: {
           asset: {
-            fluid: {
-              srcWebp: string
-              srcSetWebp: string
-              srcSet: string
-              src: string
-              sizes: string
-              base64: string
-              aspectRatio: number
-            }
+            gatsbyImageData: IGatsbyImageData
+            url: string
           }
           alt: string
         }
@@ -61,15 +55,13 @@ const useWhatWeDo = () => {
             }
             figure {
               asset {
-                fluid(maxWidth: 800) {
-                  srcWebp
-                  srcSetWebp
-                  srcSet
-                  src
-                  sizes
-                  base64
-                  aspectRatio
-                }
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                )
+                url
               }
               alt
             }
