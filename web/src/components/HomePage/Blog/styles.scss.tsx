@@ -16,7 +16,7 @@ export const Blog = styled(Flex)`
   background: ${theme.colors.background};
 
   .post {
-    border: 1px solid ${theme.colors.gray};
+    border: ${theme.border};
     padding: ${theme.space[4]};
     transition: background-color 0.777s ease-in-out 0s;
 

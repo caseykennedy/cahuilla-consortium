@@ -41,10 +41,9 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
     to: { opacity: 1, transform: theme.transform.matrix.to }
   })
   return (
-    <S.Billboard bg={bg} p={4}>
+    <S.Billboard bg={bg}>
       <AnimatedFlex className="inner" style={fadeIn}>
-        {/* <Box className={`contact ${!active ? 'hide' : 'show'}`}> */}
-        <Box>
+        <Box p={4}>
           <Heading
             as="h2"
             mb={0}
@@ -56,11 +55,15 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
             {message}
           </Text>
         </Box>
-        {/* <Flex mt={[7, 0]} className={`contact ${!active ? 'hide' : 'show'}`}> */}
-        <Flex mt={[7, 0]} className={`contact show`}>
+        <Flex mt={[7, 0]} p={4} className={`contact show`}>
           <Flex flexDirection="column" flex={2}>
             <S.Telephone>
-              <Text fontSize={1} fontWeight={500} lineHeight={1} className="t--uppercase">
+              <Text
+                fontSize={1}
+                fontWeight={500}
+                lineHeight={1}
+                className="t--uppercase"
+              >
                 Talk to an advocate
               </Text>
 

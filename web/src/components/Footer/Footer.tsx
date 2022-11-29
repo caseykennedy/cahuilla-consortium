@@ -104,6 +104,8 @@ const Footer: React.FC = () => {
                 <br />
                 <br />
                 <span>
+                  24/7 HOTLINE:
+                  <br />
                   <a
                     href={`hotline: ${contact.hotline}`}
                     aria-label={`call us: ${contact.hotline}`}
@@ -112,8 +114,10 @@ const Footer: React.FC = () => {
                   </a>
                 </span>
                 <br />
+                <br />
                 <span>
-                  OFFICE:{' '}
+                  OFFICE:
+                  <br />
                   <a
                     href={`tel: ${contact.telephone}`}
                     aria-label={`call us: ${contact.telephone}`}
@@ -133,7 +137,7 @@ const Footer: React.FC = () => {
             placeholder="blurred"
             objectFit="cover"
             quality={60}
-            aspectRatio={600 / 450}
+            aspectRatio={600 / 400}
           />
         </div>
       </Flex>

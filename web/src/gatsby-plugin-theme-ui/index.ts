@@ -80,7 +80,7 @@ const theme: ThemeShape = {
   colors: {
     text: '#000105',
     background: '#f3f3f3',
-    
+
     primary: '#D0A145',
     secondary: '#9BC2CC',
     tertiary: '#A998CB',
@@ -89,27 +89,27 @@ const theme: ThemeShape = {
 
     black: '#000105',
     white: '#ffffff',
-    gray: '#B5AFA5',
+    gray: 'hsla(0, 0%, 0%, 0.44)'
   },
 
   // Space
   // _____________________________________________________________
 
   space: [
-    '0',                     // 0
-    'var(--space-xxs)',      // 1
-    'var(--space-xs)',       // 2
-    'var(--space-sm)',       // 3
-    'var(--space-md)',       // 4
-    'var(--space-lg)',       // 5
-    'var(--space-xl)',       // 6
-    'var(--space-xxl)',      // 7
-    '6rem',                  // 8
-    '10rem',                 // 9
-    '12rem',                 // 10
-    '14rem',                 // 11
-    '16rem',                 // 12
-    '18rem'                  // 13
+    '0', // 0
+    'var(--space-xxs)', // 1
+    'var(--space-xs)', // 2
+    'var(--space-sm)', // 3
+    'var(--space-md)', // 4
+    'var(--space-lg)', // 5
+    'var(--space-xl)', // 6
+    'var(--space-xxl)', // 7
+    '6rem', // 8
+    '10rem', // 9
+    '12rem', // 10
+    '14rem', // 11
+    '16rem', // 12
+    '18rem' // 13
   ],
 
   // Left/Right gutter
@@ -129,18 +129,17 @@ const theme: ThemeShape = {
   },
 
   fontSizes: [
-    'var(--text-xs)',         // 0
-    'var(--text-sm)',         // 1
-    'var(--text-base-size)',  // 2
-    'var(--text-md)',         // 3
-    'var(--text-lg)',         // 4
-    'var(--text-xl)',         // 5
-    'var(--text-xxl)',        // 6
-    'var(--text-xxxl)',       // 7
+    'var(--text-xs)', // 0
+    'var(--text-sm)', // 1
+    'var(--text-base-size)', // 2
+    'var(--text-md)', // 3
+    'var(--text-lg)', // 4
+    'var(--text-xl)', // 5
+    'var(--text-xxl)', // 6
+    'var(--text-xxxl)' // 7
   ],
 
-  Heading: {
-  },
+  Heading: {},
 
   fontWeights: {
     light: 300,
@@ -174,7 +173,7 @@ const theme: ThemeShape = {
     }
   },
 
-  border: '1px solid #000000',
+  border: '1px solid hsla(0, 0%, 0%, 0.15)',
   shadow: '0 0.25rem 0.5rem rgb(0, 0, 0, 0.3)',
 
   root: {
@@ -185,7 +184,7 @@ const theme: ThemeShape = {
       baseSize: 'var(--text-base-size)',
       scaleRatio: 'var(--text-scale-ratio)',
       baseLetterSpacing: 'var(--text-base-letter-spacing)',
-  
+
       // Type scale
       xs: 'var(--text-xs)',
       sm: 'var(--text-sm)',
@@ -194,11 +193,11 @@ const theme: ThemeShape = {
       xl: 'var(--text-xl)',
       xxl: 'var(--text-xxl)',
       xxxl: 'var(--text-xxxl)',
-  
+
       // Line height
       headingLineHeight: 'var(--heading-line-height)',
       bodyLineHeight: 'var(--body-line-height)'
-    },    
+    },
     space: {
       xxs: 'var(--space-xxs)',
       xs: 'var(--space-xs)',

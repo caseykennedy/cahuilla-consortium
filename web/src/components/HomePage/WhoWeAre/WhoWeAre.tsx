@@ -38,10 +38,10 @@ const billboardProps = {
 const Team = () => {
   const team = usePerson()
   return (
-    <Grid columns={[2, 3]} gap={theme.space[4]} className="team">
+    <Grid columns={[2, 3]} gap={theme.space[3]} className="team">
       {team.map(({ node: person }, idx) => (
         <Box key={idx} className="team__cell">
-          <Box mb={4} className="team__avatar">
+          <Box mb={2} className="team__avatar">
             {person.avatar && (
               <GatsbyImage
                 image={person.avatar.asset.gatsbyImageData}
@@ -52,10 +52,10 @@ const Team = () => {
               />
             )}
           </Box>
-          <Text as="p" mb={1} fontSize={1}>
+          <Text as="p" mb={1} fontSize={2} fontWeight={500} lineHeight={1}>
             {person.name && person.name}
           </Text>
-          <Text as="p" color="gray" mb={0} fontSize={1}>
+          <Text as="p" mb={0} color="gray" fontSize={1} lineHeight={1}>
             {person.title && person.title}
           </Text>
         </Box>

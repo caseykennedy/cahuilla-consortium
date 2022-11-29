@@ -10,7 +10,6 @@ import { Box, Flex } from '../ui'
 
 export const Billboard = styled(Flex)`
   overflow: hidden;
-  padding-top: calc(${theme.space[5]});
   position: relative;
   height: auto;
   width: 100%;
@@ -19,7 +18,7 @@ export const Billboard = styled(Flex)`
   color: ${theme.colors.white};
 
   @media ${theme.mq.tablet} {
-    padding-top: calc(${theme.headerHeight} + ${theme.space[4]});
+    padding-top: ${theme.headerHeight};
     position: sticky;
     top: 0;
     height: 100vh;
@@ -33,6 +32,8 @@ export const Billboard = styled(Flex)`
     width: 100%;
 
     .contact {
+      background: hsla(0, 0%, 0%, 0.05);
+      border-top: ${theme.border};
       flex-wrap: wrap;
       opacity: 0;
       transform: ${theme.transform.matrix.from};

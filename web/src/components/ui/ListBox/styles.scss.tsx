@@ -12,8 +12,8 @@ import theme from '../../../gatsby-plugin-theme-ui'
 // _____________________________________________________________
 
 export const ListBox = styled(Box)`
-  border-top: 1px solid ${theme.colors.gray};
-  border-left: 1px solid ${theme.colors.gray};
+  border-top: ${theme.border};
+  border-left: ${theme.border};
 
   list-style: none;
 
@@ -21,8 +21,8 @@ export const ListBox = styled(Box)`
   padding: 0;
 
   li {
-    border-right: 1px solid ${theme.colors.gray};
-    border-bottom: 1px solid ${theme.colors.gray};
+    border-right: ${theme.border};
+    border-bottom: ${theme.border};
     padding: ${theme.space[2]};
 
     transition: ${theme.transition.all};

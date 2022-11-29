@@ -14,7 +14,7 @@ export const Overlay = styled.div`
   justify-content: flex-start;
   flex-direction: column;
 
-  width: ${overlayWidth};
+  width: 100%;
   height: 100%;
   overflow: auto;
 
@@ -58,8 +58,8 @@ export const HideWindow = styled.a`
   position: fixed;
   bottom: ${theme.space[1]};
   right: ${theme.space[1]};
-  height: ${theme.space[6]};
-  width: ${theme.space[6]};
+  height: ${theme.space[5]};
+  width: ${theme.space[5]};
 
   cursor: pointer;
   transition: background-color 0.222s ease-in-out 0s;

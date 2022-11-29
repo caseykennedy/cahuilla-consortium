@@ -36,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   hr {
-    border-top: 1px solid ${theme.colors.gray};
+    border-top: ${theme.border};
     border-bottom: none;
   }
 

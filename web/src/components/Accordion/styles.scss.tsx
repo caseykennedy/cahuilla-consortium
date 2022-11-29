@@ -91,7 +91,7 @@ export const AccordionContent = styled(Box)`
 
   .content {
     flex-wrap: wrap;
-    border-top: 1px solid ${theme.colors.gray};
+    border-top: ${theme.border};
     padding-top: ${theme.space[4]};
     padding-bottom: ${theme.space[4]};
   }

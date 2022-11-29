@@ -25,16 +25,15 @@ export const Footer = styled.footer`
       ${theme.colors.quinary} 21.88%,
       ${theme.colors.secondary} 84.39%
     );
-    box-shadow: ${theme.shadow};
+    box-shadow: inset ${theme.shadow}, ${theme.shadow};
+    /* border-bottom: ${theme.border}; */
     color: ${theme.colors.white};
 
     padding: ${theme.space[4]} ${theme.space[4]};
     position: relative;
     height: 75vh;
-    width: 100vw;
+    width: 100%;
     z-index: 2;
-
-    color: ${theme.colors.white};
   }
 
   .panel {
@@ -60,7 +59,7 @@ export const Footer = styled.footer`
     z-index: 0;
 
     mix-blend-mode: luminosity;
-    opacity: 0.85;
+    opacity: 0.75;
   }
 `
 
@@ -79,6 +78,7 @@ export const HideAway = styled(Box)`
   }
 
   .footnote {
+    border-top: ${theme.border};
     padding: ${theme.space[4]};
 
     svg {

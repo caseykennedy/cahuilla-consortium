@@ -15,7 +15,7 @@ export const BlogPage = styled.div`
   padding: ${theme.space[4]};
 
   .post {
-    border: 1px solid ${theme.colors.gray};
+    border: ${theme.border};
     transition: ${theme.transition.all};
 
     &:hover {

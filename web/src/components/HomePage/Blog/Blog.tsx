@@ -70,7 +70,7 @@ const Blog = () => {
     <S.Blog id="blog">
       <Box>
         <Heading as="h4" mb={4}>
-          Latest Blog
+          What's new
         </Heading>
       </Box>
       <Flex sx={{ flexDirection: 'column' }}>
