@@ -32,6 +32,7 @@ export const Main = styled.main`
   width: 100vw;
 
   @media ${theme.mq.tablet} {
+    /* padding-top: ${theme.headerHeight}; */
   }
 `
 

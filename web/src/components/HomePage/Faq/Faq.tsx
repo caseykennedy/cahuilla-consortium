@@ -33,7 +33,7 @@ type CallbackTypes = {
 
 const billboardProps = {
   bg: theme.colors.tertiary,
-  title: `Love<br />shouldn't<br />hurt.`
+  title: `Love<br />should<br />not<br />hurt.`
 }
 
 const Faq = () => {

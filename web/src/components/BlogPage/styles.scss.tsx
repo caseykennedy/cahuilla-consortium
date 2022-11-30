@@ -13,6 +13,11 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 export const BlogPage = styled.div`
   padding: ${theme.space[4]};
+  padding-top: calc(${theme.headerHeight} + ${theme.space[2]});
+
+  @media ${theme.mq.tablet} {
+    padding-top: ${theme.space[2]};
+  }
 
   .post {
     border: ${theme.border};

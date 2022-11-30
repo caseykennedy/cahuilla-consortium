@@ -21,17 +21,19 @@ export const Header = styled(Flex)<{ isIndex: boolean }>`
   /* background: ${theme.colors.primary}; */
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.15);
   backdrop-filter: blur(7px);
-  position: sticky;
+  position: fixed;
   top: 0;
-  left: 0;
+  /* left: 0; */
 
   padding: 0 ${theme.space[4]};
   height: ${theme.headerHeight};
   width: 100%;
   z-index: 9999;
 
+  background: ${p => (p.isIndex ? theme.colors.background : 'transparent')};
+
   @media ${theme.mq.tablet} {
-    background: ${p => (p.isIndex ? theme.colors.background : 'transparent')};
+    position: sticky;
     width: ${p => (p.isIndex ? '100%' : '50%')};
   }
 `

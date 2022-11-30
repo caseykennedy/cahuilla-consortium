@@ -135,9 +135,10 @@ const Footer: React.FC = () => {
             src="../../images/bg-footer-humming-bird.jpg"
             alt="Humming bird and flowers"
             placeholder="blurred"
+            objectPosition="50% 50%"
             objectFit="cover"
+            // layout="fixed"
             quality={60}
-            aspectRatio={600 / 400}
           />
         </div>
       </Flex>

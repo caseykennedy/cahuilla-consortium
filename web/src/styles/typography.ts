@@ -193,11 +193,11 @@ const Typography = css`
 
   h2,
   .text--xl {
-    font-size: calc(${theme.fontSizes[5]} / 1);
+    font-size: calc(${theme.fontSizes[6]} / 1.25);
     line-height: calc(${theme.root.font.headingLineHeight} / 1.15);
 
-    @media ${theme.mq.desktop} {
-      font-size: calc(${theme.fontSizes[6]} / 1.25);
+    @media ${theme.mq.tablet} {
+      font-size: calc(${theme.fontSizes[6]} / 1);
     }
   }
 

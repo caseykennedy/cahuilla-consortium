@@ -20,10 +20,12 @@ export const Footer = styled.footer`
     flex-direction: column;
     flex-wrap: wrap;
 
+
+    background-color: ${theme.colors.primary};
     background: linear-gradient(
       180deg,
-      ${theme.colors.quinary} 21.88%,
-      ${theme.colors.secondary} 84.39%
+      ${theme.colors.secondary} 21.88%,
+      ${theme.colors.primary} 84.39%
     );
     box-shadow: inset ${theme.shadow}, ${theme.shadow};
     /* border-bottom: ${theme.border}; */
@@ -31,7 +33,7 @@ export const Footer = styled.footer`
 
     padding: ${theme.space[4]} ${theme.space[4]};
     position: relative;
-    height: 75vh;
+    min-height: 60vh;
     width: 100%;
     z-index: 2;
   }
@@ -52,14 +54,15 @@ export const Footer = styled.footer`
     overflow: hidden;
     position: absolute;
     top: 0;
+    right: 0;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
 
-    mix-blend-mode: luminosity;
-    opacity: 0.75;
+    mix-blend-mode: color-burn;
+    opacity: 0.35;
   }
 `
 
