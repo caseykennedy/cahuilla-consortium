@@ -1,6 +1,6 @@
 // Layout:
 
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 
 import HideWindow from './HideWindow'
 import Header from '../Header'

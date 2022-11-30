@@ -18,7 +18,7 @@ export const Wrapper = styled(Flex)`
   width: 100%;
   /* min-height: 100vh; */
   position: relative;
-  background: ${theme.colors.background};
+  background: ${theme.colors.primary};
 
   @media ${theme.mq.tablet} {
     flex-direction: row;
@@ -27,6 +27,7 @@ export const Wrapper = styled(Flex)`
 
 export const Main = styled.main`
   /* max-height: 100%; */
+  background: ${theme.colors.background};
   position: relative;
   width: 100vw;
 

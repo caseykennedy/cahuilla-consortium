@@ -11,7 +11,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 // Begin Styles
 // _____________________________________________________________
 
-const IconStyle = styled.span`
+const IconStyle = styled.span<{ color?: string }>`
   font-size: 1rem;
   line-height: 0;
   display: inline-flex;
@@ -23,7 +23,12 @@ const IconStyle = styled.span`
 
   svg {
     fill: ${props => (props.color ? props.color : theme.colors.black)};
+    stroke: ${props => (props.color ? props.color : theme.colors.black)};
     transition: ${theme.transition.all};
+
+    path {
+      stroke: ${props => (props.color ? props.color : theme.colors.black)};
+    }
   }
 `
 

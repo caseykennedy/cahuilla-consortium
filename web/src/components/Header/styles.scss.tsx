@@ -18,7 +18,7 @@ export const Header = styled(Flex)<{ isIndex: boolean }>`
   flex-wrap: wrap;
 
   /* mix-blend-mode: difference; */
-  background: ${theme.colors.primary};
+  /* background: ${theme.colors.primary}; */
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.15);
   backdrop-filter: blur(7px);
   position: sticky;
@@ -58,8 +58,12 @@ export const Logo = styled(Flex)`
     }
 
     .wordmark {
-      display: none;
+      display: flex;
       margin-left: ${theme.space[1]};
+
+      @media ${theme.mq.tablet} {
+        display: none;
+      }
 
       @media ${theme.mq.desktop} {
         display: flex;
@@ -109,7 +113,7 @@ export const Toggle = styled.div`
 
   span {
     svg {
-      fill: ${theme.colors.white};
+      /* fill: ${theme.colors.black}; */
       width: ${theme.space[4]};
     }
   }
