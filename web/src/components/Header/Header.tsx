@@ -12,7 +12,6 @@ import Navigation from './Navigation'
 import NavLinks from './NavLinks'
 import Portal from '../Portal'
 import Overlay from '../Overlay'
-import Button from '../ui/Button'
 import Icon from '../Icons'
 
 import { Flex } from '../ui'

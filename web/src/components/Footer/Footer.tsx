@@ -32,13 +32,13 @@ const HideAway = () => {
             <div className="symbol">
               <Symbol />
             </div>
-            <div className="wordmark">
+            {/* <div className="wordmark">
               <Wordmark />
-            </div>
+            </div> */}
           </Link>
         </S.Logo>
-        <Flex alignItems="center" pr={6}>
-          <p>
+        <Flex alignItems="center">
+          <p className="t--small">
             This website was produced by the Cahuilla Consortium under grant
             award #2019-VO-GX-0010, awarded by the Office for Victims of Crime,
             Office of Justice Programs, U.S. Department of Justice. The
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
       <Flex className="inner">
         <Flex className="panel">
           <Box width={[1, 1, 1 / 2]} mb={[5, 0]}>
-            <Heading as="h3">
+            <Heading as="h3" fontSize={4}>
               reach out anytime,
               <br />
               our advocates are

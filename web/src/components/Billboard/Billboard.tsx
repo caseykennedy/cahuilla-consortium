@@ -55,7 +55,7 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
             {message}
           </Text>
         </Box>
-        <Flex mt={[7, 0]} p={4} className={`contact show`}>
+        <Flex p={4} className={`contact show`}>
           <Flex flexDirection="column" flex={2}>
             <S.Telephone>
               <Text

@@ -18,12 +18,10 @@ export const Header = styled(Flex)<{ isIndex: boolean }>`
   flex-wrap: wrap;
 
   /* mix-blend-mode: difference; */
-  /* background: ${theme.colors.primary}; */
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.15);
   backdrop-filter: blur(7px);
   position: fixed;
   top: 0;
-  /* left: 0; */
 
   padding: 0 ${theme.space[4]};
   height: ${theme.headerHeight};
@@ -54,14 +52,21 @@ export const Logo = styled(Flex)`
     }
 
     .symbol {
+      /* mix-blend-mode: difference; */
+
       svg {
+        /* mix-blend-mode: difference; */
         width: 45px;
+
+        path {
+          /* mix-blend-mode: difference; */
+        }
       }
     }
 
     .wordmark {
       display: flex;
-      margin-left: ${theme.space[1]};
+      margin-left: ${theme.space[2]};
 
       @media ${theme.mq.tablet} {
         display: none;
@@ -73,7 +78,6 @@ export const Logo = styled(Flex)`
 
       svg {
         width: 90px;
-        transform: scale(0.9);
       }
     }
   }

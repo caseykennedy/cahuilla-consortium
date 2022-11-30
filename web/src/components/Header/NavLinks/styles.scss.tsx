@@ -25,6 +25,7 @@ export const NavLink = styled(AnimatedFlex)`
   width: 100%;
 
   a {
+    mix-blend-mode: difference;
     color: ${theme.colors.white};
     font-size: ${theme.fontSizes[3]};
     text-transform: uppercase;

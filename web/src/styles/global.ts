@@ -17,6 +17,10 @@ const GlobalStyles = createGlobalStyle`
   ${Reset}
   ${Typography}
   
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background: ${theme.colors.background};
     color: ${theme.colors.text};

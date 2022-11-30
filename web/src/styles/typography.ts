@@ -155,7 +155,7 @@ const Typography = css`
     font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.headingLineHeight};
     letter-spacing: ${theme.root.font.headingLetterSpacing};
-    margin: 0 0 ${theme.space[3]};
+    margin: 0 0 ${theme.space[2]};
     transition: ${theme.transition.all};
 
     text-transform: capitalize;
@@ -273,7 +273,7 @@ const Typography = css`
   }
 
   .t--small {
-    font-size: calc(${theme.fontSizes[1]} / s 1.5);
+    font-size: calc(${theme.fontSizes[1]} / 1.25);
   }
 
   .t--underline {

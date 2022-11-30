@@ -32,7 +32,7 @@ export const Billboard = styled(Flex)`
     width: 100%;
 
     .contact {
-      background: hsla(0, 0%, 0%, 0.05);
+      background: hsla(0, 0%, 0%, 0.1);
       border-top: ${theme.border};
       flex-wrap: wrap;
       opacity: 0;
@@ -53,7 +53,7 @@ export const Billboard = styled(Flex)`
 
     span {
       transform: rotate(90deg);
-      width: ${theme.space[5]};
+      width: 32px;
 
       svg {
       }

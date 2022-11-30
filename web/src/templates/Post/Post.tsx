@@ -36,7 +36,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
         pathname={`/blog/${post.slug.current}`}
       />
       {/* <S.PageTitle /> */}
-      <Box pt={5} px={4} pb={7}>
+      <Box px={4} pb={5}>
         <S.Post>
           <Box width={1} mb={5}>
             <Heading as="h1" mb={0} className="text--lg">
@@ -51,7 +51,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
           </Box>
 
           <Flex flexDirection="column" flexWrap="wrap">
-            <Box width={1} mb={[6]}>
+            <Box width={1} mb={5}>
               {post.figure && (
                 <GatsbyImage
                   image={post.figure.asset.gatsbyImageData}

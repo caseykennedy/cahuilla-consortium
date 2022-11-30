@@ -69,14 +69,14 @@ const Blog = () => {
   return (
     <S.Blog id="blog">
       <Box>
-        <Heading as="h4" mb={4}>
+        <Heading as="h4" mb={3}>
           What's new
         </Heading>
       </Box>
       <Flex sx={{ flexDirection: 'column' }}>
         <Grid
           columns={[1, 2, 4]}
-          gap={theme.space[4]}
+          gap={theme.space[3]}
         >
           {list.map(({ node: post }, idx) => (
             <Post post={post} key={idx} />

@@ -63,6 +63,10 @@ export const Footer = styled.footer`
 
     mix-blend-mode: color-burn;
     opacity: 0.35;
+
+    .gatsby-image-wrapper {
+      min-height: -webkit-fill-available;
+    }
   }
 `
 
@@ -81,19 +85,27 @@ export const HideAway = styled(Box)`
   }
 
   .footnote {
+    display: flex;
+    flex-flow: column nowrap;
     border-top: ${theme.border};
     padding: ${theme.space[4]};
+
+    @media ${theme.mq.tablet} {
+      align-items: center;
+      flex-flow: row nowrap;
+    }
 
     svg {
       fill: ${theme.colors.black};
     }
 
     p {
-      border-left: ${theme.border};
-      margin-left: ${theme.space[4]};
-      padding-left: ${theme.space[4]};
+      margin-top: ${theme.space[4]};
 
-      font-size: calc(${theme.fontSizes[1]} / 1.25);
+      @media ${theme.mq.tablet} {
+        margin-top: 0;
+        margin-left: ${theme.space[4]};
+      }
     }
   }
 `
@@ -115,6 +127,7 @@ export const Logo = styled(Flex)`
     }
 
     .symbol {
+      display: inline-flex;
       svg {
         width: 45px;
       }
@@ -122,7 +135,6 @@ export const Logo = styled(Flex)`
 
     .wordmark {
       margin-left: ${theme.space[2]};
-      display: none;
 
       @media ${theme.mq.tablet} {
         display: initial;

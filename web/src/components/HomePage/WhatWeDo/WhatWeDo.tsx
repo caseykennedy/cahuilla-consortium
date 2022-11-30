@@ -64,7 +64,7 @@ const WhatWeDo = () => {
       <Box width={[1, 1 / 2]}>
         <Billboard {...billboardProps} />
       </Box>
-      <Box width={[1, 1 / 2]}>
+      <Box width={[1, 1 / 2]} id="what">
         <Hero>
           <StaticImage
             src="../../../images/group-hands.jpg"
@@ -72,7 +72,7 @@ const WhatWeDo = () => {
             placeholder="blurred"
           />
         </Hero>
-        <Box p={4} id="what">
+        <Box p={4}>
           <Heading as="h2" fontSize={3} mb={6}>
             What we do
           </Heading>

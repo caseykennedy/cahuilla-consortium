@@ -3,9 +3,8 @@
 // _____________________________________________________________
 
 import styled from 'styled-components'
-import { animated } from 'react-spring'
 
-import { Box, Flex } from '../ui'
+import { Flex } from '../ui'
 import theme from '../../gatsby-plugin-theme-ui'
 
 // _____________________________________________________________
@@ -16,7 +15,6 @@ export const Wrapper = styled(Flex)`
   justify-content: flex-start;
 
   width: 100%;
-  /* min-height: 100vh; */
   position: relative;
   background: ${theme.colors.primary};
 
@@ -26,18 +24,12 @@ export const Wrapper = styled(Flex)`
 `
 
 export const Main = styled.main`
-  /* max-height: 100%; */
   background: ${theme.colors.background};
   position: relative;
   width: 100vw;
-
-  @media ${theme.mq.tablet} {
-    /* padding-top: ${theme.headerHeight}; */
-  }
 `
 
 export const Aside = styled(Flex)`
-  /* background: ${theme.colors.primary}; */
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -51,5 +43,3 @@ export const Aside = styled(Flex)`
     top: 0;
   }
 `
-
-// _____________________________________________________________
