@@ -39,7 +39,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
       <Box pt={5} px={4} pb={7}>
         <S.Post>
           <Box width={1} mb={5}>
-            <Heading as="h1" mb={0} className="text--xl">
+            <Heading as="h1" mb={0} className="text--lg">
               {post.title}
             </Heading>
 
@@ -50,7 +50,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
             </Flex>
           </Box>
 
-          <Flex flexWrap="wrap">
+          <Flex flexDirection="column" flexWrap="wrap">
             <Box width={1} mb={[6]}>
               {post.figure && (
                 <GatsbyImage
@@ -62,7 +62,9 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
               )}
             </Box>
 
-            {post._rawBody && <BlockContent blocks={post._rawBody || []} />}
+            <div>
+              {post._rawBody && <BlockContent blocks={post._rawBody || []} />}
+            </div>
 
             <Flex
               color="gray"

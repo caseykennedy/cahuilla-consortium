@@ -16,8 +16,11 @@ export const Post = styled(Box)`
   margin: 0 auto;
   width: 100%;
 
+  padding-top: calc(${theme.headerHeight});
+
   @media ${theme.mq.tablet} {
     max-width: 75%;
+    padding-top: 0;
   }
 
   @media ${theme.mq.desktop} {

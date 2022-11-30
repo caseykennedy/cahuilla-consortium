@@ -203,10 +203,10 @@ const Typography = css`
 
   h3,
   .text--lg {
-    font-size: calc(${theme.fontSizes[3]});
+    font-size: calc(${theme.fontSizes[4]});
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[4]});
+      font-size: calc(${theme.fontSizes[5]});
     }
   }
 
@@ -302,6 +302,8 @@ const Typography = css`
     transition: ${theme.transition.all};
 
     color: inherit;
+    line-break: loose;
+    word-break: break-all;
 
     &:hover,
     &:focus {
