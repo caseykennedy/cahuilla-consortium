@@ -28,7 +28,7 @@ export const Header = styled(Flex)<{ isIndex: boolean }>`
   padding: 0 ${theme.space[4]};
   height: ${theme.headerHeight};
   width: 100%;
-  z-index: 999;
+  z-index: 9999;
 
   @media ${theme.mq.tablet} {
     background: ${p => (p.isIndex ? theme.colors.background : 'transparent')};
