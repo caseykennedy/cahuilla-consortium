@@ -3,7 +3,7 @@
 
 // _____________________________________________________________
 
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'gatsby'
 
 import Symbol from '../Symbol'
@@ -32,9 +32,15 @@ const Header: React.FC<HeaderShape> = ({ location, mainRef }) => {
   // Navigation toggle
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleModal = () => setNavOpen(!isNavOpen)
-  const isIndex = location.pathname === ('/' || '')
+
+  const [isIndex, setIsIndex] = useState(true)
+  // const isIndex = location.pathname === ('/' || '')
   console.log('isIndex:', isIndex)
   console.log('location.pathname:', location.pathname)
+
+  useEffect(() => {
+    setIsIndex(location.pathname === '/')
+  }, [location.pathname])
 
   return (
     <>
