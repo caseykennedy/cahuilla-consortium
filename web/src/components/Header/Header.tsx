@@ -15,24 +15,25 @@ import Overlay from '../Overlay'
 import Icon from '../Icons'
 
 import { Flex } from '../ui'
-
-import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // _____________________________________________________________
 
 type HeaderShape = {
+  location: {
+    pathname: string
+  }
   mainRef: React.RefObject<HTMLDivElement>
-  pathname?: string
 }
 
-const Header: React.FC<HeaderShape> = ({ mainRef, pathname }) => {
+const Header: React.FC<HeaderShape> = ({ location, mainRef }) => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const exitRef = useRef<HTMLDivElement>(null)
   // Navigation toggle
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleModal = () => setNavOpen(!isNavOpen)
-  const isIndex = pathname === '/'
+  const isIndex = location.pathname === '/' || location.pathname === ''
+  console.log('pathname:', location)
 
   return (
     <>

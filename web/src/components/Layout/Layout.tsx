@@ -30,7 +30,7 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
   return (
     <>
       <S.Wrapper>
-        <Header mainRef={mainRef} pathname={location?.pathname} />
+        <Header mainRef={mainRef} location={location} />
         <S.Main ref={mainRef}>{children}</S.Main>
       </S.Wrapper>
       <Footer />
