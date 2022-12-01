@@ -70,6 +70,7 @@ const WhatWeDo = () => {
             src="../../../images/group-hands.jpg"
             alt="Group raising hands in the air."
             placeholder="blurred"
+            layout="fullWidth"
           />
         </Hero>
         <Box p={4}>

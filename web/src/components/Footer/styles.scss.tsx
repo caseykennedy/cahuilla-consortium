@@ -27,7 +27,7 @@ export const Footer = styled.footer`
       ${theme.colors.secondary} 21.88%,
       ${theme.colors.primary} 84.39%
     );
-    box-shadow: inset ${theme.shadow}, ${theme.shadow};
+    box-shadow: ${theme.shadow};
     /* border-bottom: ${theme.border}; */
     color: ${theme.colors.white};
 

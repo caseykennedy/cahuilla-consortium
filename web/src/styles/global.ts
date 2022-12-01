@@ -29,12 +29,13 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
 
-    &::-webkit-scrollbar {
+    /* &::-webkit-scrollbar {
       display: none;
-    }
+    } */
   }
 
-  .img {
+  .img,
+  .gatsby-image-wrapper {
     width: 100%;
     height: 100%;
   }

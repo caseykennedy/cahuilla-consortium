@@ -61,6 +61,7 @@ const Faq = () => {
             src="../../../images/stop-hand.jpg"
             alt="Girl holding hand up palm facing forward"
             placeholder="blurred"
+            layout="fullWidth"
           />
         </Hero>
         <Box p={4}>

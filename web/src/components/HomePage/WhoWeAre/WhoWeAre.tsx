@@ -91,6 +91,7 @@ const WhoWeAre = () => {
             src="../../../images/counseling.jpg"
             alt="Therapist and patient talking."
             placeholder="blurred"
+            layout="fullWidth"
           />
         </Hero>
         <Box p={4}>

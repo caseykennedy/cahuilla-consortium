@@ -137,7 +137,7 @@ const Footer: React.FC = () => {
             placeholder="blurred"
             objectPosition="50% 50%"
             objectFit="cover"
-            // layout="fixed"
+            layout="fullWidth"
             quality={60}
           />
         </div>
