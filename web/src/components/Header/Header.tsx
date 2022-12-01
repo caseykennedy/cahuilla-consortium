@@ -32,8 +32,9 @@ const Header: React.FC<HeaderShape> = ({ location, mainRef }) => {
   // Navigation toggle
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleModal = () => setNavOpen(!isNavOpen)
-  const isIndex = location.pathname === '/' || location.pathname === ''
-  console.log('pathname:', location)
+  const isIndex = location.pathname === ('/' || '')
+  console.log('isIndex:', isIndex)
+  console.log('location.pathname:', location.pathname)
 
   return (
     <>
