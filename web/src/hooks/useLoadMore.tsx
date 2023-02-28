@@ -1,14 +1,12 @@
 // useLoadMore hook
 // Hook for slicing and loading more items from an array
 
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // _____________________________________________________________
 
-const maxPosts = 4
-
 // Hook
-const useLoadMore = (posts: any) => {
+const useLoadMore = (posts: any[], maxPosts = 4) => {
   // State for the list
   const [list, setList] = useState([...posts.slice(0, maxPosts)])
   // State to trigger oad more
@@ -31,13 +29,13 @@ const useLoadMore = (posts: any) => {
       setList([...list, ...nextResults])
       setLoadMore(false)
     }
-  }, [loadMore, hasMore]) // eslint-disable-line
+  }, [loadMore, hasMore])
 
   // Check if there is more
   useEffect(() => {
     const isMore = list.length < posts.length
     setHasMore(isMore)
-  }, [list]) // eslint-disable-line
+  }, [list])
 
   return { list, handleLoadMore, hasMore }
 }

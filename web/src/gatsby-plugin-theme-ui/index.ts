@@ -42,6 +42,7 @@ type ThemeShape = {
   }
   border: string
   shadow: string
+  radius: string
   root: {
     mouseX: string
     mouseY: string
@@ -175,6 +176,7 @@ const theme: ThemeShape = {
 
   border: '1px solid hsla(0, 0%, 0%, 0.15)',
   shadow: '0 0.25rem 0.5rem rgb(0, 0, 0, 0.3)',
+  radius: '4px',
 
   root: {
     mouseX: 'var(--mouse-x)',

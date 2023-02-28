@@ -10,7 +10,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
-import { Box, Flex, Text, Heading, Grid } from 'theme-ui'
+import {Button, Box, Flex, Text, Heading, Grid } from 'theme-ui'
 
 // Components
 import BlockContent from '../BlockContent'
@@ -64,7 +64,7 @@ const Post: React.FC<{ post: PostQuery }> = ({ post }) => {
 
 const BlogPage: React.FC = () => {
   const posts = usePost()
-  const { list, handleLoadMore, hasMore } = useLoadMore(posts)
+  const { list, handleLoadMore, hasMore } = useLoadMore(posts, 8)
   return (
     <S.BlogPage>
       <Box>
@@ -72,15 +72,23 @@ const BlogPage: React.FC = () => {
           Blog
         </Heading>
       </Box>
-      <Flex>
+      <Flex sx={{ flexDirection: 'column' }}>
         <Grid
           columns={`repeat(auto-fit,minmax(300px,1fr))`}
           gap={theme.space[4]}
         >
-          {posts.map(({ node: post }, idx) => (
+          {list.map(({ node: post }, idx) => (
             <Post post={post} key={idx} />
           ))}
         </Grid>
+
+        <Box mt={6}>
+          {hasMore && (
+            <Button onClick={handleLoadMore} className="load-more">
+              Load More +
+            </Button>
+          )}
+        </Box>
       </Flex>
     </S.BlogPage>
   )

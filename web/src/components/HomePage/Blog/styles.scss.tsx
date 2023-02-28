@@ -48,11 +48,30 @@ export const Blog = styled(Flex)`
   }
 
   .load-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+
+    background: ${theme.colors.background};
+    border: ${theme.border};
+    border-radius: ${theme.radius};
+
     cursor: pointer;
-    text-decoration: underline;
+    color: ${darken(0.35, theme.colors.background)};
+    font-family: ${theme.fonts.display};
+    font-size: ${theme.fontSizes[3]};
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    transition: ${theme.transition.all};
 
     &:hover {
-      text-decoration: none;
+      background: ${theme.colors.secondary};
+      color: ${theme.colors.white};
     }
 
     svg {

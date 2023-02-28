@@ -60,11 +60,11 @@ const WhatWeDo = () => {
   // })
 
   return (
-    <S.WhatWeDo ref={scrollRef}>
+    <S.WhatWeDo>
       <Box width={[1, 1 / 2]}>
         <Billboard {...billboardProps} />
       </Box>
-      <Box width={[1, 1 / 2]} id="what">
+      <Box width={[1, 1 / 2]}>
         <Hero>
           <StaticImage
             src="../../../images/group-hands.jpg"
@@ -73,7 +73,7 @@ const WhatWeDo = () => {
             layout="fullWidth"
           />
         </Hero>
-        <Box p={4}>
+        <Box p={4} id="what" ref={scrollRef}>
           <Heading as="h2" fontSize={3} mb={6}>
             What we do
           </Heading>

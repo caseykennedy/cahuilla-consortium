@@ -43,7 +43,7 @@ const Billboard: React.FC<Props> = ({ active, arrow, bg, message, title }) => {
   return (
     <S.Billboard bg={bg}>
       <AnimatedFlex className="inner" style={fadeIn}>
-        <Box p={4} style={{maxInlineSize: '30ch'}}>
+        <Box p={4} style={{ maxInlineSize: '30ch' }}>
           <Heading
             as="h2"
             mb={0}

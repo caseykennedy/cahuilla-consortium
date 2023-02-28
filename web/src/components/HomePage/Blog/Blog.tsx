@@ -11,7 +11,7 @@ import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
-import { Box, Flex, Text, Heading, Grid } from 'theme-ui'
+import { Button, Box, Flex, Text, Heading, Grid } from 'theme-ui'
 
 // Components
 import BlockContent from '../../BlockContent'
@@ -74,10 +74,7 @@ const Blog = () => {
         </Heading>
       </Box>
       <Flex sx={{ flexDirection: 'column' }}>
-        <Grid
-          columns={[1, 2, 4]}
-          gap={theme.space[3]}
-        >
+        <Grid columns={[1, 2, 4]} gap={theme.space[3]}>
           {list.map(({ node: post }, idx) => (
             <Post post={post} key={idx} />
           ))}
@@ -85,9 +82,9 @@ const Blog = () => {
 
         <Box mt={6}>
           {hasMore && (
-            <Box onClick={handleLoadMore} className="load-more">
+            <Button onClick={handleLoadMore} className="load-more">
               Load More +
-            </Box>
+            </Button>
           )}
         </Box>
       </Flex>
