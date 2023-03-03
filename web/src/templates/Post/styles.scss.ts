@@ -11,12 +11,13 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // _____________________________________________________________
 
-export const Post = styled(Box)`
-  flex-wrap: wrap;
+export const Post = styled.div`
   margin: 0 auto;
+  padding-top: calc(${theme.headerHeight} + ${theme.space[4]});
+  padding-right: ${theme.space[4]};
+  padding-bottom: ${theme.space[5]};
+  padding-left: ${theme.space[4]};
   width: 100%;
-
-  padding-top: calc(${theme.headerHeight} + ${theme.space[5]});
 
   @media ${theme.mq.tablet} {
     max-width: 75%;
@@ -27,11 +28,28 @@ export const Post = styled(Box)`
     max-width: 800px;
   }
 
-  p {
-    margin: 0 0 ${theme.space[5]} 0;
+  .post {
+    &__title {
+      margin-bottom: ${theme.space[5]};
 
-    &:last-child {
-      margin-bottom: 0;
+      &__meta {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+      }
+    }
+
+    &__body {
+      font-size: calc(${theme.fontSizes[2]} * 1.15);
+
+      p {
+        margin: 0 0 ${theme.space[5]} 0;
+        font-size: calc(${theme.fontSizes[2]});
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 

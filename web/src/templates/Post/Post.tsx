@@ -3,7 +3,7 @@
 // _____________________________________________________________
 
 // Libraries
-import React from 'react'
+import React, { useEffect } from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 // Components
@@ -30,61 +30,56 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
     <>
       <SEO
         article={true}
-        banner={`${post.figure.asset.gatsbyImageData}`}
+        banner={`${post.figure.asset.url}`}
         title={`${post.title} | ${siteSettings.titleShort}`}
         desc={`${post.title}`}
         pathname={`/blog/${post.slug.current}`}
       />
-      {/* <S.PageTitle /> */}
-      <Box px={4} pb={5}>
-        <S.Post>
-          <Box width={1} mb={5}>
-            <Heading as="h1" mb={0} className="text--lg">
-              {post.title}
-            </Heading>
+      <S.Post>
+        <div className="post__title">
+          <Heading as="h1" mb={0} className="text--lg">
+            {post.title}
+          </Heading>
 
-            <Flex width={1} mb={5} justifyContent="space-between">
-              <Text as="p" fontWeight={500}>
-                {post.publishedAt} | by: {post.author}
-              </Text>
-            </Flex>
+          <div className="post__title__meta">
+            {post.publishedAt} | by: {post.author}
+          </div>
+        </div>
+
+        <div className="post__body">
+          <Box width={1} mb={5}>
+            {post.figure && (
+              <GatsbyImage
+                image={post.figure.asset.gatsbyImageData}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt={post.title}
+              />
+            )}
           </Box>
 
-          <Flex flexDirection="column" flexWrap="wrap">
-            <Box width={1} mb={5}>
-              {post.figure && (
-                <GatsbyImage
-                  image={post.figure.asset.gatsbyImageData}
-                  objectFit="cover"
-                  objectPosition="50% 50%"
-                  alt={post.title}
-                />
-              )}
-            </Box>
+          <div>
+            {post._rawBody && <BlockContent blocks={post._rawBody || []} />}
+          </div>
 
-            <div>
-              {post._rawBody && <BlockContent blocks={post._rawBody || []} />}
-            </div>
-
-            <Flex
-              color="gray"
-              alignItems="center"
-              fontSize={1}
-              fontWeight={500}
-              width={1 / 2}
-              className="social-share"
-            >
-              <Heading as="h4" mb={0}>
-                Share:
-              </Heading>
-              <SocialShare name="facebook" slug={post.slug.current} />
-              <SocialShare name="linkedIn" slug={post.slug.current} />
-              <SocialShare name="twitter" slug={post.slug.current} />
-            </Flex>
+          <Flex
+            color="gray"
+            alignItems="center"
+            fontSize={1}
+            fontWeight={500}
+            width={1 / 2}
+            className="social-share"
+          >
+            <Heading as="h4" mb={0}>
+              Share:
+            </Heading>
+            <SocialShare name="facebook" slug={post.slug.current} />
+            <SocialShare name="linkedIn" slug={post.slug.current} />
+            <SocialShare name="twitter" slug={post.slug.current} />
           </Flex>
-        </S.Post>
-      </Box>
-
+        </div>
+      </S.Post>
+      {/* Let's save this component for a future feature. */}
       {/* <PrevNext pageContext={pageContext} /> */}
     </>
   )

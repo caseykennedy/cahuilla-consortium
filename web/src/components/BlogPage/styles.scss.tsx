@@ -37,6 +37,7 @@ export const BlogPage = styled.div`
       display: -webkit-box;
       -webkit-line-clamp: 5; /* number of lines to show */
       -webkit-box-orient: vertical;
+      font-size: ${theme.fontSizes[2]};
     }
 
     .inner {

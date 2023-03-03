@@ -31,6 +31,7 @@ async function createPostPages(graphql, actions) {
                   formats: [AUTO, AVIF, WEBP]
                   aspectRatio: 1
                 )
+                url
               }
             }
             categories {
