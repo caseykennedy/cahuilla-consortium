@@ -20,16 +20,15 @@ export const Footer = styled.footer`
     flex-direction: column;
     flex-wrap: wrap;
 
-
     background-color: ${theme.colors.background};
     background: linear-gradient(
       180deg,
-      ${theme.colors.tertiary} 30%,
+      ${theme.colors.secondary} 20%,
       ${theme.colors.primary} 80%
     );
     box-shadow: ${theme.shadow};
-    /* border-bottom: ${theme.border}; */
-    /* background: ${theme.colors.tertiary}; */
+    border-top: ${theme.border};
+    border-bottom: ${theme.border};
     color: ${theme.colors.white};
 
     padding: ${theme.space[4]} ${theme.space[4]};
@@ -62,9 +61,9 @@ export const Footer = styled.footer`
     height: 100%;
     z-index: 0;
 
-    mix-blend-mode: hard-light;
+    mix-blend-mode: luminosity;
     opacity: 0.35;
-    filter: brightness(80%);
+    /* filter: brightness(80%); */
 
     img {
     }

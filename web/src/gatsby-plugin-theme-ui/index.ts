@@ -175,7 +175,7 @@ const theme: ThemeShape = {
   },
 
   border: '1px solid hsla(0, 0%, 0%, 0.15)',
-  shadow: '0 0.25rem 0.5rem rgb(0, 0, 0, 0.3)',
+  shadow: '0 0.15rem 0.5rem rgb(0, 0, 0, 0.3)',
   radius: '4px',
 
   root: {

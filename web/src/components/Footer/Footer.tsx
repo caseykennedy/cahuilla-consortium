@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
     <S.Footer id="contact">
       <Flex className="inner">
         <Flex className="panel">
-          <Box width={[1, 1, 1 / 2]} mb={[5, 0]}>
+          <Box width={[1, 1, 1 / 2]} mb={[5, 4, 0]}>
             <Heading as="h3" fontSize={4}>
               reach out anytime,
               <br />
