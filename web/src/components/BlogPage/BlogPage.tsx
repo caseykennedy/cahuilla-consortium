@@ -10,7 +10,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
-import {Button, Box, Flex, Text, Heading, Grid } from 'theme-ui'
+import { Button, Box, Flex, Text, Heading, Grid } from 'theme-ui'
 
 // Components
 import BlockContent from '../BlockContent'

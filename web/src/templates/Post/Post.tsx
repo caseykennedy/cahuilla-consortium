@@ -31,7 +31,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
       <SEO
         article={true}
         banner={`${post.figure.asset.url}`}
-        title={`${post.title} | ${siteSettings.titleShort}`}
+        title={`${post.title} | ${siteSettings.title}`}
         desc={`${post.title}`}
         pathname={`/blog/${post.slug.current}`}
       />
