@@ -21,14 +21,15 @@ export const Footer = styled.footer`
     flex-wrap: wrap;
 
 
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.background};
     background: linear-gradient(
       180deg,
-      ${theme.colors.secondary} 21.88%,
-      ${theme.colors.primary} 84.39%
+      ${theme.colors.tertiary} 30%,
+      ${theme.colors.primary} 80%
     );
     box-shadow: ${theme.shadow};
     /* border-bottom: ${theme.border}; */
+    /* background: ${theme.colors.tertiary}; */
     color: ${theme.colors.white};
 
     padding: ${theme.space[4]} ${theme.space[4]};
@@ -61,8 +62,12 @@ export const Footer = styled.footer`
     height: 100%;
     z-index: 0;
 
-    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;
     opacity: 0.35;
+    filter: brightness(80%);
+
+    img {
+    }
 
     .gatsby-image-wrapper {
       min-height: -webkit-fill-available;
@@ -86,9 +91,11 @@ export const HideAway = styled(Box)`
 
   .footnote {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
+    align-items: flex-start;
     border-top: ${theme.border};
     padding: ${theme.space[4]};
+    gap: ${theme.space[2]};
 
     @media ${theme.mq.tablet} {
       align-items: center;
@@ -100,11 +107,11 @@ export const HideAway = styled(Box)`
     }
 
     p {
-      margin-top: ${theme.space[4]};
+      /* margin-top: ${theme.space[4]}; */
+      font-size: ${theme.fontSizes[1]};
 
       @media ${theme.mq.tablet} {
         margin-top: 0;
-        margin-left: ${theme.space[4]};
       }
     }
   }
@@ -128,7 +135,9 @@ export const Logo = styled(Flex)`
 
     .symbol {
       display: inline-flex;
+
       svg {
+        /* fill: ${theme.colors.gray}; */
         width: 45px;
       }
     }

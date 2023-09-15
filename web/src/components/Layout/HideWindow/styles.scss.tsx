@@ -56,8 +56,8 @@ export const HideWindow = styled.a`
   /* mix-blend-mode: difference; */
 
   position: fixed;
-  bottom: ${theme.space[1]};
-  right: ${theme.space[1]};
+  bottom: ${theme.space[2]};
+  right: ${theme.space[2]};
   height: ${theme.space[5]};
   width: ${theme.space[5]};
 
@@ -65,10 +65,16 @@ export const HideWindow = styled.a`
   transition: background-color 0.222s ease-in-out 0s;
   z-index: 999999;
 
-  /* display: none; */
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
+
+  @media ${theme.mq.tablet} {
+    top: ${theme.space[4]};
+    bottom: initial;
+    right: ${theme.space[4]};
+    display: flex;
+  }
 
   svg {
     fill: ${theme.colors.black};

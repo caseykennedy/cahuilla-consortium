@@ -70,7 +70,7 @@ export const Blog = styled(Flex)`
     transition: ${theme.transition.all};
 
     &:hover {
-      background: ${theme.colors.secondary};
+      background: ${theme.colors.primary};
       color: ${theme.colors.white};
     }
 

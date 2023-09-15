@@ -37,6 +37,7 @@ const billboardProps = {
 
 const Team = () => {
   const team = usePerson()
+  console.log('team', team)
   return (
     <Grid columns={[2, 3]} gap={theme.space[3]} className="team">
       {team.map(({ node: person }, idx) => (

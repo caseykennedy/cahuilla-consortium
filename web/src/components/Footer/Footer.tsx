@@ -13,8 +13,10 @@ import * as S from './styles.scss'
 // Components
 import Symbol from '../Symbol'
 import Wordmark from '../Wordmark'
+import HideWindow from '../Layout/HideWindow'
 
 import useContact from '../../hooks/useContact'
+import theme from '@/gatsby-plugin-theme-ui'
 
 // _____________________________________________________________
 
@@ -37,8 +39,11 @@ const HideAway = () => {
             </div> */}
           </Link>
         </S.Logo>
-        <Flex alignItems="center">
-          <p className="t--small">
+        {/* <Flex>
+          <HideWindow />
+        </Flex> */}
+        <Flex flex={1} alignItems="center" ml={2}>
+          <p>
             This website was produced by the Cahuilla Consortium under grant
             award #2019-VO-GX-0010, awarded by the Office for Victims of Crime,
             Office of Justice Programs, U.S. Department of Justice. The
@@ -92,19 +97,9 @@ const Footer: React.FC = () => {
             </Box>
             <Box width={[1, 1 / 2]}>
               <h4>Contact</h4>
-              <p>
-                You can reach us at:
-                <br />
-                <a
-                  href={`mailto:${contact.email}?subject=Contact from cahuillaconsortium.org`}
-                  aria-label="email us"
-                >
-                  {contact.email}
-                </a>
-                <br />
-                <br />
+              <div>
                 <span>
-                  24/7 HOTLINE:
+                  <b>24/7 HOTLINE:</b>
                   <br />
                   <a
                     href={`hotline: ${contact.hotline}`}
@@ -115,8 +110,18 @@ const Footer: React.FC = () => {
                 </span>
                 <br />
                 <br />
+                <b>EMAIL</b>
+                <br />
+                <a
+                  href={`mailto:${contact.email}?subject=Contact from cahuillaconsortium.org`}
+                  aria-label="email us"
+                >
+                  {contact.email}
+                </a>
+                <br />
+                <br />
                 <span>
-                  OFFICE:
+                  <b>OFFICE:</b>
                   <br />
                   <a
                     href={`tel: ${contact.telephone}`}
@@ -125,7 +130,7 @@ const Footer: React.FC = () => {
                     {contact.telephone}
                   </a>
                 </span>
-              </p>
+              </div>
             </Box>
           </Flex>
         </Flex>
@@ -135,7 +140,7 @@ const Footer: React.FC = () => {
             src="../../images/bg-footer-humming-bird.jpg"
             alt="Humming bird and flowers"
             placeholder="blurred"
-            objectPosition="50% 50%"
+            objectPosition="center center"
             objectFit="cover"
             layout="fullWidth"
             quality={60}
