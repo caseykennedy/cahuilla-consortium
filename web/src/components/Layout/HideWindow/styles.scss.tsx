@@ -70,8 +70,7 @@ export const HideWindow = styled.a`
   justify-content: center;
 
   @media ${theme.mq.tablet} {
-    top: ${theme.space[4]};
-    bottom: initial;
+    bottom: ${theme.space[4]};
     right: ${theme.space[4]};
     display: flex;
   }
