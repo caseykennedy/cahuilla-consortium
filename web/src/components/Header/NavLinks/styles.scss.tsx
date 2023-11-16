@@ -21,12 +21,12 @@ export const NavLinks = styled(Flex)`
 `
 
 export const NavLink = styled(AnimatedFlex)`
-  padding: ${theme.space[4]};
+  padding: ${theme.space[2]} ${theme.space[4]};
   width: 100%;
 
   a {
     mix-blend-mode: difference;
-    color: ${theme.colors.white};
+    color: ${theme.colors.text};
     font-size: ${theme.fontSizes[3]};
     text-transform: uppercase;
     width: 100%;

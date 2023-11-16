@@ -25,7 +25,7 @@ export const Overlay = styled(Flex)`
   right: 0;
   bottom: 0;
 
-  background: ${theme.colors.primary};
+  background: ${theme.colors.background};
   color: ${theme.colors.white};
   visibility: hidden;
   opacity: 0;

@@ -7,9 +7,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { useTransition } from 'react-spring'
 
-import { Box, Text } from '../../ui'
-
-import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 import data from '../nav.json'
@@ -53,7 +50,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
       leave: {
         opacity: 0
       },
-      trail: 40,
+      trail: 80,
       unique: true
     }
   )
