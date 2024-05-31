@@ -30,6 +30,7 @@ async function createPostPages(graphql, actions) {
                   placeholder: BLURRED
                   formats: [AUTO, AVIF, WEBP]
                   aspectRatio: 1
+                  width: 800
                 )
                 url
               }

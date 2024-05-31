@@ -14,7 +14,6 @@ import { Button, Box, Flex, Text, Heading, Grid } from 'theme-ui'
 
 // Components
 import BlockContent from '../BlockContent'
-import Icon from '../Icons'
 
 // Hooks
 import usePost from '../../hooks/usePost'
@@ -37,7 +36,7 @@ const Post: React.FC<{ post: PostQuery }> = ({ post }) => {
                   objectFit="cover"
                   objectPosition="50% 50%"
                   alt={post.title}
-                  // className="article__img"
+                  sizes="300px"
                 />
               )}
             </Box>

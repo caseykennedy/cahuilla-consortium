@@ -1,5 +1,6 @@
 import BaseBlockContent from '@sanity/block-content-to-react'
 import React from 'react'
+import Figure from './Figure'
 
 type BlockShape = {
   blocks: any
@@ -25,7 +26,11 @@ const serializers = {
           return <blockquote>{props.children}</blockquote>
 
         case 'a':
-          return <a rel="noopener" target="_blank">{props.children}</a>
+          return (
+            <a rel="noopener" target="_blank">
+              {props.children}
+            </a>
+          )
 
         case 'ul':
           return <ul>{props.children}</ul>
@@ -39,6 +44,9 @@ const serializers = {
         default:
           return <p>{props.children}</p>
       }
+    },
+    figure(props: any) {
+      return <Figure {...props.node} />
     }
   }
 }

@@ -30,6 +30,7 @@ const usePost = () => {
                   placeholder: BLURRED
                   formats: [AUTO, AVIF, WEBP]
                   aspectRatio: 1
+                  width: 300
                 )
                 url
               }

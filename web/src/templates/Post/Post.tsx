@@ -54,6 +54,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
                 objectFit="cover"
                 objectPosition="50% 50%"
                 alt={post.title}
+                sizes="800px"
               />
             )}
           </Box>
