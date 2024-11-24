@@ -3,9 +3,6 @@
   "name": "cahuilla-consortium-sanity",
   "version": "1.0.0",
   "author": "Casey Kennedy <me@caseykennedy.me>",
-  "engines": {
-    "node": "16.x"
-  },
   "scripts": {
     "deploy": "npm run graphql-deploy && npm run sanity-deploy",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
